@@ -9,13 +9,14 @@ public class SethMovement : MonoBehaviour
 
     private Rigidbody2D rigid;
     private Animator anim;
-
+    private SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class SethMovement : MonoBehaviour
         if(moveInput != 0)
         {
             anim.SetBool("isWalking", true);
+            spriteRenderer.flipX = (moveInput < 0);
         }
         else
         {
