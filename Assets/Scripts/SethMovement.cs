@@ -16,7 +16,6 @@ public class SethMovement : MonoBehaviour
     private Rigidbody2D rigid;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
-
     // Start is called before the first frame update
     void Start()
     {
