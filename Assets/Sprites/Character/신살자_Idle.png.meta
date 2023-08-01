@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02cd52efa0fadb0409ce586a5488a608
+guid: 936aa3b639774a748964f28b942b2b47
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle -_0"
+      name: "\uC2E0\uC0B4\uC790_Idle_0"
       rect:
         serializedVersion: 2
         x: 29
@@ -112,62 +112,62 @@ TextureImporter:
         width: 106
         height: 153
       alignment: 9
-      pivot: {x: 0.661976, y: 0.3648913}
+      pivot: {x: 0.65890306, y: 0.3648913}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c6be422cdb354f4f92a1afe2831604e
-      internalID: -1750860328
+      spriteID: 7ca97f0318b4add4abc9de3d48ae1335
+      internalID: 1148942924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle -_1"
+      name: "\uC2E0\uC0B4\uC790_Idle_1"
       rect:
         serializedVersion: 2
         x: 191
         y: 998
         width: 114
-        height: 153
+        height: 152
       alignment: 9
-      pivot: {x: 0.61108506, y: 0.3534071}
+      pivot: {x: 0.61417186, y: 0.35896462}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48d76809147d91546b799aae73e445a6
-      internalID: -1557637588
+      spriteID: b31bd381caee46a40b3062709459d293
+      internalID: 626887186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle -_2"
+      name: "\uC2E0\uC0B4\uC790_Idle_2"
       rect:
         serializedVersion: 2
         x: 325
         y: 995
         width: 122
-        height: 160
+        height: 159
       alignment: 9
-      pivot: {x: 0.57314414, y: 0.34632644}
+      pivot: {x: 0.5627561, y: 0.35554323}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8aed7c8f2f359947b0e74cb16d09d7f
-      internalID: 1000345095
+      spriteID: 4aed34f7d2ccc9b488d4c4870a308c84
+      internalID: 1740658793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle -_3"
+      name: "\uC2E0\uC0B4\uC790_Idle_3"
       rect:
         serializedVersion: 2
         x: 479
@@ -175,35 +175,35 @@ TextureImporter:
         width: 114
         height: 151
       alignment: 9
-      pivot: {x: 0.61306655, y: 0.36518022}
+      pivot: {x: 0.61417216, y: 0.34788987}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dae33d5e39fbdf4bb04694ff98095f6
-      internalID: 1719774720
+      spriteID: 4e6b5735c48a2c14eb2a85e95cf3cb3d
+      internalID: 501470283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle -_4"
+      name: "\uC2E0\uC0B4\uC790_Idle_4"
       rect:
         serializedVersion: 2
         x: 638
-        y: 996
+        y: 995
         width: 106
-        height: 153
+        height: 154
       alignment: 9
-      pivot: {x: 0.664108, y: 0.36046246}
+      pivot: {x: 0.6661262, y: 0.36079624}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b87764c8f8b33ee428669163e3580f2c
-      internalID: 1522914724
+      spriteID: 48172ffc7899e064ca90919e1e48aaa9
+      internalID: -1194247394
       vertices: []
       indices: 
       edges: []
@@ -219,11 +219,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\uC2E0\uC0B4\uC790_Idle -_1": -1557637588
-      "\uC2E0\uC0B4\uC790_Idle -_2": 1000345095
-      "\uC2E0\uC0B4\uC790_Idle -_0": -1750860328
-      "\uC2E0\uC0B4\uC790_Idle -_4": 1522914724
-      "\uC2E0\uC0B4\uC790_Idle -_3": 1719774720
+      "\uC2E0\uC0B4\uC790_Idle_1": 626887186
+      "\uC2E0\uC0B4\uC790_Idle_2": 1740658793
+      "\uC2E0\uC0B4\uC790_Idle_3": 501470283
+      "\uC2E0\uC0B4\uC790_Idle_0": 1148942924
+      "\uC2E0\uC0B4\uC790_Idle_4": -1194247394
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
