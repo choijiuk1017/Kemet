@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 65665c8e65cd69945b89e7d0e30b22e9
+guid: fcdd008791d883e49b8e995758a254c0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,106 +104,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle_17"
+      name: "\uC2E0\uC0B4\uC790_Attack_0"
       rect:
         serializedVersion: 2
-        x: 755
-        y: 283
-        width: 327
+        x: 568
+        y: 886
+        width: 351
         height: 258
       alignment: 9
-      pivot: {x: 0.27230844, y: 0.22502656}
+      pivot: {x: 0.52332413, y: 0.22146772}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76fc3d792d2aa2c4292dc9c04880c1a4
-      internalID: 183506591
+      spriteID: 74d21f8e438c5324c9658c78004cc017
+      internalID: -965637645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle_18"
+      name: "\uC2E0\uC0B4\uC790_Attack_1"
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 281
-        width: 319
-        height: 236
+        x: 992
+        y: 898
+        width: 250
+        height: 253
       alignment: 9
-      pivot: {x: 0.17411819, y: 0.25891954}
+      pivot: {x: 0.37628955, y: 0.22315393}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3161581cb77e15c41b87ff25c46b558e
-      internalID: -916888187
+      spriteID: 734f1ab5c2066724486d734764616563
+      internalID: -576012811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle_21"
+      name: "\uC2E0\uC0B4\uC790_Attack_3"
       rect:
         serializedVersion: 2
-        x: 42
-        y: 295
-        width: 106
-        height: 153
-      alignment: 9
-      pivot: {x: 0.6656619, y: 0.3668638}
+        x: 1288
+        y: 896
+        width: 198
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42e1a75cf00adae4e9dd54a743a3024e
-      internalID: -534059847
+      spriteID: bf67e7a4db38c5a4e8fe9a4de889e176
+      internalID: -267610742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle_22"
+      name: "\uC2E0\uC0B4\uC790_Attack_5"
       rect:
         serializedVersion: 2
-        x: 238
-        y: 295
+        x: 44
+        y: 896
         width: 168
         height: 152
       alignment: 9
-      pivot: {x: 0.8052123, y: 0.36136666}
+      pivot: {x: 0.80321246, y: 0.36834195}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba4b5f7092b9f9747b6a69090bf161c6
-      internalID: -1465749355
+      spriteID: c01a053e608d7b14784bfbd401beb088
+      internalID: 727291841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle_23"
+      name: "\uC2E0\uC0B4\uC790_Attack_6"
       rect:
         serializedVersion: 2
-        x: 502
-        y: 293
-        width: 184
-        height: 157
+        x: 276
+        y: 893
+        width: 218
+        height: 149
       alignment: 9
-      pivot: {x: 0.8435682, y: 0.38367748}
+      pivot: {x: 0.8505025, y: 0.3534812}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e72b96bf98dc4b14fba8d69fc767c183
-      internalID: 1719121168
+      spriteID: 04a264e994a557c419671ab303d5bf87
+      internalID: -1984928732
       vertices: []
       indices: 
       edges: []
@@ -219,47 +219,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\uC2E0\uC0B4\uC790_Idle_1": -709765926
-      "\uC2E0\uC0B4\uC790_Idle_32": 332735054
-      "\uC2E0\uC0B4\uC790_Idle_16": 1526960229
-      "\uC2E0\uC0B4\uC790_Idle_19": 530276240
-      "\uC2E0\uC0B4\uC790_Idle_21": -534059847
-      "\uC2E0\uC0B4\uC790_Idle_28": -72685502
-      "\uC2E0\uC0B4\uC790_Idle_11": 983124274
-      "\uC2E0\uC0B4\uC790_Idle_39": -138961968
-      "\uC2E0\uC0B4\uC790_Idle_12": -25350408
-      "\uC2E0\uC0B4\uC790_Idle_31": -1451771894
-      "\uC2E0\uC0B4\uC790_Idle_17": 183506591
-      "\uC2E0\uC0B4\uC790_Idle_37": 1280980916
-      "\uC2E0\uC0B4\uC790_Idle_26": 1499341266
-      "\uC2E0\uC0B4\uC790_Idle_38": -1555429705
-      "\uC2E0\uC0B4\uC790_Idle_10": 1487019190
-      "\uC2E0\uC0B4\uC790_Idle_20": -1639947275
-      "\uC2E0\uC0B4\uC790_Idle_23": 1719121168
-      "\uC2E0\uC0B4\uC790_Idle_25": 1263395742
-      "\uC2E0\uC0B4\uC790_Idle_2": 700494053
-      "\uC2E0\uC0B4\uC790_Idle_3": 665875850
-      "\uC2E0\uC0B4\uC790_Idle_7": -1737465633
-      "\uC2E0\uC0B4\uC790_Idle_6": -370700853
-      "\uC2E0\uC0B4\uC790_Idle_14": 1624903264
-      "\uC2E0\uC0B4\uC790_Idle_13": 1796119121
-      "\uC2E0\uC0B4\uC790_Idle_0": 171698622
-      "\uC2E0\uC0B4\uC790_Idle_24": -80674378
-      "\uC2E0\uC0B4\uC790_Idle_27": 1463771233
-      "\uC2E0\uC0B4\uC790_Idle_18": -916888187
-      "\uC2E0\uC0B4\uC790_Idle_30": -730747222
-      "\uC2E0\uC0B4\uC790_Idle_36": -537192513
-      "\uC2E0\uC0B4\uC790_Idle_34": -336203537
-      "\uC2E0\uC0B4\uC790_Idle_33": 2100085895
-      "\uC2E0\uC0B4\uC790_Idle_15": 2014855016
-      "\uC2E0\uC0B4\uC790_Idle_35": 1101362347
-      "\uC2E0\uC0B4\uC790_Idle_8": 1727702583
-      "\uC2E0\uC0B4\uC790_Idle_5": 151996321
-      "\uC2E0\uC0B4\uC790_Idle_4": -283415234
-      "\uC2E0\uC0B4\uC790_Idle_22": -1465749355
-      "\uC2E0\uC0B4\uC790_Idle_40": 1312804424
-      "\uC2E0\uC0B4\uC790_Idle_9": -1595819596
-      "\uC2E0\uC0B4\uC790_Idle_29": -2136853361
+      "\uC2E0\uC0B4\uC790_Attack_16": 1826568612
+      "\uC2E0\uC0B4\uC790_Attack_13": -1576349896
+      "\uC2E0\uC0B4\uC790_Attack_7": -1210991130
+      "\uC2E0\uC0B4\uC790_Attack_14": 1980726331
+      "\uC2E0\uC0B4\uC790_Attack_2": -1948512767
+      "\uC2E0\uC0B4\uC790_Attack_8": -191215495
+      "\uC2E0\uC0B4\uC790_Attack_10": 1529009109
+      "\uC2E0\uC0B4\uC790_Attack_9": -395471768
+      "\uC2E0\uC0B4\uC790_Attack_11": -92886217
+      "\uC2E0\uC0B4\uC790_Attack_12": 1370859029
+      "\uC2E0\uC0B4\uC790_Attack_17": -1448297832
+      "\uC2E0\uC0B4\uC790_Attack_6": -1984928732
+      "\uC2E0\uC0B4\uC790_Attack_4": -681658982
+      "\uC2E0\uC0B4\uC790_Attack_15": -578514714
+      "\uC2E0\uC0B4\uC790_Attack_1": -576012811
+      "\uC2E0\uC0B4\uC790_Attack_5": 727291841
+      "\uC2E0\uC0B4\uC790_Attack_3": -267610742
+      "\uC2E0\uC0B4\uC790_Attack_0": -965637645
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

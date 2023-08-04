@@ -10,6 +10,13 @@ public class SethMovement : MonoBehaviour
     private float curTime;
     public float coolTime = 0.5f;
 
+    public float comboTimeWindow = 1.0f; //콤보를 유지하는 시간
+    public int maxComboCount = 2; //최대 콤보 횟수
+
+    private float lastAttackTime = 0f; //마지막으로 공격한 시간
+    private int comboCount = 0;  //현재 콤보 횟수
+
+
     public Transform pos;
     public Vector2 boxSize;
 
@@ -56,33 +63,28 @@ public class SethMovement : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
-        
-
         if (curTime <= 0 && state != State.Move)
         {
             if (Input.GetKey(KeyCode.Z))
             {
-                //Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+                if (Time.time - lastAttackTime < comboTimeWindow)
+                {
+                    lastAttackTime = Time.time;
+                    comboCount++;
 
-                //foreach (Collider2D collider in collider2Ds)
-                //{
-                //    //태그가 몬스터인 오브젝트와 충돌시
-                //    if (collider.tag == "Monster" || collider.tag == "Spawner")
-                //    {
-                //        collider.GetComponent<Monster>().TakeDamage(1); //데미지를 입음, HealthPointManager의 TakeDamage와는 다름
-                //    }
-                //    if (collider.tag == "Dust")
-                //    {
-                //        collider.GetComponent<Dust>().TakeDamage(1);
-                //    }
-                //    if (collider.tag == "Door")
-                //    {
-                //        SceneManager.LoadScene("Puzzle");
-                //    }
-                //}
-                anim.SetTrigger("isDefaultAttack");
-                state = State.Attack;
-                curTime = coolTime;//공격을 하면 쿨타임 부여
+                    if (comboCount > maxComboCount)
+                    {
+                        comboCount = 1;
+                    }
+                }
+                else
+                {
+                    comboCount = 1;
+                    lastAttackTime = Time.time;
+                }
+
+                DefaultAttack();
+                
             }
         }
         else
@@ -125,6 +127,30 @@ public class SethMovement : MonoBehaviour
         }
 
      
+    }
+    void DefaultAttack()
+    {
+        //Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+
+        //foreach (Collider2D collider in collider2Ds)
+        //{
+        //    //태그가 몬스터인 오브젝트와 충돌시
+        //    if (collider.tag == "Monster" || collider.tag == "Spawner")
+        //    {
+        //        collider.GetComponent<Monster>().TakeDamage(1); //데미지를 입음, HealthPointManager의 TakeDamage와는 다름
+        //    }
+        //    if (collider.tag == "Dust")
+        //    {
+        //        collider.GetComponent<Dust>().TakeDamage(1);
+        //    }
+        //    if (collider.tag == "Door")
+        //    {
+        //        SceneManager.LoadScene("Puzzle");
+        //    }
+        //}
+        anim.SetTrigger("isDefaultAttack"+comboCount);
+        state = State.Attack;
+        curTime = coolTime;//공격을 하면 쿨타임 부여
     }
 
     //공격 범위를 나타내는 기즈모 그리는 함수
