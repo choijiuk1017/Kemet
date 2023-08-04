@@ -15,7 +15,18 @@ public class SethMovement : MonoBehaviour
 
     private Rigidbody2D rigid;
     private Animator anim;
-    private SpriteRenderer spriteRenderer; 
+    private SpriteRenderer spriteRenderer;
+
+    public enum State
+    {
+        Idle,
+        Move,
+        Attack
+    };
+
+
+    public State state;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +117,8 @@ public class SethMovement : MonoBehaviour
             // 정지 시 애니메이션 정지
             anim.SetBool("isWalking", false);
         }
+
+        state = State.Move;
     }
 
     //공격 범위를 나타내는 기즈모 그리는 함수
