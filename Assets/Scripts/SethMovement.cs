@@ -33,6 +33,8 @@ public class SethMovement : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        state = State.Idle;
     }
 
     // Update is called once per frame
@@ -56,7 +58,7 @@ public class SethMovement : MonoBehaviour
 
         
 
-        if (curTime <= 0)
+        if (curTime <= 0 && state != State.Move)
         {
             if (Input.GetKey(KeyCode.Z))
             {
@@ -79,7 +81,7 @@ public class SethMovement : MonoBehaviour
                 //    }
                 //}
                 anim.SetTrigger("isDefaultAttack");
-
+                state = State.Attack;
                 curTime = coolTime;//공격을 하면 쿨타임 부여
             }
         }
@@ -111,14 +113,18 @@ public class SethMovement : MonoBehaviour
         if (moveDirection.magnitude > 0)
         {
             anim.SetBool("isWalking", true);
+
+            state = State.Move;
         }
         else
         {
             // 정지 시 애니메이션 정지
             anim.SetBool("isWalking", false);
+
+            state = State.Idle;
         }
 
-        state = State.Move;
+     
     }
 
     //공격 범위를 나타내는 기즈모 그리는 함수

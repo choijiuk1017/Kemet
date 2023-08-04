@@ -445,9 +445,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   maxSpeed: 5
-  coolTime: 0.5
+  coolTime: 0.7
   pos: {fileID: 595506389}
   boxSize: {x: 1, y: 1.8}
+  state: 0
 --- !u!50 &1840917325
 Rigidbody2D:
   serializedVersion: 4
