@@ -18,7 +18,7 @@ public class OssethanMovement : MonoBehaviour
 
 
     public float jumpForce = 5.0f;
-    public bool isGround = false;
+    public bool isJump = false;
 
     public Transform pos;
     public Vector2 boxSize;
@@ -108,24 +108,7 @@ public class OssethanMovement : MonoBehaviour
     {
         move();
 
-        if(rigid.velocity.y < 0)
-        {
-            Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
-            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 10);
-            if (rayHit.collider != null)
-            {
-                
-                if(rayHit.distance > 3f)
-                {
-                    anim.SetBool("isRand", true);
-                    anim.SetBool("isJump", false);
-                }
-                if (rayHit.distance < 0.1f)
-                {
-                    anim.SetBool("isRand",false);
-                }
-            }
-        }
+
     }
 
     //플레이어 이동함수
@@ -133,15 +116,14 @@ public class OssethanMovement : MonoBehaviour
     {
         // 상하좌우 입력 감지
         float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
 
         // 이동 벡터 계산
-        Vector3 moveDirection = new Vector3(moveX, moveY, 0f).normalized;
+        Vector3 moveDirection = new Vector3(moveX, 0f, 0f).normalized;
 
         // 플레이어 이동
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
         // 애니메이션 재생
-        if (moveDirection.magnitude > 0)
+        if (moveDirection.magnitude > 0 && !isJump)
         {
             anim.SetBool("isWalking", true);
 
@@ -163,7 +145,10 @@ public class OssethanMovement : MonoBehaviour
         rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
 
         anim.SetBool("isJump", true);
+
+        isJump = true;
     }
+
     void DefaultAttack()
     {
         //Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
@@ -188,7 +173,16 @@ public class OssethanMovement : MonoBehaviour
         state = State.Attack;
         curTime = coolTime;//공격을 하면 쿨타임 부여
     }
-  
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.CompareTag("Ground"))
+        {
+            anim.SetBool("isJump", false);
+            isJump = false;
+        }
+    }
+
     //공격 범위를 나타내는 기즈모 그리는 함수
     void OnDrawGizmos()
     {
