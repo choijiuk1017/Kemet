@@ -445,7 +445,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   maxSpeed: 5
-  coolTime: 0.7
+  coolTime: 0.5
+  comboTimeWindow: 1
+  maxComboCount: 2
   pos: {fileID: 595506389}
   boxSize: {x: 1, y: 1.8}
   state: 0

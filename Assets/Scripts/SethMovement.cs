@@ -11,7 +11,7 @@ public class SethMovement : MonoBehaviour
     public float coolTime = 0.5f;
 
     public float comboTimeWindow = 1.0f; //콤보를 유지하는 시간
-    public int maxComboCount = 2; //최대 콤보 횟수
+    public int maxComboCount = 3; //최대 콤보 횟수
 
     private float lastAttackTime = 0f; //마지막으로 공격한 시간
     private int comboCount = 0;  //현재 콤보 횟수
@@ -70,6 +70,7 @@ public class SethMovement : MonoBehaviour
                 if (Time.time - lastAttackTime < comboTimeWindow)
                 {
                     lastAttackTime = Time.time;
+
                     comboCount++;
 
                     if (comboCount > maxComboCount)
@@ -92,6 +93,7 @@ public class SethMovement : MonoBehaviour
             curTime -= Time.deltaTime;
         }
 
+        Debug.Log(comboCount);
     }
 
     void FixedUpdate()
@@ -148,7 +150,7 @@ public class SethMovement : MonoBehaviour
         //        SceneManager.LoadScene("Puzzle");
         //    }
         //}
-        anim.SetTrigger("isDefaultAttack"+comboCount);
+        anim.SetTrigger("isDefaultAttack" + comboCount);
         state = State.Attack;
         curTime = coolTime;//공격을 하면 쿨타임 부여
     }
