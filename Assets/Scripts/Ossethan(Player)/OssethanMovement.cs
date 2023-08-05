@@ -17,6 +17,9 @@ public class OssethanMovement : MonoBehaviour
     private int comboCount = 0;  //현재 콤보 횟수
 
 
+    public float jumpForce = 5.0f;
+    public bool isGround = false;
+
     public Transform pos;
     public Vector2 boxSize;
 
@@ -93,12 +96,36 @@ public class OssethanMovement : MonoBehaviour
             curTime -= Time.deltaTime;
         }
 
+        if(Input.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
+
         Debug.Log(comboCount);
     }
 
     void FixedUpdate()
     {
         move();
+
+        if(rigid.velocity.y < 0)
+        {
+            Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0));
+            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 10);
+            if (rayHit.collider != null)
+            {
+                
+                if(rayHit.distance > 3f)
+                {
+                    anim.SetBool("isRand", true);
+                    anim.SetBool("isJump", false);
+                }
+                if (rayHit.distance < 0.1f)
+                {
+                    anim.SetBool("isRand",false);
+                }
+            }
+        }
     }
 
     //플레이어 이동함수
@@ -130,6 +157,13 @@ public class OssethanMovement : MonoBehaviour
 
      
     }
+
+    void Jump()
+    {
+        rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
+
+        anim.SetBool("isJump", true);
+    }
     void DefaultAttack()
     {
         //Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
@@ -154,7 +188,7 @@ public class OssethanMovement : MonoBehaviour
         state = State.Attack;
         curTime = coolTime;//공격을 하면 쿨타임 부여
     }
-
+  
     //공격 범위를 나타내는 기즈모 그리는 함수
     void OnDrawGizmos()
     {
