@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SethMovement : MonoBehaviour
+public class OssethanMovement : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
     public float maxSpeed;
