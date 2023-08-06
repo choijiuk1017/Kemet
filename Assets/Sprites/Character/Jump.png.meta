@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2054737a838bbb348a987d2544ef28b2
+guid: c82e0036560e6974a94ed4364d4426aa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,49 +104,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ossethan_Dash&Jump_13
+      name: Ossethan_Dash&Jump (1)_13
       rect:
         serializedVersion: 2
-        x: 71
+        x: 72
         y: 574
         width: 106
         height: 153
       alignment: 9
-      pivot: {x: 0.6630482, y: 0.3573118}
+      pivot: {x: 0.658903, y: 0.34987864}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af2ea6ecadc01334e95cac1a5c955027
-      internalID: -160894181
+      spriteID: 43fb178ca7f635e43a058c1278cb154e
+      internalID: -377934938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ossethan_Dash&Jump_14
+      name: Ossethan_Dash&Jump (1)_14
       rect:
         serializedVersion: 2
         x: 212
-        y: 545
+        y: 544
         width: 207
-        height: 178
+        height: 179
       alignment: 9
-      pivot: {x: 0.74608546, y: 0.4642279}
+      pivot: {x: 0.744112, y: 0.4700597}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89dbffe6e5cc78a478dba5736d9d03f5
-      internalID: -105388733
+      spriteID: a435de35e403826448437a3bcf5f4917
+      internalID: 637696068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ossethan_Dash&Jump_15
+      name: Ossethan_Dash&Jump (1)_15
       rect:
         serializedVersion: 2
         x: 450
@@ -154,98 +154,77 @@ TextureImporter:
         width: 175
         height: 207
       alignment: 9
-      pivot: {x: 0.69232315, y: 0.53515506}
+      pivot: {x: 0.68812466, y: 0.536987}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6af606fabd4eb944c943e4a6f24f229d
-      internalID: 1386132966
+      spriteID: faef10a54219a6047a929b546c1f2beb
+      internalID: 574726986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ossethan_Dash&Jump_16
+      name: Ossethan_Dash&Jump (1)_16
       rect:
         serializedVersion: 2
-        x: 664
-        y: 517
+        x: 660
+        y: 516
         width: 188
         height: 207
       alignment: 9
-      pivot: {x: 0.6354779, y: 0.5395493}
+      pivot: {x: 0.6628986, y: 0.5480827}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 597c3c14d2c2046448a1d8fb011550c9
-      internalID: 990787320
+      spriteID: 70fb8937329a22b40a86fdd91d3c5f18
+      internalID: 383258889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ossethan_Dash&Jump_17
+      name: Ossethan_Dash&Jump (1)_17
       rect:
         serializedVersion: 2
         x: 878
         y: 498
-        width: 158
+        width: 159
         height: 217
       alignment: 9
-      pivot: {x: 0.6439302, y: 0.562878}
+      pivot: {x: 0.6540881, y: 0.5635081}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 454d0cb2a390c6a40a0e0299678a5f3a
-      internalID: -503641736
+      spriteID: 11ca64aaab0122e4fad235af1472e586
+      internalID: -400175675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ossethan_Dash&Jump_18
+      name: Ossethan_Dash&Jump (1)_18
       rect:
         serializedVersion: 2
-        x: 1096
-        y: 547
-        width: 106
-        height: 158
+        x: 1065
+        y: 515
+        width: 148
+        height: 203
       alignment: 9
-      pivot: {x: 0.6716297, y: 0.36758423}
+      pivot: {x: 0.67591405, y: 0.5244976}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ac0007189222194f89f7b7b11fe2e77
-      internalID: -1643968864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ossethan_Dash&Jump_19
-      rect:
-        serializedVersion: 2
-        x: 1262
-        y: 532
-        width: 106
-        height: 153
-      alignment: 9
-      pivot: {x: 0.6630479, y: 0.3573118}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ca67e40f36f7214e9e65cd6dcdfe458
-      internalID: 696467708
+      spriteID: c07ad8384fcd39a499401f8480317474
+      internalID: 589866261
       vertices: []
       indices: 
       edges: []
@@ -261,26 +240,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ossethan_Dash&Jump_19: 696467708
-      Ossethan_Dash&Jump_1: 40328068
-      Ossethan_Dash&Jump_2: -500451585
-      Ossethan_Dash&Jump_8: -1967082428
-      Ossethan_Dash&Jump_4: 1848474090
-      Ossethan_Dash&Jump_14: -105388733
-      Ossethan_Dash&Jump_10: 2043078907
-      Ossethan_Dash&Jump_13: -160894181
-      Ossethan_Dash&Jump_12: -1827430035
-      Ossethan_Dash&Jump_18: -1643968864
-      Ossethan_Dash&Jump_15: 1386132966
-      Ossethan_Dash&Jump_11: 107182693
-      Ossethan_Dash&Jump_7: -1001174163
-      Ossethan_Dash&Jump_3: 257228219
-      Ossethan_Dash&Jump_9: 209524018
-      Ossethan_Dash&Jump_5: 1988108766
-      Ossethan_Dash&Jump_6: -443202462
-      Ossethan_Dash&Jump_0: -1136068244
-      Ossethan_Dash&Jump_16: 990787320
-      Ossethan_Dash&Jump_17: -503641736
+      Ossethan_Dash&Jump (1)_2: -321768739
+      Ossethan_Dash&Jump (1)_8: -1433337438
+      Ossethan_Dash&Jump (1)_17: -400175675
+      Ossethan_Dash&Jump (1)_3: -191890438
+      Ossethan_Dash&Jump (1)_13: -377934938
+      Ossethan_Dash&Jump (1)_0: -630380340
+      Ossethan_Dash&Jump (1)_11: 539820644
+      Ossethan_Dash&Jump (1)_14: 637696068
+      Ossethan_Dash&Jump (1)_15: 574726986
+      Ossethan_Dash&Jump (1)_18: 589866261
+      Ossethan_Dash&Jump (1)_9: -1435959181
+      Ossethan_Dash&Jump (1)_1: -1842927318
+      Ossethan_Dash&Jump (1)_7: 1640907974
+      Ossethan_Dash&Jump (1)_4: 803266832
+      Ossethan_Dash&Jump (1)_12: -260136547
+      Ossethan_Dash&Jump (1)_5: 1561728066
+      Ossethan_Dash&Jump (1)_16: 383258889
+      Ossethan_Dash&Jump (1)_6: -1298968970
+      Ossethan_Dash&Jump (1)_10: 1782396063
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

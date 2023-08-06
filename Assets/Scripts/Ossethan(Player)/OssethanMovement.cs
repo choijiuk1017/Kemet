@@ -6,6 +6,7 @@ public class OssethanMovement : MonoBehaviour
 {
     public float moveSpeed = 5.0f;
     public float maxSpeed;
+    private int facingDirection = 1;
 
     private float curTime;
     public float coolTime = 0.5f;
@@ -19,6 +20,16 @@ public class OssethanMovement : MonoBehaviour
 
     public float jumpForce = 5.0f;
     public bool isJump = false;
+    public bool isGround = false;
+
+
+    public float slideDuration = 1f; // 슬라이딩 지속 시간
+    public float slideSpeed = 10f; // 슬라이딩 속도
+    public float slideCooldown = 2f; // 슬라이딩 쿨다운 시간
+
+    private bool isSliding = false;
+    private float slideTimer = 0f;
+    private float slideCooldownTimer = 0f;
 
     public Transform pos;
     public Vector2 boxSize;
@@ -66,9 +77,9 @@ public class OssethanMovement : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
-        if (curTime <= 0 && state != State.Move)
+        if (curTime <= 0)
         {
-            if (Input.GetKey(KeyCode.Z))
+            if (Input.GetKey(KeyCode.Z) && state != State.Move)
             {
                 if (Time.time - lastAttackTime < comboTimeWindow)
                 {
@@ -108,7 +119,18 @@ public class OssethanMovement : MonoBehaviour
     {
         move();
 
+        Sliding();
 
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        if (horizontalInput > 0f)
+        {
+            facingDirection = 1; // 오른쪽
+        }
+        else if (horizontalInput < 0f)
+        {
+            facingDirection = -1; // 왼쪽
+        }
     }
 
     //플레이어 이동함수
@@ -174,6 +196,42 @@ public class OssethanMovement : MonoBehaviour
         curTime = coolTime;//공격을 하면 쿨타임 부여
     }
 
+    void Sliding()
+    {
+        if (isSliding)
+        {
+            // 슬라이딩 중일 때 처리
+            slideTimer += Time.deltaTime;
+
+            if (slideTimer >= slideDuration)
+            {
+                isSliding = false;
+                slideTimer = 0f;
+                rigid.velocity = new Vector2(0f, rigid.velocity.y); // 슬라이딩이 끝났을 때 속도 초기화
+            }
+        }
+        else
+        {
+            // 슬라이딩이 아닐 때 처리
+            slideCooldownTimer += Time.deltaTime;
+            if (slideCooldownTimer >= slideCooldown)
+            {
+                // 슬라이딩 쿨다운이 끝났을 때 슬라이딩 발동을 확인
+                if (Input.GetKey(KeyCode.Z) && state == State.Move) // 원하는 키를 사용할 수 있습니다.
+                {
+                    isSliding = true;
+
+                    anim.SetTrigger("isSlide");
+                    state = State.Attack;
+
+                    slideCooldownTimer = 0f;
+   
+                    rigid.velocity = new Vector2(slideSpeed * facingDirection, rigid.velocity.y); // 슬라이딩 중에 가속도 적용
+                }
+            }
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("Ground"))
@@ -181,6 +239,7 @@ public class OssethanMovement : MonoBehaviour
             anim.SetBool("isJump", false);
             isJump = false;
         }
+
     }
 
     //공격 범위를 나타내는 기즈모 그리는 함수

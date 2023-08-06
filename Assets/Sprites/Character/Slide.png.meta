@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 65665c8e65cd69945b89e7d0e30b22e9
+guid: faae67f1a160c0b4294dd3cd1b74b1e5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,106 +104,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle_17"
+      name: Slide_0
       rect:
         serializedVersion: 2
-        x: 755
-        y: 283
-        width: 327
-        height: 258
+        x: 10
+        y: 997
+        width: 228
+        height: 165
       alignment: 9
-      pivot: {x: 0.27230844, y: 0.22502656}
+      pivot: {x: 0.85665494, y: 0.39048222}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76fc3d792d2aa2c4292dc9c04880c1a4
-      internalID: 183506591
+      spriteID: 3086317aa5f358a4c9558f65784da547
+      internalID: -691935482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle_18"
+      name: Slide_3
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 281
-        width: 319
-        height: 236
+        x: 19
+        y: 748
+        width: 278
+        height: 170
       alignment: 9
-      pivot: {x: 0.17411819, y: 0.25891954}
+      pivot: {x: 0.7816749, y: 0.44685167}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3161581cb77e15c41b87ff25c46b558e
-      internalID: -916888187
+      spriteID: dc1aa1bceaeab0e438a2e9e88de71045
+      internalID: -1215795872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle_21"
+      name: Slide_4
       rect:
         serializedVersion: 2
-        x: 42
-        y: 295
-        width: 106
-        height: 153
+        x: 398
+        y: 761
+        width: 291
+        height: 180
       alignment: 9
-      pivot: {x: 0.6656619, y: 0.3668638}
+      pivot: {x: 0.7587417, y: 0.33268058}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42e1a75cf00adae4e9dd54a743a3024e
-      internalID: -534059847
+      spriteID: 7e342464cbd56ab469995df6c9acb489
+      internalID: 1412489077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle_22"
+      name: Slide_5
       rect:
         serializedVersion: 2
-        x: 238
-        y: 295
-        width: 168
-        height: 152
+        x: 777
+        y: 772
+        width: 288
+        height: 158
       alignment: 9
-      pivot: {x: 0.8052123, y: 0.36136666}
+      pivot: {x: 0.7614369, y: 0.3951609}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba4b5f7092b9f9747b6a69090bf161c6
-      internalID: -1465749355
+      spriteID: 4a4f9d5c89550464d8f4239b88367c0c
+      internalID: 676073365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\uC2E0\uC0B4\uC790_Idle_23"
+      name: Slide_7
       rect:
         serializedVersion: 2
-        x: 502
-        y: 293
-        width: 184
-        height: 157
+        x: 1138
+        y: 761
+        width: 272
+        height: 177
       alignment: 9
-      pivot: {x: 0.8435682, y: 0.38367748}
+      pivot: {x: 0.77681553, y: 0.4574616}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e72b96bf98dc4b14fba8d69fc767c183
-      internalID: 1719121168
+      spriteID: 95934e46c3760fd4ab044a682de000b1
+      internalID: -1855957247
       vertices: []
       indices: 
       edges: []
@@ -219,47 +219,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\uC2E0\uC0B4\uC790_Idle_1": -709765926
-      "\uC2E0\uC0B4\uC790_Idle_32": 332735054
-      "\uC2E0\uC0B4\uC790_Idle_16": 1526960229
-      "\uC2E0\uC0B4\uC790_Idle_19": 530276240
-      "\uC2E0\uC0B4\uC790_Idle_21": -534059847
-      "\uC2E0\uC0B4\uC790_Idle_28": -72685502
-      "\uC2E0\uC0B4\uC790_Idle_11": 983124274
-      "\uC2E0\uC0B4\uC790_Idle_39": -138961968
-      "\uC2E0\uC0B4\uC790_Idle_12": -25350408
-      "\uC2E0\uC0B4\uC790_Idle_31": -1451771894
-      "\uC2E0\uC0B4\uC790_Idle_17": 183506591
-      "\uC2E0\uC0B4\uC790_Idle_37": 1280980916
-      "\uC2E0\uC0B4\uC790_Idle_26": 1499341266
-      "\uC2E0\uC0B4\uC790_Idle_38": -1555429705
-      "\uC2E0\uC0B4\uC790_Idle_10": 1487019190
-      "\uC2E0\uC0B4\uC790_Idle_20": -1639947275
-      "\uC2E0\uC0B4\uC790_Idle_23": 1719121168
-      "\uC2E0\uC0B4\uC790_Idle_25": 1263395742
-      "\uC2E0\uC0B4\uC790_Idle_2": 700494053
-      "\uC2E0\uC0B4\uC790_Idle_3": 665875850
-      "\uC2E0\uC0B4\uC790_Idle_7": -1737465633
-      "\uC2E0\uC0B4\uC790_Idle_6": -370700853
-      "\uC2E0\uC0B4\uC790_Idle_14": 1624903264
-      "\uC2E0\uC0B4\uC790_Idle_13": 1796119121
-      "\uC2E0\uC0B4\uC790_Idle_0": 171698622
-      "\uC2E0\uC0B4\uC790_Idle_24": -80674378
-      "\uC2E0\uC0B4\uC790_Idle_27": 1463771233
-      "\uC2E0\uC0B4\uC790_Idle_18": -916888187
-      "\uC2E0\uC0B4\uC790_Idle_30": -730747222
-      "\uC2E0\uC0B4\uC790_Idle_36": -537192513
-      "\uC2E0\uC0B4\uC790_Idle_34": -336203537
-      "\uC2E0\uC0B4\uC790_Idle_33": 2100085895
-      "\uC2E0\uC0B4\uC790_Idle_15": 2014855016
-      "\uC2E0\uC0B4\uC790_Idle_35": 1101362347
-      "\uC2E0\uC0B4\uC790_Idle_8": 1727702583
-      "\uC2E0\uC0B4\uC790_Idle_5": 151996321
-      "\uC2E0\uC0B4\uC790_Idle_4": -283415234
-      "\uC2E0\uC0B4\uC790_Idle_22": -1465749355
-      "\uC2E0\uC0B4\uC790_Idle_40": 1312804424
-      "\uC2E0\uC0B4\uC790_Idle_9": -1595819596
-      "\uC2E0\uC0B4\uC790_Idle_29": -2136853361
+      Slide_6: -36158650
+      Slide_4: 1412489077
+      Slide_9: 212179236
+      Slide_10: -1981790326
+      Slide_11: 426575097
+      Slide_15: 166759089
+      Slide_14: 931708408
+      Slide_1: -2060053579
+      Slide_2: 1915014428
+      Slide_8: -1884564071
+      Slide_7: -1855957247
+      Slide_3: -1215795872
+      Slide_0: -691935482
+      Slide_12: -283445913
+      Slide_5: 676073365
+      Slide_13: -444344090
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
