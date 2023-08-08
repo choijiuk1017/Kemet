@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 17f7a4706c7e1974ba7679ad28acbb79
+guid: 22f54f59c91741844804dffa5af6daaa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,12 +104,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ossetian_JumpAttack_0
+      name: Ossetian_JumpAttack (1)_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 859
-        width: 146
+        x: 78
+        y: 864
+        width: 147
         height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -118,19 +118,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e24bead9a472224d8eeab231f75ad08
-      internalID: 1856825519
+      spriteID: 18bbe239452e1254ca1ca49bc6d007c3
+      internalID: 1230382457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ossetian_JumpAttack_1
+      name: Ossetian_JumpAttack (1)_1
       rect:
         serializedVersion: 2
-        x: 271
+        x: 281
         y: 897
-        width: 225
+        width: 215
         height: 166
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ce3ffbacc9dcf347864b14d961f916f
-      internalID: -1189427654
+      spriteID: 9c405ba6e85692a44a67e170f41d3815
+      internalID: 178905040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ossetian_JumpAttack_2
+      name: Ossetian_JumpAttack (1)_2
       rect:
         serializedVersion: 2
         x: 539
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6aac9abef46b31544842a30e32067669
-      internalID: -1601411530
+      spriteID: 2563bf7c91c53c4428881171de815c47
+      internalID: 64590844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ossetian_JumpAttack_3
+      name: Ossetian_JumpAttack (1)_3
       rect:
         serializedVersion: 2
         x: 688
@@ -181,20 +181,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f43627ac4abc81c43a81829a1d97e239
-      internalID: -691665623
+      spriteID: f60ecec78416a1d468110addd40af681
+      internalID: -847219304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ossetian_JumpAttack_4
+      name: Ossetian_JumpAttack (1)_4
       rect:
         serializedVersion: 2
-        x: 977
-        y: 825
+        x: 999
+        y: 831
+        width: 136
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f299ed7045a56f40bc5dd701a4e7eac
+      internalID: -1079327701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ossetian_JumpAttack (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 832
+        width: 87
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff91069987dbbcd4fab6abdb7e57b600
+      internalID: -476462905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ossetian_JumpAttack (1)_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 700
         width: 158
-        height: 234
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 095f9574db66e7442970a0419b3a2619
-      internalID: 651782246
+      spriteID: 1bc0e2cae04a96f45b17b4f5b58bcda3
+      internalID: -1906841823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ossetian_JumpAttack_5
+      name: Ossetian_JumpAttack (1)_8
       rect:
         serializedVersion: 2
-        x: 1215
-        y: 778
-        width: 214
-        height: 275
+        x: 874
+        y: 672
+        width: 213
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c57acaeb66c123419f43049ea30b533
-      internalID: -1169491515
+      spriteID: 2a60cb2074d13414daee438ce4ee08c4
+      internalID: 1850592426
       vertices: []
       indices: 
       edges: []
@@ -240,12 +282,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ossetian_JumpAttack_3: -691665623
-      Ossetian_JumpAttack_5: -1169491515
-      Ossetian_JumpAttack_2: -1601411530
-      Ossetian_JumpAttack_1: -1189427654
-      Ossetian_JumpAttack_0: 1856825519
-      Ossetian_JumpAttack_4: 651782246
+      Ossetian_JumpAttack (1)_7: -231867778
+      Ossetian_JumpAttack (1)_9: 322005403
+      Ossetian_JumpAttack (1)_5: -476462905
+      Ossetian_JumpAttack (1)_4: -1079327701
+      Ossetian_JumpAttack (1)_1: 178905040
+      Ossetian_JumpAttack (1)_0: 1230382457
+      Ossetian_JumpAttack (1)_3: -847219304
+      Ossetian_JumpAttack (1)_2: 64590844
+      Ossetian_JumpAttack (1)_6: -1906841823
+      Ossetian_JumpAttack (1)_8: 1850592426
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

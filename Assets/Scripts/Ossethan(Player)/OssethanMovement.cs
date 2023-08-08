@@ -112,6 +112,11 @@ public class OssethanMovement : MonoBehaviour
             Jump();
         }
 
+        if (isJump && Input.GetKeyDown(KeyCode.Z))
+        {
+            JumpAttack();
+        }
+
         Debug.Log(comboCount);
     }
 
@@ -169,6 +174,17 @@ public class OssethanMovement : MonoBehaviour
         anim.SetBool("isJump", true);
 
         isJump = true;
+    }
+
+    void JumpAttack()
+    {
+        anim.SetTrigger("isJumpAttack");
+        rigid.velocity = new Vector2(rigid.velocity.x, -7);
+
+        if(isGround)
+        {
+            anim.ResetTrigger("isJumpAttack");
+        }
     }
 
     void DefaultAttack()
