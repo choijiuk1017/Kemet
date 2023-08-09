@@ -180,8 +180,7 @@ public class OssethanMovement : MonoBehaviour
     {
         anim.SetTrigger("isJumpAttack");
         rigid.velocity = new Vector2(rigid.velocity.x, -7);
-
-        if(isGround)
+        if (isGround)
         {
             anim.ResetTrigger("isJumpAttack");
         }
