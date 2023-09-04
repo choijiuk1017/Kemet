@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eca2cd57513ff8a4587a7bf407cb3620
+guid: 909dd19daa89a3245bbe8e49e8c9b174
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,28 +104,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Army-Monster-move_2
+      name: Army-Monster-move (1)_2
       rect:
         serializedVersion: 2
-        x: 562
+        x: 546
         y: 1452
-        width: 419
+        width: 435
         height: 384
       alignment: 9
-      pivot: {x: 0.67204356, y: 0.40310955}
+      pivot: {x: 0.6921245, y: 0.40859094}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03811ef9945507b4aa6658d9e28d867a
-      internalID: 1236531757
+      spriteID: 8b011dacc291cf3498c2a16dadfe3f5f
+      internalID: -106641453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-Monster-move_4
+      name: Army-Monster-move (1)_4
       rect:
         serializedVersion: 2
         x: 999
@@ -133,83 +133,83 @@ TextureImporter:
         width: 362
         height: 384
       alignment: 9
-      pivot: {x: 0.81475896, y: 0.40916505}
+      pivot: {x: 0.82783264, y: 0.41294384}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8094c24bc39a45c48ac86c16b54eea1e
-      internalID: -768761945
+      spriteID: ce71126f89808a6469660581e7cc1d06
+      internalID: -291356956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-Monster-move_5
+      name: Army-Monster-move (1)_5
       rect:
         serializedVersion: 2
-        x: 1436
+        x: 1423
         y: 1454
-        width: 369
+        width: 382
         height: 384
       alignment: 9
-      pivot: {x: 0.82871616, y: 0.39705405}
+      pivot: {x: 0.80629295, y: 0.40859094}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd82c858bbe096443b8fd90a7a57bf8f
-      internalID: -170687201
+      spriteID: 9a2acd298a0e29740a757878a93e404d
+      internalID: 2032003967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-Monster-move_9
+      name: Army-Monster-move (1)_6
       rect:
         serializedVersion: 2
-        x: 55
+        x: 39
         y: 953
-        width: 372
+        width: 388
         height: 384
       alignment: 9
-      pivot: {x: 0.8296262, y: 0.40916538}
+      pivot: {x: 0.79155207, y: 0.40180397}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a29837d4c795355409d837036e083bf7
-      internalID: -838538568
+      spriteID: 62e39ee020529bd49a0fd7fa3947dc63
+      internalID: 380370242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-Monster-move_11
+      name: Army-Monster-move (1)_7
       rect:
         serializedVersion: 2
         x: 535
         y: 953
-        width: 382
+        width: 391
         height: 384
       alignment: 9
-      pivot: {x: 0.81654155, y: 0.40310955}
+      pivot: {x: 0.79498804, y: 0.38447508}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc6dd560b3fcdb24c9f50029efd05f95
-      internalID: 67108710
+      spriteID: f8165e33ba4f5e64cb5645b55bd92e8d
+      internalID: -2043106863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-Monster-move_13
+      name: Army-Monster-move (1)_8
       rect:
         serializedVersion: 2
         x: 992
@@ -217,20 +217,20 @@ TextureImporter:
         width: 361
         height: 384
       alignment: 9
-      pivot: {x: 0.81563056, y: 0.40916505}
+      pivot: {x: 0.80721414, y: 0.3902515}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50ba16220b31e894d82a68a48e0d895f
-      internalID: 952224280
+      spriteID: 7de35bfe600adee4eb5e9c5accbbe85d
+      internalID: -590256377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-Monster-move_15
+      name: Army-Monster-move (1)_9
       rect:
         serializedVersion: 2
         x: 1459
@@ -238,62 +238,62 @@ TextureImporter:
         width: 361
         height: 384
       alignment: 9
-      pivot: {x: 0.82207185, y: 0.40916538}
+      pivot: {x: 0.82564706, y: 0.37869897}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1482b268f7a8d84e8fcf7930e01be19
-      internalID: -1623697395
+      spriteID: 8ba80dcd369fc8d48b7be0b558178065
+      internalID: -919491810
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-Monster-move_17
+      name: Army-Monster-move (1)_10
       rect:
         serializedVersion: 2
-        x: 46
+        x: 32
         y: 454
-        width: 380
+        width: 394
         height: 384
       alignment: 9
-      pivot: {x: 0.7950969, y: 0.42127642}
+      pivot: {x: 0.8031349, y: 0.39209223}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 877346f7b9322eb4abe0c867ec2b5e4a
-      internalID: 1855589559
+      spriteID: 44a279de66c7c464f9f1b8348a7becc1
+      internalID: 2081664473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-Monster-move_19
+      name: Army-Monster-move (1)_11
       rect:
         serializedVersion: 2
-        x: 520
+        x: 506
         y: 456
-        width: 396
+        width: 410
         height: 384
       alignment: 9
-      pivot: {x: 0.76089436, y: 0.40916538}
+      pivot: {x: 0.7734704, y: 0.39843956}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce4c8bf5d2fc2843a20a5cb3f7f3496
-      internalID: -75956460
+      spriteID: a86bb2c27ea95634d82597ffbe1ee984
+      internalID: 675166295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-Monster-move_21
+      name: Army-Monster-move (1)_12
       rect:
         serializedVersion: 2
         x: 1054
@@ -301,14 +301,14 @@ TextureImporter:
         width: 398
         height: 384
       alignment: 9
-      pivot: {x: 0.73370486, y: 0.4152209}
+      pivot: {x: 0.74497026, y: 0.37939692}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0a1bf9ab1e8b6a4581240c8933ea7ab
-      internalID: -1208999553
+      spriteID: 9cdfd06390168544d816b162a8c852c9
+      internalID: 2039120391
       vertices: []
       indices: 
       edges: []
@@ -324,29 +324,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Army-Monster-move_10: 278767724
-      Army-Monster-move_22: -1999288501
-      Army-Monster-move_13: 952224280
-      Army-Monster-move_12: 825699222
-      Army-Monster-move_20: 1943986536
-      Army-Monster-move_4: -768761945
-      Army-Monster-move_6: -1442292077
-      Army-Monster-move_16: -1417905082
-      Army-Monster-move_18: -310030573
-      Army-Monster-move_1: -541392671
-      Army-Monster-move_5: -170687201
-      Army-Monster-move_17: 1855589559
-      Army-Monster-move_11: 67108710
-      Army-Monster-move_0: 1993056343
-      Army-Monster-move_7: 216655912
-      Army-Monster-move_14: -1251219422
-      Army-Monster-move_15: -1623697395
-      Army-Monster-move_19: -75956460
-      Army-Monster-move_8: -466104447
-      Army-Monster-move_21: -1208999553
-      Army-Monster-move_9: -838538568
-      Army-Monster-move_2: 1236531757
-      Army-Monster-move_3: -706660644
+      Army-Monster-move (1)_0: -2025608153
+      Army-Monster-move (1)_11: 675166295
+      Army-Monster-move (1)_4: -291356956
+      Army-Monster-move (1)_3: 718888349
+      Army-Monster-move (1)_12: 2039120391
+      Army-Monster-move (1)_1: -1540631755
+      Army-Monster-move (1)_6: 380370242
+      Army-Monster-move (1)_9: -919491810
+      Army-Monster-move (1)_2: -106641453
+      Army-Monster-move (1)_5: 2032003967
+      Army-Monster-move (1)_10: 2081664473
+      Army-Monster-move (1)_7: -2043106863
+      Army-Monster-move (1)_8: -590256377
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
