@@ -112,7 +112,7 @@ TextureImporter:
         width: 417
         height: 340
       alignment: 9
-      pivot: {x: 0.4990268, y: 0.8092396}
+      pivot: {x: 0.6758057, y: 0.24879616}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,7 +133,7 @@ TextureImporter:
         width: 362
         height: 341
       alignment: 9
-      pivot: {x: 0.5650837, y: 0.80419457}
+      pivot: {x: 0.8148281, y: 0.2617098}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,7 +154,7 @@ TextureImporter:
         width: 382
         height: 342
       alignment: 9
-      pivot: {x: 0.592514, y: 0.80300564}
+      pivot: {x: 0.81825966, y: 0.2621071}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,7 +175,7 @@ TextureImporter:
         width: 371
         height: 344
       alignment: 9
-      pivot: {x: 0.57014674, y: 0.8101022}
+      pivot: {x: 0.77634233, y: 0.2683052}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,7 +196,7 @@ TextureImporter:
         width: 372
         height: 342
       alignment: 9
-      pivot: {x: 0.5592307, y: 0.80363387}
+      pivot: {x: 0.7985223, y: 0.25460154}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,7 +217,7 @@ TextureImporter:
         width: 361
         height: 342
       alignment: 9
-      pivot: {x: 0.570702, y: 0.80937433}
+      pivot: {x: 0.82499105, y: 0.24814111}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -238,7 +238,7 @@ TextureImporter:
         width: 361
         height: 343
       alignment: 9
-      pivot: {x: 0.5707034, y: 0.8100522}
+      pivot: {x: 0.82884526, y: 0.24234515}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,7 +259,7 @@ TextureImporter:
         width: 379
         height: 341
       alignment: 9
-      pivot: {x: 0.55382824, y: 0.80354893}
+      pivot: {x: 0.795792, y: 0.24124637}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,7 +280,7 @@ TextureImporter:
         width: 391
         height: 347
       alignment: 9
-      pivot: {x: 0.5325898, y: 0.81590813}
+      pivot: {x: 0.7766038, y: 0.2659977}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,12 +296,12 @@ TextureImporter:
       name: Army-Monster-move_11
       rect:
         serializedVersion: 2
-        x: 1054
+        x: 1053
         y: 493
         width: 398
         height: 351
       alignment: 9
-      pivot: {x: 0.51479906, y: 0.8099629}
+      pivot: {x: 0.76150346, y: 0.27423635}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -324,7 +324,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Army-Monster-move_10: 126748127
+      Army-Monster-move_3: -257919849
       Army-Monster-move_4: 1967017413
       Army-Monster-move_6: -436941675
       Army-Monster-move_1: -993127489
@@ -335,7 +335,7 @@ TextureImporter:
       Army-Monster-move_8: 50925703
       Army-Monster-move_9: -574302801
       Army-Monster-move_2: -1088576524
-      Army-Monster-move_3: -257919849
+      Army-Monster-move_10: 126748127
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
