@@ -42,6 +42,7 @@ public class RangeMonster : MonoBehaviour
     void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        
 
         // 플레이어가 공격 범위 내에 있고, 공격 쿨다운이 지났다면 공격을 실행
         if (distanceToPlayer <= attackRange && Time.time - lastAttackTime >= attackCooldown)
@@ -51,16 +52,14 @@ public class RangeMonster : MonoBehaviour
             StartAttack();
             lastAttackTime = Time.time;
         }
+
+        if (playerDetected)
+        {
+            StopMoving();
+        }
         else
         {
-            if (playerDetected)
-            {
-                Move();
-            }
-            else
-            {
-                StopMoving();
-            }
+            Move();
         }
 
         if (isMovingRight)
@@ -99,10 +98,13 @@ public class RangeMonster : MonoBehaviour
         {
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
+
+        anim.SetBool("isWalking", true);
     }
 
     void StopMoving()
     {
         rigid.velocity = Vector3.zero;
+        anim.SetBool("isWalking", false);
     }
 }
