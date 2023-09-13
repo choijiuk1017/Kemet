@@ -8,6 +8,7 @@ public class RangeMonster : MonoBehaviour
     public float moveDistance = 5.0f;
 
     public float attackRange = 2.0f;
+    public float chaseRange = 4.0f;
     public float attackCooldown = 2.0f;
 
     private Transform player;
@@ -27,6 +28,15 @@ public class RangeMonster : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
 
+    public enum State
+    {
+        Idle,
+        Move,
+        Attack
+    }
+    
+    public State state;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,33 +46,38 @@ public class RangeMonster : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;  
+
+        state = State.Idle;
     }
 
     // Update is called once per frame
     void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        
 
-        // 플레이어가 공격 범위 내에 있고, 공격 쿨다운이 지났다면 공격을 실행
-        if (distanceToPlayer <= attackRange && Time.time - lastAttackTime >= attackCooldown)
+        if (distanceToPlayer <= chaseRange)
         {
-            playerDetected = true;
-
-            StartAttack();
-            lastAttackTime = Time.time;
-
-            anim.SetBool("isAttack", true);
+            state = State.Move;
+            if(distanceToPlayer <= attackRange)
+            {
+                state = State.Attack;
+            }
         }
 
-        if (playerDetected)
+        if (state == State.Idle)
+        {
+            MoveLeftRight();
+        }
+        else if(state == State.Move)
         {
             ChasePlayer();
         }
-        else
+        else if(state==State.Attack)
         {
-            Move();
+            StartAttack();
         }
+
+       
 
         if (isMovingRight)
         {
@@ -76,10 +91,15 @@ public class RangeMonster : MonoBehaviour
 
     void StartAttack()
     {
-        anim.SetBool("isAttack", true);
+        // 플레이어가 공격 범위 내에 있고, 공격 쿨다운이 지났다면 공격을 실행
+        if (Time.time - lastAttackTime >= attackCooldown)
+        {
+            anim.SetTrigger("isAttack");
+            lastAttackTime = Time.time;
+        }
     }
 
-    void Move()
+    void MoveLeftRight()
     {
         // 현재 이동한 거리 계산
         currentDistance = Mathf.Abs(transform.position.x - initialPositionX);
