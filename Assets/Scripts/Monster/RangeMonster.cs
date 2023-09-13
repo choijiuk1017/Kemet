@@ -8,7 +8,7 @@ public class RangeMonster : MonoBehaviour
     public float moveDistance = 5.0f;
 
     public float attackRange = 2.0f;
-    public float chaseRange = 4.0f;
+    public float chaseRange = 5.0f;
     public float attackCooldown = 2.0f;
 
     private Transform player;
@@ -55,13 +55,20 @@ public class RangeMonster : MonoBehaviour
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToPlayer <= chaseRange)
+        if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
         {
-            state = State.Move;
-            if(distanceToPlayer <= attackRange)
+            if (distanceToPlayer <= attackRange)
             {
                 state = State.Attack;
             }
+            else
+            {
+                state = State.Move;
+            }
+        }
+        else
+        {
+            state = State.Idle;
         }
 
         if (state == State.Idle)

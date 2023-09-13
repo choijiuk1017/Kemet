@@ -404,7 +404,7 @@ MonoBehaviour:
   moveSpeed: 2
   moveDistance: 5
   attackRange: 5
-  chaseRange: 4
+  chaseRange: 5
   attackCooldown: 2
   state: 0
 --- !u!1 &519420028
