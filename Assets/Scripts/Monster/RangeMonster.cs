@@ -55,16 +55,15 @@ public class RangeMonster : MonoBehaviour
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
+        Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
+
         if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
         {
             if (distanceToPlayer <= attackRange)
             {
                 state = State.Attack;
             }
-            else
-            {
                 state = State.Move;
-            }
         }
         else
         {
@@ -84,16 +83,14 @@ public class RangeMonster : MonoBehaviour
             StartAttack();
         }
 
-       
-
-        if (isMovingRight)
-        {
-            spriteRenderer.flipX = true;  // 오른쪽으로 이동 중이면 반전하지 않음
-        }
-        else
-        {
-            spriteRenderer.flipX = false;  // 왼쪽으로 이동 중이면 이미지를 좌우로 반전
-        }
+       if(velocity.x < 0)
+       {
+            spriteRenderer.flipX = false;
+       }
+       else if(velocity.x > 0)
+       {
+            spriteRenderer.flipX = true;
+       }
     }
 
     void StartAttack()
