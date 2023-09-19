@@ -53,44 +53,44 @@ public class RangeMonster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        //float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
+        //Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
 
-        if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
-        {
-            if (distanceToPlayer <= attackRange)
-            {
-                state = State.Attack;
-            }
-                state = State.Move;
-        }
-        else
-        {
-            state = State.Idle;
-        }
+        //if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
+        //{
+        //    if (distanceToPlayer <= attackRange)
+        //    {
+        //        state = State.Attack;
+        //    }
+        //        state = State.Move;
+        //}
+        //else
+        //{
+        //    state = State.Idle;
+        //}
 
         if (state == State.Idle)
         {
             MoveLeftRight();
         }
-        else if(state == State.Move)
-        {
-            ChasePlayer();
-        }
-        else if(state==State.Attack)
-        {
-            StartAttack();
-        }
+        //if(state == State.Move)
+        //{
+        //    ChasePlayer();
+        //}
+        //if(state==State.Attack)
+        //{
+        //    StartAttack();
+        //}
 
-       if(velocity.x < 0)
-       {
-            spriteRenderer.flipX = false;
-       }
-       else if(velocity.x > 0)
-       {
-            spriteRenderer.flipX = true;
-       }
+       //if(velocity.x < 0)
+       //{
+       //     spriteRenderer.flipX = false;
+       //}
+       //else if(velocity.x > 0)
+       //{
+       //     spriteRenderer.flipX = true;
+       //}
     }
 
     void StartAttack()
@@ -115,15 +115,11 @@ public class RangeMonster : MonoBehaviour
             initialPositionX = transform.position.x;
         }
 
-        // 이동 방향에 따라 이동합니다.
-        if (isMovingRight)
-        {
-            transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
-        }
-        else
-        {
-            transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
-        }
+        spriteRenderer.flipX = !isMovingRight;
+
+        Vector2 moveDirection = isMovingRight ? Vector2.right : Vector2.left;
+
+        rigid.velocity = moveDirection * moveSpeed;
 
         anim.SetBool("isWalking", true);
     }
