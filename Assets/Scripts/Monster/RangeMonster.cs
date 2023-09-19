@@ -27,107 +27,69 @@ public class RangeMonster : MonoBehaviour
     Rigidbody2D rigid;
 
     SpriteRenderer spriteRenderer;
-
-    public enum State
-    {
-        Idle,
-        Move,
-        Attack
-    }
     
-    public State state;
-
     // Start is called before the first frame update
     void Start()
     {
-        initialPositionX = transform.position.x;
-
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        player = GameObject.FindGameObjectWithTag("Player").transform;  
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        state = State.Idle;
+        //배회 코루틴 시작
+        StartCoroutine(Wander());
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-        //Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
-
-        //if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
-        //{
-        //    if (distanceToPlayer <= attackRange)
-        //    {
-        //        state = State.Attack;
-        //    }
-        //        state = State.Move;
-        //}
-        //else
-        //{
-        //    state = State.Idle;
-        //}
-
-        if (state == State.Idle)
+        if(distanceToPlayer <= chaseRange)
         {
-            MoveLeftRight();
+            StopCoroutine(Wander());
+            StopCoroutine(ChasePlayer());
         }
-        //if(state == State.Move)
-        //{
-        //    ChasePlayer();
-        //}
-        //if(state==State.Attack)
-        //{
-        //    StartAttack();
-        //}
 
-       //if(velocity.x < 0)
-       //{
-       //     spriteRenderer.flipX = false;
-       //}
-       //else if(velocity.x > 0)
-       //{
-       //     spriteRenderer.flipX = true;
-       //}
     }
 
-    void StartAttack()
+    IEnumerator Wander()
     {
-        // 플레이어가 공격 범위 내에 있고, 공격 쿨다운이 지났다면 공격을 실행
-        if (Time.time - lastAttackTime >= attackCooldown)
+        while(true)
         {
-            anim.SetTrigger("isAttack");
-            lastAttackTime = Time.time;
-        }
-    }
+            float waitTime = Random.Range(1.0f, 3.0f);
 
-    void MoveLeftRight()
-    {
-        // 현재 이동한 거리 계산
-        currentDistance = Mathf.Abs(transform.position.x - initialPositionX);
+            yield return new WaitForSeconds(waitTime);
 
-        // 일정 거리(moveDistance)에 도달하면 이동 방향을 바꿉니다.
-        if (currentDistance >= moveDistance)
-        {
             isMovingRight = !isMovingRight;
-            initialPositionX = transform.position.x;
+
+            spriteRenderer.flipX = !isMovingRight;
+
+            Vector2 moveDirection = isMovingRight ? Vector2.right : Vector2.left;
+            rigid.velocity = new Vector2(moveDirection.x * moveSpeed, rigid.velocity.y);
         }
-
-        spriteRenderer.flipX = !isMovingRight;
-
-        Vector2 moveDirection = isMovingRight ? Vector2.right : Vector2.left;
-
-        rigid.velocity = moveDirection * moveSpeed;
-
-        anim.SetBool("isWalking", true);
     }
 
-    void ChasePlayer()
+    IEnumerator ChasePlayer()
     {
-        Vector2 playerDirection = (player.position - transform.position).normalized;
-        
-        transform.Translate(playerDirection * moveSpeed * Time.deltaTime);
+        while(true)
+        {
+            Vector2 moveDirection = (player.position - transform.position).normalized;
+
+            rigid.velocity = new Vector2(moveDirection.x * moveSpeed, rigid.velocity.y);
+
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+            if(distanceToPlayer > chaseRange)
+            {
+                StopCoroutine(ChasePlayer());
+                StartCoroutine(Wander());
+
+                yield break;
+            }
+
+            yield return null;
+        }
     }
 }
