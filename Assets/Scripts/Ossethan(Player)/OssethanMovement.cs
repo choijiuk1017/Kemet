@@ -117,7 +117,7 @@ public class OssethanMovement : MonoBehaviour
             JumpAttack();
         }
 
-        Debug.Log(comboCount);
+        
     }
 
     void FixedUpdate()
