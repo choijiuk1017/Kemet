@@ -44,11 +44,13 @@ public class RangeMonster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        
-
-        
-
+        if (distanceToPlayer < chaseRange)
+        {
+            StopCoroutine(Wander());
+            StartCoroutine(ChasePlayer());
+        }
     }
 
 
@@ -88,42 +90,37 @@ public class RangeMonster : MonoBehaviour
         while(true)
         {
             Debug.Log("ChasePlayer");
+            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
             if (player != null)
             {
-                // 플레이어와 몬스터 간의 x 거리 계산
-                float xDistance = player.position.x - transform.position.x;
-
-                // 플레이어가 멈추는 거리보다 가까우면 몬스터는 멈춥니다.
-                if (Mathf.Abs(xDistance) <= 1.5f)
-                {
-                    transform.Translate(Vector2.zero);
-                    StopCoroutine(Wander());
-                    StopCoroutine(ChasePlayer());
-                }
-                else
+        
+                
+                if(distanceToPlayer <= chaseRange && distanceToPlayer > 2f)
                 {
                     // 플레이어가 오른쪽에 있으면 몬스터는 오른쪽으로 이동하고, 그 반대면 왼쪽으로 이동
-                    float moveDirection = Mathf.Sign(xDistance);
-                    transform.Translate(Vector2.right * moveDirection * moveSpeed * Time.deltaTime);
+                    Vector2 direction = new Vector2((player.position.x - transform.position.x), 0).normalized;
+                    transform.Translate(direction * moveSpeed * Time.deltaTime);
+                }
+                if(distanceToPlayer <= 2f)
+                {
+                    transform.Translate(Vector2.zero);
+                    StopAllCoroutines();
+                    yield break;
                 }
 
                 // flip 설정
-                spriteRenderer.flipX = xDistance > 0;
+                //spriteRenderer.flipX = xDistance > 0;
             }
 
-                
-            
             
 
-            //float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            if(distanceToPlayer > chaseRange)
+            {
+                StopCoroutine(ChasePlayer());
+                StartCoroutine(Wander());
 
-            //if(distanceToPlayer > chaseRange)
-            //{
-            //    StopCoroutine(ChasePlayer());
-            //    StartCoroutine(Wander());
-
-            //    yield break;
-            //}
+               yield break;
+            }
 
             yield return new WaitForSeconds(0.1f);
         }
