@@ -38,7 +38,7 @@ public class RangeMonster : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
 
-        initialPosition = transform.position;
+        
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         
@@ -52,11 +52,12 @@ public class RangeMonster : MonoBehaviour
     {
         distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToPlayer < chaseRange && distanceToPlayer > attackRange)
+        if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
         {
             StopCoroutine(Wander());
             StartCoroutine(ChasePlayer());
         }
+        
 
     }
 
@@ -80,13 +81,7 @@ public class RangeMonster : MonoBehaviour
             isMovingRight = !isMovingRight;
 
             anim.SetBool("isWalking", false);
-            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-            if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
-            {
-                StopCoroutine(Wander());
-                StartCoroutine(ChasePlayer());
-            }
             yield return new WaitForSeconds(2f);
 
         }
@@ -109,15 +104,15 @@ public class RangeMonster : MonoBehaviour
 
                 spriteRenderer.flipX = direction.sqrMagnitude > 0;
 
-                if (distanceToPlayer <= attackRange)
-                {
-                    Debug.Log("StopChasePlayer");
-                    StopCoroutine(ChasePlayer());
-                    anim.SetBool("isWalking", false);
-                    rigid.velocity = Vector2.zero;
-                    rigid.angularVelocity = 0f;
-                    yield return null;
-                }
+                initialPosition = transform.position;
+            }
+
+            if (distanceToPlayer <= attackRange || distanceToPlayer > chaseRange)
+            {
+                Debug.Log("StopChasePlayer");
+                StopAllCoroutines();
+                anim.SetBool("isWalking", false);
+                rigid.velocity = Vector2.zero;
             }
 
             yield return new WaitForSeconds(0.1f);
