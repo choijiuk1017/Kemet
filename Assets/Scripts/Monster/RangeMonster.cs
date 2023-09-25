@@ -33,9 +33,12 @@ public class RangeMonster : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rigid = GetComponent<Rigidbody2D>();
 
         initialPosition = transform.position;
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        
         //배회 코루틴 시작
         StartCoroutine(Wander());
 
@@ -50,6 +53,11 @@ public class RangeMonster : MonoBehaviour
         {
             StopCoroutine(Wander());
             StartCoroutine(ChasePlayer());
+
+            if (distanceToPlayer > chaseRange)
+            {
+                StopAllCoroutines();
+            }
         }
     }
 
@@ -93,36 +101,22 @@ public class RangeMonster : MonoBehaviour
             float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
             if (player != null)
             {
-        
-                
-                if(distanceToPlayer <= chaseRange && distanceToPlayer > 2f)
-                {
-                    // 플레이어가 오른쪽에 있으면 몬스터는 오른쪽으로 이동하고, 그 반대면 왼쪽으로 이동
-                    Vector2 direction = new Vector2((player.position.x - transform.position.x), 0).normalized;
+                // 플레이어가 오른쪽에 있으면 몬스터는 오른쪽으로 이동하고, 그 반대면 왼쪽으로 이동
+                Vector2 direction = new Vector2((player.position.x - transform.position.x), 0).normalized;
+                if (distanceToPlayer <= chaseRange && distanceToPlayer > 2f)
+                {                   
                     transform.Translate(direction * moveSpeed * Time.deltaTime);
                 }
-                if(distanceToPlayer <= 2f)
-                {
-                    transform.Translate(Vector2.zero);
-                    StopAllCoroutines();
-                    yield break;
-                }
 
-                // flip 설정
-                //spriteRenderer.flipX = xDistance > 0;
-            }
-
-            
-
-            if(distanceToPlayer > chaseRange)
-            {
-                StopCoroutine(ChasePlayer());
-                StartCoroutine(Wander());
-
-               yield break;
+                spriteRenderer.flipX = direction.sqrMagnitude > 0 ? true : false;
             }
 
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    void StopMove()
+    {
+
     }
 }
