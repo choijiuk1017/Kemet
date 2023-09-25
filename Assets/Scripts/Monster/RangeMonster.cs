@@ -11,6 +11,8 @@ public class RangeMonster : MonoBehaviour
     public float chaseRange = 5.0f;
     public float attackCooldown = 2.0f;
 
+    [SerializeField]
+    private float distanceToPlayer;
     private Transform player;
     private float lastAttackTime;
 
@@ -18,9 +20,10 @@ public class RangeMonster : MonoBehaviour
 
     private bool isMovingRight = true;  // 몬스터가 현재 오른쪽으로 이동 중인지 여부
 
+    private bool isStopped = false;
+
     private Vector2 initialPosition;
 
-    private float currentDistance;
 
     Animator anim;
 
@@ -47,18 +50,14 @@ public class RangeMonster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToPlayer < chaseRange)
+        if (distanceToPlayer < chaseRange && distanceToPlayer > attackRange)
         {
             StopCoroutine(Wander());
             StartCoroutine(ChasePlayer());
-
-            if (distanceToPlayer > chaseRange)
-            {
-                StopAllCoroutines();
-            }
         }
+
     }
 
 
@@ -83,7 +82,7 @@ public class RangeMonster : MonoBehaviour
             anim.SetBool("isWalking", false);
             float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-            if (distanceToPlayer <= chaseRange && distanceToPlayer >= 2f)
+            if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
             {
                 StopCoroutine(Wander());
                 StartCoroutine(ChasePlayer());
@@ -98,25 +97,31 @@ public class RangeMonster : MonoBehaviour
         while(true)
         {
             Debug.Log("ChasePlayer");
-            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
             if (player != null)
             {
                 // 플레이어가 오른쪽에 있으면 몬스터는 오른쪽으로 이동하고, 그 반대면 왼쪽으로 이동
                 Vector2 direction = new Vector2((player.position.x - transform.position.x), 0).normalized;
-                if (distanceToPlayer <= chaseRange && distanceToPlayer > 2f)
+                if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
                 {                   
                     transform.Translate(direction * moveSpeed * Time.deltaTime);
+                    anim.SetBool("isWalking", true);
                 }
 
-                spriteRenderer.flipX = direction.sqrMagnitude > 0 ? true : false;
+                spriteRenderer.flipX = direction.sqrMagnitude > 0;
+
+                if (distanceToPlayer <= attackRange)
+                {
+                    Debug.Log("StopChasePlayer");
+                    StopCoroutine(ChasePlayer());
+                    anim.SetBool("isWalking", false);
+                    rigid.velocity = Vector2.zero;
+                    rigid.angularVelocity = 0f;
+                    yield return null;
+                }
             }
 
             yield return new WaitForSeconds(0.1f);
         }
     }
 
-    void StopMove()
-    {
-
-    }
 }

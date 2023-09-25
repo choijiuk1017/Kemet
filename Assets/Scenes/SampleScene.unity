@@ -403,9 +403,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   moveDistance: 5
-  attackRange: 5
+  attackRange: 2
   chaseRange: 5
   attackCooldown: 2
+  distanceToPlayer: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
