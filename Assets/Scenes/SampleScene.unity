@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 329708832}
   - component: {fileID: 329708831}
   - component: {fileID: 329708836}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Monster
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   moveDistance: 5
-  attackRange: 3.5
+  attackRange: 3
   chaseRange: 7
   attackCooldown: 4
   distanceToPlayer: 0
@@ -521,7 +521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 595506389}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +1107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1701673611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1143,7 +1143,7 @@ GameObject:
   - component: {fileID: 1840917324}
   - component: {fileID: 1840917325}
   - component: {fileID: 1840917326}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ossethan(Player)
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1323,7 +1323,7 @@ GameObject:
   - component: {fileID: 2110030816}
   - component: {fileID: 2110030818}
   - component: {fileID: 2110030817}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SlideAfterEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

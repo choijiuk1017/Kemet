@@ -64,24 +64,25 @@ public class RangeMonster : MonoBehaviour
     {
         distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
+        if (distanceToPlayer < chaseRange)
         {
             StopCoroutine(Wander());
             StartCoroutine(ChasePlayer());
-        }
 
-        if (distanceToPlayer <= attackRange)
-        {
-            Debug.Log("StopChasePlayer");
-            playerDetected = true;
-            anim.SetBool("isWalking", false);
-            rigid.velocity = Vector2.zero;
-            if (!isAttacking)
+            if (distanceToPlayer <= attackRange)
             {
-                StopCoroutine(ChasePlayer());
-                StartCoroutine(Attack());
+                Debug.Log("StopChasePlayer");
+                anim.SetBool("isWalking", false);
+                rigid.velocity = Vector2.zero;
+                if (!isAttacking)
+                {
+                    StopCoroutine(ChasePlayer());
+                    StartCoroutine(Attack());
+                }
             }
         }
+
+        
 
         //방향에 따라 좌우 반전
         if (!isMovingRight)
@@ -130,11 +131,10 @@ public class RangeMonster : MonoBehaviour
             {
                 // 플레이어가 오른쪽에 있으면 몬스터는 오른쪽으로 이동하고, 그 반대면 왼쪽으로 이동
                 Vector2 direction = new Vector2((player.position.x - transform.position.x), 0).normalized;
-                if (distanceToPlayer <= chaseRange && distanceToPlayer > attackRange)
-                {                   
-                    transform.Translate(direction * moveSpeed * Time.deltaTime);
-                    anim.SetBool("isWalking", true);
-                }
+                                
+                transform.Translate(direction * moveSpeed * Time.deltaTime);
+                anim.SetBool("isWalking", true);
+                
 
                 //spriteRenderer.flipX = direction.sqrMagnitude > 0;
 
