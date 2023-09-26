@@ -404,9 +404,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   moveDistance: 5
-  attackRange: 5
+  attackRange: 3.5
   chaseRange: 7
-  attackCooldown: 2
+  attackCooldown: 4
   distanceToPlayer: 0
   pos: {fileID: 1701673611}
   boxSize: {x: 3, y: 3}
@@ -1122,7 +1122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701673610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.18, y: 0.78, z: 0}
+  m_LocalPosition: {x: -4.66, y: 0.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1230,7 +1230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840917320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.16, y: -3.45, z: -2}
+  m_LocalPosition: {x: 10.49, y: -3.45, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -29,6 +29,8 @@ public class RangeMonster : MonoBehaviour
 
     private bool isMovingRight = true;  // 몬스터가 현재 오른쪽으로 이동 중인지 여부
 
+    private bool isAttacking = false;
+
 
     private Vector2 initialPosition;
 
@@ -66,6 +68,19 @@ public class RangeMonster : MonoBehaviour
         {
             StopCoroutine(Wander());
             StartCoroutine(ChasePlayer());
+        }
+
+        if (distanceToPlayer <= attackRange)
+        {
+            Debug.Log("StopChasePlayer");
+            playerDetected = true;
+            anim.SetBool("isWalking", false);
+            rigid.velocity = Vector2.zero;
+            if (!isAttacking)
+            {
+                StopCoroutine(ChasePlayer());
+                StartCoroutine(Attack());
+            }
         }
 
         //방향에 따라 좌우 반전
@@ -125,26 +140,23 @@ public class RangeMonster : MonoBehaviour
 
                 initialPosition = transform.position;
             }
-
-            if (distanceToPlayer <= attackRange || distanceToPlayer > chaseRange)
-            {
-                Debug.Log("StopChasePlayer");
-                playerDetected = true;
-                StopAllCoroutines();
-                anim.SetBool("isWalking", false);
-                rigid.velocity = Vector2.zero;
-            }
-
+         
             yield return new WaitForSeconds(0.1f);
         }
     }
 
     IEnumerator Attack()
     {
-        while(true)
-        {
+        Debug.Log("Attack");
+        isAttacking = true;
 
-        }
+        anim.SetTrigger("isAttack");
+
+        yield return new WaitForSeconds(attackCooldown);
+
+        isAttacking = false;
+
+        anim.ResetTrigger("isAttack");
     }
 
     void OnDrawGizmos()
