@@ -5,24 +5,34 @@ using UnityEngine;
 public class RangeMonster : MonoBehaviour
 {
     public float moveSpeed = 2.0f;  // 몬스터의 이동 속도
+
     public float moveDistance = 5.0f;
 
     public float attackRange = 2.0f;
+
     public float chaseRange = 5.0f;
+
     public float attackCooldown = 2.0f;
+
+    private float lastAttackTime;
 
     [SerializeField]
     private float distanceToPlayer;
+
+
     private Transform player;
-    private float lastAttackTime;
+
+    public Transform pos;
+
 
     private bool playerDetected = false;
 
     private bool isMovingRight = true;  // 몬스터가 현재 오른쪽으로 이동 중인지 여부
 
-    private bool isStopped = false;
 
     private Vector2 initialPosition;
+
+    public Vector2 boxSize;
 
 
     Animator anim;
@@ -57,7 +67,16 @@ public class RangeMonster : MonoBehaviour
             StopCoroutine(Wander());
             StartCoroutine(ChasePlayer());
         }
-        
+
+        //방향에 따라 좌우 반전
+        if (!isMovingRight)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        if (isMovingRight)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
 
     }
 
@@ -70,7 +89,7 @@ public class RangeMonster : MonoBehaviour
 
             Vector2 target = isMovingRight ? initialPosition + new Vector2(moveDistance, 0f) : initialPosition;
 
-            spriteRenderer.flipX = isMovingRight;
+            //spriteRenderer.flipX = isMovingRight;
             while (Mathf.Abs(transform.position.x - target.x) > 0.1f)
             {
                 transform.position = Vector2.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
@@ -102,7 +121,7 @@ public class RangeMonster : MonoBehaviour
                     anim.SetBool("isWalking", true);
                 }
 
-                spriteRenderer.flipX = direction.sqrMagnitude > 0;
+                //spriteRenderer.flipX = direction.sqrMagnitude > 0;
 
                 initialPosition = transform.position;
             }
@@ -110,6 +129,7 @@ public class RangeMonster : MonoBehaviour
             if (distanceToPlayer <= attackRange || distanceToPlayer > chaseRange)
             {
                 Debug.Log("StopChasePlayer");
+                playerDetected = true;
                 StopAllCoroutines();
                 anim.SetBool("isWalking", false);
                 rigid.velocity = Vector2.zero;
@@ -119,4 +139,17 @@ public class RangeMonster : MonoBehaviour
         }
     }
 
+    IEnumerator Attack()
+    {
+        while(true)
+        {
+
+        }
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(pos.position, boxSize);
+    }
 }
