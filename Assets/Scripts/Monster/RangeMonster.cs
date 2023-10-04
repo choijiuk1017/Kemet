@@ -42,47 +42,39 @@ public class RangeMonster : MonoBehaviour
     Rigidbody2D rigid;
 
     SpriteRenderer spriteRenderer;
-    
+
+    public enum State
+    {
+        Idle,
+        Wander,
+        Chase,
+        Attack
+    };
+
+    public State state;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
-
         
+        initialPosition = transform.position;
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        
-        //배회 코루틴 시작
-        StartCoroutine(Wander());
-
+        state = State.Wander;
     }
 
     // Update is called once per frame
     void Update()
     {
-        distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        distanceToPlayer = Vector2.Distance(transform.position, player.position);   
 
-        if (distanceToPlayer < chaseRange)
+        if(state == State.Wander)
         {
-            StopCoroutine(Wander());
-            StartCoroutine(ChasePlayer());
-
-            if (distanceToPlayer <= attackRange)
-            {
-                Debug.Log("StopChasePlayer");
-                anim.SetBool("isWalking", false);
-                rigid.velocity = Vector2.zero;
-                if (!isAttacking)
-                {
-                    StopCoroutine(ChasePlayer());
-                    StartCoroutine(Attack());
-                }
-            }
+            StartCoroutine(Wander());
         }
-
-        
 
         //방향에 따라 좌우 반전
         if (!isMovingRight)
@@ -99,27 +91,27 @@ public class RangeMonster : MonoBehaviour
 
     IEnumerator Wander()
     {
-        while(true)
+        if (isMovingRight)
         {
-            Debug.Log("Wander");
-
-            Vector2 target = isMovingRight ? initialPosition + new Vector2(moveDistance, 0f) : initialPosition;
-
-            //spriteRenderer.flipX = isMovingRight;
-            while (Mathf.Abs(transform.position.x - target.x) > 0.1f)
+            // Move right
+            while (transform.position.x < initialPosition.x + moveDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
-                anim.SetBool("isWalking", true);
+                transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
                 yield return null;
             }
-
-            isMovingRight = !isMovingRight;
-
-            anim.SetBool("isWalking", false);
-
-            yield return new WaitForSeconds(2f);
-
         }
+        else
+        {
+            // Move left
+            while (transform.position.x > initialPosition.x - moveDistance)
+            {
+                transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+                yield return null;
+            }
+        }
+
+        // Change direction
+        isMovingRight = !isMovingRight;
     }
 
     IEnumerator ChasePlayer()
