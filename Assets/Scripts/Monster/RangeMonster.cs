@@ -13,8 +13,9 @@ public class RangeMonster : Monster
         jumpPower = 15f;
     }
 
-    private float minX;
-    private float maxX;
+    public float patrolDistance = 5.0f;
+
+    private float initialPositionX;
 
     public enum State
     {
@@ -27,8 +28,7 @@ public class RangeMonster : Monster
     State state;
     void Start()
     {
-        minX = transform.position.x - 5f;
-        maxX = transform.position.x + 5f;
+        initialPositionX = transform.position.x;
 
         state = State.patrol;
 
@@ -39,31 +39,34 @@ public class RangeMonster : Monster
     {
         
     }
-    void SetX()
-    {
-        minX = transform.position.x - 5f;
-        maxX = transform.position.x + 5f;
-    }
+
     IEnumerator Patrol()
     {
         Debug.Log("patrol");
         while(true)
         {
-            Vector2 direction = new Vector2(minX - transform.position.x, transform.localPosition.y).normalized;
-            transform.Translate(direction * moveSpeed * Time.deltaTime);
-
-            MonsterFlip();
-
-            anim.SetBool("isWalking", true);
-
-            if (transform.position.x < maxX)
+            
+            if(Mathf.Abs(initialPositionX - transform.position.x) == patrolDistance)
             {
-                anim.SetBool("isWalking", false);
-                yield return new WaitForSeconds(2f);
-                transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+                MonsterDirRight = !MonsterDirRight;
+
+                Vector3 scale = transform.localScale;
+                scale.x *= -1;
+                transform.localScale = scale;
             }
-                
+            else
+            {
+                Vector2 moveDirection = MonsterDirRight ? Vector2.right : Vector2.left;
+
+                transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+
+                MonsterFlip();
+
+                anim.SetBool("isWalking", true);
+            }
+            yield return new WaitForSeconds(2.0f);
         }
     }
+
 
 }

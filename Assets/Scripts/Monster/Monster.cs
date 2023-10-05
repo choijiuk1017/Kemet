@@ -82,8 +82,6 @@ public class Monster : MonoBehaviour
 
     protected void MonsterFlip()
     {
-        MonsterDirRight = !MonsterDirRight;
-
         Vector3 thisScale = transform.localScale;
         if(MonsterDirRight)
         {
@@ -94,7 +92,6 @@ public class Monster : MonoBehaviour
             thisScale.x = Mathf.Abs(thisScale.x);
         }
         transform.localScale = thisScale;
-        rigid.velocity = Vector2.zero;
     }
 
     protected bool IsPlayerDir()
