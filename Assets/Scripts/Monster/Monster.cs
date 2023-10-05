@@ -21,7 +21,7 @@ public class Monster : MonoBehaviour
     public GameObject player;
     public Animator anim;
     public LayerMask layerMask;
-
+    
     protected void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
