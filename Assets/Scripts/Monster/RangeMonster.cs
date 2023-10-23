@@ -37,34 +37,41 @@ public class RangeMonster : Monster
 
     void Update()
     {
-        
+        MonsterFlip();
+
     }
 
     IEnumerator Patrol()
     {
         Debug.Log("patrol");
-        while(true)
+        
+        while (true)
         {
-            
-            if(Mathf.Abs(initialPositionX - transform.position.x) == patrolDistance)
-            {
-                MonsterDirRight = !MonsterDirRight;
+            float nextmove = Random.Range(-1, 2);
 
-                Vector3 scale = transform.localScale;
-                scale.x *= -1;
-                transform.localScale = scale;
+            if(nextmove < 0)
+            {
+                MonsterDirRight = false;
             }
             else
             {
-                Vector2 moveDirection = MonsterDirRight ? Vector2.right : Vector2.left;
-
-                transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
-
-                MonsterFlip();
-
-                anim.SetBool("isWalking", true);
+                MonsterDirRight = true;
             }
-            yield return new WaitForSeconds(2.0f);
+
+            rigid.velocity = new Vector2(nextmove , rigid.velocity.y);
+
+            if (rigid.velocity == Vector2.zero)
+            {
+                anim.SetBool("isWalking", false);
+            }
+            else
+            {
+                anim.SetBool("isWalking", true); 
+            }
+            
+            yield return new WaitForSeconds(5.0f);
+            
+
         }
     }
 
