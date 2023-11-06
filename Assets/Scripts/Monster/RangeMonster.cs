@@ -36,22 +36,31 @@ public class RangeMonster : Monster
 
         state = State.patrol;
 
-        StartCoroutine(Patrol());
+        //StartCoroutine(Patrol());
     }
 
     void Update()
-    {
-        MonsterFlip();
+    {    
         transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
 
         if(groundInfo.collider == false)
         {
-
+            if(MonsterDirRight)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+                MonsterDirRight = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+            
         }
     }
 
+    /*
     IEnumerator Patrol()
     {
         Debug.Log("patrol");
@@ -65,7 +74,7 @@ public class RangeMonster : Monster
 
         }
     }
-
+    */
 
 
 
