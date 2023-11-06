@@ -17,6 +17,10 @@ public class RangeMonster : Monster
 
     private float initialPositionX;
 
+    public Transform groundDetected;
+
+    public float distance;
+
     public enum State
     {
         idle,
@@ -38,7 +42,14 @@ public class RangeMonster : Monster
     void Update()
     {
         MonsterFlip();
+        transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
+
+        if(groundInfo.collider == false)
+        {
+
+        }
     }
 
     IEnumerator Patrol()
@@ -47,33 +58,15 @@ public class RangeMonster : Monster
         
         while (true)
         {
-            float nextmove = Random.Range(-1, 2);
-
-            if(nextmove < 0)
-            {
-                MonsterDirRight = false;
-            }
-            else
-            {
-                MonsterDirRight = true;
-            }
-
-            rigid.velocity = new Vector2(nextmove , rigid.velocity.y);
-
-            if (rigid.velocity == Vector2.zero)
-            {
-                anim.SetBool("isWalking", false);
-            }
-            else
-            {
-                anim.SetBool("isWalking", true); 
-            }
             
-            yield return new WaitForSeconds(5.0f);
+            
+            yield return new WaitForSeconds(2.0f);
             
 
         }
     }
+
+
 
 
 }
