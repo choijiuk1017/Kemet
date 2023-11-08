@@ -41,18 +41,25 @@ public class RangeMonster : Monster
 
     void Update()
     { 
-        rigid.velocity = new Vector2(moveSpeed, rigid.velocity.y); 
-
+        if(MonsterDirRight)
+        {
+            rigid.velocity = new Vector2(moveSpeed, rigid.velocity.y);
+        }
+        else
+        {
+            rigid.velocity = new Vector2(-moveSpeed, rigid.velocity.y);
+        }
+       
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
+
+        
 
         Debug.DrawRay(groundDetected.position, Vector2.down * 2f, Color.green);
 
-        MonsterFlip();
-
         if (!groundInfo.collider)
         {
-            moveSpeed = -moveSpeed;
-
+            MonsterFlip();
+            MonsterDirRight = !MonsterDirRight;
         }
     }
 

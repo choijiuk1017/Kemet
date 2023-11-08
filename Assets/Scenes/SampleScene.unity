@@ -950,7 +950,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989067576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.32, y: -3.36, z: 0}
+  m_LocalPosition: {x: -7.42, y: -4.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -988,7 +988,7 @@ MonoBehaviour:
   wallCheck: []
   patrolDistance: 5
   groundDetected: {fileID: 881123233}
-  distance: 0
+  distance: 15
 --- !u!1 &1553311014
 GameObject:
   m_ObjectHideFlags: 0
