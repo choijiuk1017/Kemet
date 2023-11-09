@@ -15,6 +15,8 @@ public class RangeMonster : Monster
 
     public Transform groundDetected;
 
+    public Transform playerDetected;
+
     public float distance;
 
     public enum State
@@ -35,6 +37,7 @@ public class RangeMonster : Monster
 
     void Update()
     {
+
         if(state == State.patrol)
         {
             Patrol();
@@ -46,10 +49,12 @@ public class RangeMonster : Monster
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
+        RaycastHit2D playerInfo = Physics2D.Raycast(playerDetected.position, Vector2.left, distance);
 
         anim.SetBool("isWalking", true);
 
         Debug.DrawRay(groundDetected.position, Vector2.down * 2f, Color.green);
+        Debug.DrawRay(playerDetected.position, Vector2.left * 2f, Color.green);
 
         if (!groundInfo.collider)
         {
@@ -64,7 +69,13 @@ public class RangeMonster : Monster
                 MonsterDirRight = true;
             }
         }
+
+        
     }
+
+    
+
+    
 
 
 
