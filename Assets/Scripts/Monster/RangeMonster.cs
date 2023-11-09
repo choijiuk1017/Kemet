@@ -9,13 +9,9 @@ public class RangeMonster : Monster
     private void Awake()
     {
         base.Awake();
-        moveSpeed = 5f;
+        moveSpeed = 3f;
         jumpPower = 15f;
     }
-
-    public float patrolDistance = 5.0f;
-
-    private float initialPositionX;
 
     public Transform groundDetected;
 
@@ -32,50 +28,44 @@ public class RangeMonster : Monster
     State state;
     void Start()
     {
-        initialPositionX = transform.position.x;
 
         state = State.patrol;
 
-        StartCoroutine(Patrol());
     }
 
     void Update()
-    { 
-        if(MonsterDirRight)
+    {
+        if(state == State.patrol)
         {
-            rigid.velocity = new Vector2(moveSpeed, rigid.velocity.y);
+            Patrol();
         }
-        else
-        {
-            rigid.velocity = new Vector2(-moveSpeed, rigid.velocity.y);
-        }
-       
+    }
+
+    void Patrol()
+    {
+        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
 
-        
+        anim.SetBool("isWalking", true);
 
         Debug.DrawRay(groundDetected.position, Vector2.down * 2f, Color.green);
 
         if (!groundInfo.collider)
         {
-            MonsterFlip();
-            MonsterDirRight = !MonsterDirRight;
+            if (MonsterDirRight)
+            {
+                transform.eulerAngles = new Vector3(0, -180, 0);
+                MonsterDirRight = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                MonsterDirRight = true;
+            }
         }
     }
 
-    IEnumerator Patrol()
-    {
-        Debug.Log("patrol");
-        
-        while (true)
-        {
-
-
-            yield return new WaitForSeconds(2.0f);
-            
-
-        }
-    }
 
 
 
