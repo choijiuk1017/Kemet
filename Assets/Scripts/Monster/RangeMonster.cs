@@ -66,7 +66,7 @@ public class RangeMonster : Monster
             }
         }       
         
-        if(distanceToPlayer < 5)
+        if(distanceToPlayer < 5f)
         {
             moveSpeed = 0f;
             state = State.chase;
@@ -75,7 +75,18 @@ public class RangeMonster : Monster
 
     void Chase()
     {
-        
+        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+        if(distanceToPlayer < 5f)
+        {
+            float direction = (player.transform.position.x > transform.position.x) ? 1f : -1f;
+            transform.Translate(new Vector2(direction, 0) *moveSpeed * Time.deltaTime);
+
+            if(distanceToPlayer < 2f)
+            {
+                moveSpeed = 0f;
+                state = State.attack;
+            }
+        }
     }
 
     
