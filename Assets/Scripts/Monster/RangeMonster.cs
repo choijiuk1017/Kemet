@@ -42,54 +42,72 @@ public class RangeMonster : Monster
 
     void Patrol()
     {
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
-        
-        anim.SetBool("isWalking", true);
-
-        Debug.DrawRay(groundDetected.position, Vector2.down * 2f, Color.green);
-
-        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-
-        if (!groundInfo.collider)
+        if(state == State.patrol)
         {
-            if (MonsterDirRight)
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+
+            RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
+
+            anim.SetBool("isWalking", true);
+
+            Debug.DrawRay(groundDetected.position, Vector2.down * 2f, Color.green);
+
+            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+            if (!groundInfo.collider)
             {
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                MonsterDirRight = false;
+                if (MonsterDirRight)
+                {
+                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    MonsterDirRight = false;
+                }
+                else
+                {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    MonsterDirRight = true;
+                }
             }
-            else
+
+            if (distanceToPlayer < 5f && groundInfo.collider)
             {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                MonsterDirRight = true;
+                moveSpeed = 0f;
+                state = State.chase;
             }
-        }       
-        
-        if(distanceToPlayer < 5f)
-        {
-            moveSpeed = 0f;
-            state = State.chase;
         }
     }
 
     void Chase()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-        if(distanceToPlayer < 5f)
+        if(state == State.chase)
         {
-            float direction = (player.transform.position.x > transform.position.x) ? 1f : -1f;
-            transform.Translate(new Vector2(direction, 0) *moveSpeed * Time.deltaTime);
-
-            if(distanceToPlayer < 2f)
+            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+            if (distanceToPlayer < 5f)
             {
-                moveSpeed = 0f;
-                state = State.attack;
+                float direction = (player.transform.position.x > transform.position.x) ? 1f : -1f;
+                transform.Translate(new Vector2(direction, 0) * moveSpeed * Time.deltaTime);
+
+                if (distanceToPlayer < 2f)
+                {
+                    moveSpeed = 0f;
+                    state = State.attack;
+                }
             }
         }
     }
 
-    
+    void Attack()
+    {
+        if(state == State.attack)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+            if (distanceToPlayer < 2f)
+            {
+                moveSpeed = 0f;
+                state = State.attack;
+            }
+
+        }
+    }
 
 
 

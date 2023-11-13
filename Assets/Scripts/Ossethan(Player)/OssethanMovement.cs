@@ -117,7 +117,10 @@ public class OssethanMovement : MonoBehaviour
             JumpAttack();
         }
 
-        
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            Parrying();
+        }
     }
 
     void FixedUpdate()
@@ -247,6 +250,11 @@ public class OssethanMovement : MonoBehaviour
         }
     }
 
+    void Parrying()
+    {
+        anim.SetTrigger("isParrying");  
+    }
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("Ground"))
@@ -254,7 +262,6 @@ public class OssethanMovement : MonoBehaviour
             anim.SetBool("isJump", false);
             isJump = false;
         }
-
     }
 
     //공격 범위를 나타내는 기즈모 그리는 함수
