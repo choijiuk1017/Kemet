@@ -26,17 +26,29 @@ public class RangeMonster : Monster
         attack,
     };
 
-    State state;
+    public State state;
     void Start()
     {
         state = State.patrol;
-
+        //StartCoroutine(Thinking());
     }
 
     void Update()
     {
+        if(state == State.patrol)
+        {
+            Patrol();
+        }
+        else if(state == State.chase)
+        {
+            Chase();
+        }
+        else if (state == State.attack)
+        {
+            Attack();
+        }
 
-        
+
     }
 
     void Patrol()
@@ -109,9 +121,21 @@ public class RangeMonster : Monster
 
     IEnumerator Thinking()
     {
-        yield return new WaitForSeconds(0.3f);
+       while(true)
+       {
+            if (state == State.patrol)
+            {
+                Patrol();
+            }
+            else
+            {
 
+            
+            }
+       }
 
+       
+        
     }
 
 
