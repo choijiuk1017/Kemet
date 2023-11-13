@@ -29,7 +29,6 @@ public class RangeMonster : Monster
     State state;
     void Start()
     {
-
         state = State.patrol;
 
     }
@@ -100,15 +99,20 @@ public class RangeMonster : Monster
         if(state == State.attack)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
             if (distanceToPlayer < 2f)
             {
-                moveSpeed = 0f;
-                state = State.attack;
+                anim.SetTrigger("isAttack");  
             }
-
         }
     }
 
+    IEnumerator Thinking()
+    {
+        yield return new WaitForSeconds(0.3f);
+
+
+    }
 
 
 
