@@ -17,6 +17,7 @@ public class RangeMonster : Monster
 
     public float distance;
 
+    public float distanceToPlayer;
 
     public enum State
     {
@@ -35,19 +36,12 @@ public class RangeMonster : Monster
 
     void Update()
     {
-        if(state == State.patrol)
+        distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+        if (state == State.patrol)
         {
             Patrol();
         }
-        else if(state == State.chase)
-        {
-            Chase();
-        }
-        else if (state == State.attack)
-        {
-            Attack();
-        }
-
 
     }
 
@@ -61,9 +55,7 @@ public class RangeMonster : Monster
 
             anim.SetBool("isWalking", true);
 
-            Debug.DrawRay(groundDetected.position, Vector2.down * 2f, Color.green);
-
-            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+            Debug.DrawRay(groundDetected.position, Vector2.down * 10f, Color.green);
 
             if (!groundInfo.collider)
             {
@@ -78,12 +70,6 @@ public class RangeMonster : Monster
                     MonsterDirRight = true;
                 }
             }
-
-            if (distanceToPlayer < 5f && groundInfo.collider)
-            {
-                moveSpeed = 0f;
-                state = State.chase;
-            }
         }
     }
 
@@ -91,17 +77,15 @@ public class RangeMonster : Monster
     {
         if(state == State.chase)
         {
-            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
             if (distanceToPlayer < 5f)
             {
-                float direction = (player.transform.position.x > transform.position.x) ? 1f : -1f;
-                transform.Translate(new Vector2(direction, 0) * moveSpeed * Time.deltaTime);
+                Vector2 direction = (player.transform.position - transform.position).normalized;
 
-                if (distanceToPlayer < 2f)
-                {
-                    moveSpeed = 0f;
-                    state = State.attack;
-                }
+                transform.Translate(direction * moveSpeed * Time.deltaTime);
+            }
+            else if(distanceToPlayer >= 5f)
+            {
+                state = State.patrol;
             }
         }
     }
@@ -110,7 +94,6 @@ public class RangeMonster : Monster
     {
         if(state == State.attack)
         {
-            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
             if (distanceToPlayer < 2f)
             {
@@ -121,21 +104,9 @@ public class RangeMonster : Monster
 
     IEnumerator Thinking()
     {
-       while(true)
-       {
-            if (state == State.patrol)
-            {
-                Patrol();
-            }
-            else
-            {
-
-            
-            }
-       }
+        yield return new WaitForSeconds(0.1f);
 
        
-        
     }
 
 
