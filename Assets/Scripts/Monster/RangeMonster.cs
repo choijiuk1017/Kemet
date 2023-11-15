@@ -37,19 +37,34 @@ public class RangeMonster : Monster
     {
         distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
+        if (state == State.patrol || state == State.chase)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+
         if (distanceToPlayer < 5f)
         {
             Chase();
+        }
+
+        if (distanceToPlayer < 1f)
+        {
+            moveSpeed = 0f;
+            anim.SetBool("isWalking", false);
         }
     }
 
     void Patrol()
     {
+        state = State.patrol;
+
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
-
-        anim.SetBool("isWalking", true);
 
         Debug.DrawRay(groundDetected.position, Vector2.down * 10f, Color.green);
 
@@ -72,6 +87,8 @@ public class RangeMonster : Monster
     {
         if (distanceToPlayer < 5f)
         {
+            state = State.chase;
+
             Vector2 direction = (player.transform.position - transform.position).normalized;
 
             transform.Translate(direction * moveSpeed * Time.deltaTime);
@@ -86,12 +103,14 @@ public class RangeMonster : Monster
                 MonsterDirRight = true;
                 MonsterFlip();
             }
-        
+
+
+            if (distanceToPlayer >= 5f)
+            {
+                state = State.patrol;
+            }
         }
-        else if (distanceToPlayer >= 5f)
-        {
-            state = State.patrol;
-        }
+
     }
 
     void Attack()
