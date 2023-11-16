@@ -46,9 +46,16 @@ public class RangeMonster : Monster
             anim.SetBool("isWalking", false);
         }
 
-        if (distanceToPlayer < 5f)
+        
+
+        if(distanceToPlayer > 5f)
         {
-            Chase();
+            Patrol();
+
+            if (distanceToPlayer < 5f)
+            {
+                Chase();
+            }
         }
 
         if (distanceToPlayer < 1f)
@@ -88,6 +95,7 @@ public class RangeMonster : Monster
         if (distanceToPlayer < 5f)
         {
             state = State.chase;
+            
 
             Vector2 direction = (player.transform.position - transform.position).normalized;
 
@@ -103,7 +111,6 @@ public class RangeMonster : Monster
                 MonsterDirRight = true;
                 MonsterFlip();
             }
-
 
             if (distanceToPlayer >= 5f)
             {
