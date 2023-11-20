@@ -17,7 +17,7 @@ public class RangeMonster : Monster
 
     public float distance;
 
-    public float distanceToPlayer;
+    public bool isPatrolling;
 
     public enum State
     {
@@ -31,12 +31,12 @@ public class RangeMonster : Monster
     void Start()
     {
         state = State.patrol;
+
+        isPatrolling = true;
     }
 
     void Update()
     {
-        distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-
         if (state == State.patrol || state == State.chase)
         {
             anim.SetBool("isWalking", true);
@@ -46,28 +46,23 @@ public class RangeMonster : Monster
             anim.SetBool("isWalking", false);
         }
 
-        
 
-        if(distanceToPlayer > 5f)
+        if (isPatrolling == true)
         {
             Patrol();
-
-            if (distanceToPlayer < 5f)
-            {
-                Chase();
-            }
         }
-
-        if (distanceToPlayer < 1f)
+        else
         {
-            moveSpeed = 0f;
-            anim.SetBool("isWalking", false);
+            Chase();
         }
+     
     }
 
     void Patrol()
     {
         state = State.patrol;
+
+        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
 
@@ -88,40 +83,58 @@ public class RangeMonster : Monster
                 MonsterDirRight = true;
             }
         }
+
+        if(distanceToPlayer < 5f)
+        {
+            isPatrolling = false;
+
+            state = State.chase;
+        }
+        else
+        {
+            isPatrolling = true;
+        }
     }
 
     void Chase()
     {
-        if (distanceToPlayer < 5f)
+        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+        if (distanceToPlayer > 2f && distanceToPlayer < 5f)
         {
-            state = State.chase;
-            
+            Vector2 targetPosition = new Vector2(player.transform.position.x, transform.position.y);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-            Vector2 direction = (player.transform.position - transform.position).normalized;
-
-            transform.Translate(direction * moveSpeed * Time.deltaTime);
-
-            if(direction.x < 0f)
+            if(player.transform.position.x > transform.position.x)
             {
                 MonsterDirRight = false;
                 MonsterFlip();
             }
-            else if(direction.x > 0f)
+            else
             {
                 MonsterDirRight = true;
                 MonsterFlip();
             }
+        }
+        else
+        {
+            moveSpeed = 0f;
 
-            if (distanceToPlayer >= 5f)
-            {
-                state = State.patrol;
-            }
+            state = State.attack;
         }
 
+        if(distanceToPlayer > 5f)
+        {
+            isPatrolling = true;
+
+            state = State.patrol;
+        }
     }
 
     void Attack()
     {
+        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
         if (distanceToPlayer < 2f)
         {
             anim.SetTrigger("isAttack");
