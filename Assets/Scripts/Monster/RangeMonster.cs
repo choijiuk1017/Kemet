@@ -62,11 +62,14 @@ public class RangeMonster : Monster
     {
         if(isPatrolling)
         {
+            moveSpeed = 2f;
             state = State.patrol;
 
             float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+            Vector2 patrolDirection = transform.position.x - groundDetected.position.x > 0 ? Vector2.left: Vector2.right;
+
+            transform.Translate(patrolDirection * moveSpeed * Time.deltaTime);
 
             RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
 
@@ -76,12 +79,12 @@ public class RangeMonster : Monster
             {
                 if (MonsterDirRight)
                 {
-                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    MonsterFlip();
                     MonsterDirRight = false;
                 }
                 else
                 {
-                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    MonsterFlip();
                     MonsterDirRight = true;
                 }
             }
@@ -101,17 +104,18 @@ public class RangeMonster : Monster
 
         if (distanceToPlayer > 2f && distanceToPlayer < 5f)
         {
+            moveSpeed = 2f;
             Vector2 targetPosition = new Vector2(player.transform.position.x, transform.position.y);
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
             if(player.transform.position.x > transform.position.x)
             {
-                MonsterDirRight = false;
+                MonsterDirRight = true;
                 MonsterFlip();
             }
             else
             {
-                MonsterDirRight = true;
+                MonsterDirRight = false;
                 MonsterFlip();
             }
         }
@@ -122,11 +126,18 @@ public class RangeMonster : Monster
             state = State.attack;
         }
 
-        if(distanceToPlayer >= 5f)
+        if(distanceToPlayer >= 2f)
         {
-            isPatrolling = true;
+            isPatrolling = false;
 
-            state = State.patrol;
+            state = State.chase;
+
+            if(distanceToPlayer >= 5f)
+            {
+                isPatrolling = true;
+
+                state = State.patrol;
+            }
         }
     }
 
