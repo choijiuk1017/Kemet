@@ -60,39 +60,38 @@ public class RangeMonster : Monster
 
     void Patrol()
     {
-        state = State.patrol;
-
-        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
-
-        Debug.DrawRay(groundDetected.position, Vector2.down * 10f, Color.green);
-
-        if (!groundInfo.collider)
+        if(isPatrolling)
         {
-            if (MonsterDirRight)
+            state = State.patrol;
+
+            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+
+            RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
+
+            Debug.DrawRay(groundDetected.position, Vector2.down * 10f, Color.green);
+
+            if (!groundInfo.collider)
             {
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                MonsterDirRight = false;
+                if (MonsterDirRight)
+                {
+                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    MonsterDirRight = false;
+                }
+                else
+                {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    MonsterDirRight = true;
+                }
             }
-            else
+
+            if (distanceToPlayer < 5f)
             {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                MonsterDirRight = true;
+                isPatrolling = false;
+
+                state = State.chase;
             }
-        }
-
-        if(distanceToPlayer < 5f)
-        {
-            isPatrolling = false;
-
-            state = State.chase;
-        }
-        else
-        {
-            isPatrolling = true;
         }
     }
 
@@ -123,7 +122,7 @@ public class RangeMonster : Monster
             state = State.attack;
         }
 
-        if(distanceToPlayer > 5f)
+        if(distanceToPlayer >= 5f)
         {
             isPatrolling = true;
 
