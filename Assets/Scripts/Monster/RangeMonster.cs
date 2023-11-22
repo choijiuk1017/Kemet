@@ -124,10 +124,14 @@ public class RangeMonster : Monster
             moveSpeed = 0f;
 
             state = State.attack;
+
+            StartCoroutine(Thinking());
         }
 
         if(distanceToPlayer >= 2f)
         {
+            StopAllCoroutines();
+
             isPatrolling = false;
 
             state = State.chase;
@@ -144,18 +148,40 @@ public class RangeMonster : Monster
     void Attack()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-
-        if (distanceToPlayer < 2f)
+        moveSpeed = 0;
+        if (distanceToPlayer < 2f && state == State.attack)
         {
             anim.SetTrigger("isAttack");
         }
+        else
+        {
+            if(distanceToPlayer > 2f)
+            {
+                state = State.chase;
+
+                if (distanceToPlayer > 5f)
+                {
+                    state = State.patrol;
+                }
+            }
+            
+        }
+        
     }
 
     IEnumerator Thinking()
     {
-        yield return new WaitForSeconds(0.1f);
+        
 
-       
+        if(state == State.attack)
+        {
+            Attack();
+
+            yield return new WaitForSeconds(2f);
+        }
+
+        
+
     }
 
 
