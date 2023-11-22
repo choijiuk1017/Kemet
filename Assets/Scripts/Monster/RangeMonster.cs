@@ -145,17 +145,28 @@ public class RangeMonster : Monster
         }
     }
 
-    void Attack()
+    IEnumerator Attack()
     {
+        anim.SetTrigger("isAttack");
+        yield return new WaitForSeconds(2f);
+
+        StartCoroutine(Thinking());
+    }
+
+    IEnumerator Thinking()
+    {
+        yield return new WaitForSeconds(3f);
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         moveSpeed = 0;
+
         if (distanceToPlayer < 2f && state == State.attack)
         {
-            anim.SetTrigger("isAttack");
+            StartCoroutine(Attack());
+
         }
         else
         {
-            if(distanceToPlayer > 2f)
+            if (distanceToPlayer > 2f)
             {
                 state = State.chase;
 
@@ -164,24 +175,8 @@ public class RangeMonster : Monster
                     state = State.patrol;
                 }
             }
-            
+
         }
-        
-    }
-
-    IEnumerator Thinking()
-    {
-        
-
-        if(state == State.attack)
-        {
-            Attack();
-
-            yield return new WaitForSeconds(2f);
-        }
-
-        
-
     }
 
 
