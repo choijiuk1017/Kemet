@@ -19,6 +19,7 @@ public class RangeMonster : Monster
 
     public bool isPatrolling;
 
+    public bool isAttackCoroutine = false;
     public enum State
     {
         idle,
@@ -125,11 +126,16 @@ public class RangeMonster : Monster
 
             state = State.attack;
 
-            StartCoroutine(Thinking());
+            if(!isAttackCoroutine)
+            {
+                StartCoroutine(Thinking());
+            }
+           
         }
 
         if(distanceToPlayer >= 2f)
         {
+            isAttackCoroutine = false;
             StopAllCoroutines();
 
             isPatrolling = false;
@@ -145,29 +151,30 @@ public class RangeMonster : Monster
         }
     }
 
-    IEnumerator Attack()
+    void Attack()
     {
         anim.SetTrigger("isAttack");
-        yield return new WaitForSeconds(2f);
-
-        StartCoroutine(Thinking());
     }
 
     IEnumerator Thinking()
     {
-        yield return new WaitForSeconds(3f);
+        isAttackCoroutine = true;
+
+        yield return new WaitForSeconds(2f);
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         moveSpeed = 0;
 
         if (distanceToPlayer < 2f && state == State.attack)
         {
-            StartCoroutine(Attack());
-
+            Attack();
+            isAttackCoroutine = false;
         }
         else
         {
             if (distanceToPlayer > 2f)
             {
+                isAttackCoroutine = false;
                 state = State.chase;
 
                 if (distanceToPlayer > 5f)
