@@ -160,7 +160,7 @@ public class RangeMonster : Monster
     {
         isAttackCoroutine = true;
 
-        yield return new WaitForSeconds(2f);
+        
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         moveSpeed = 0;
@@ -168,7 +168,10 @@ public class RangeMonster : Monster
         if (distanceToPlayer < 2f && state == State.attack)
         {
             Attack();
+            yield return new WaitForSeconds(2f);
             isAttackCoroutine = false;
+
+            
         }
         else
         {
