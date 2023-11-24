@@ -4,40 +4,72 @@ using UnityEngine;
 
 public class OssethanMovement : MonoBehaviour
 {
+    //플레이어 속도
     public float moveSpeed = 5.0f;
+
+    //플레이어 최대 속도
     public float maxSpeed;
+
+    //플레이어가 바라보고 있는 방향
     private int facingDirection = 1;
 
+    //현재 시간 변수, 공격 후 얼마나 지났는 지 측정 위함
     private float curTime;
+
+    //공격 쿨타임
     public float coolTime = 0.5f;
 
-    public float comboTimeWindow = 1.0f; //콤보를 유지하는 시간
-    public int maxComboCount = 3; //최대 콤보 횟수
+    //콤보를 유지하는 시간
+    public float comboTimeWindow = 1.0f;
 
-    private float lastAttackTime = 0f; //마지막으로 공격한 시간
-    private int comboCount = 0;  //현재 콤보 횟수
+    //최대 콤보 횟수
+    public int maxComboCount = 3;
 
+    //마지막으로 공격한 시간
+    private float lastAttackTime = 0f;
 
+    //현재 콤보 횟수
+    private int comboCount = 0;  
+
+    //점프 높이
     public float jumpForce = 5.0f;
+
+    //점프 실행 여부
     public bool isJump = false;
+
+    //현재 바닥 위에 있는지 확인 여부
     public bool isGround = false;
 
+    //슬라이딩 지속 시간
+    public float slideDuration = 1f;
 
-    public float slideDuration = 1f; // 슬라이딩 지속 시간
-    public float slideSpeed = 10f; // 슬라이딩 속도
-    public float slideCooldown = 2f; // 슬라이딩 쿨다운 시간
+    //슬라이딩 속도
+    public float slideSpeed = 10f;
 
+    //슬라이딩 쿨다운 시간
+    public float slideCooldown = 2f; 
+
+    //슬라이딩 확인 여부
     private bool isSliding = false;
+
+    //슬라이딩 직후 시간 측정 
     private float slideTimer = 0f;
+
+    //슬라이딩 쿨타임
     private float slideCooldownTimer = 0f;
 
+    //공격 사거리
     public Transform pos;
+    
+    //히트 박스
     public Vector2 boxSize;
 
+    //기초 컴포넌트 요소
     private Rigidbody2D rigid;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
 
+    //플레이어 상태 구조체
     public enum State
     {
         Idle,
@@ -49,6 +81,7 @@ public class OssethanMovement : MonoBehaviour
     public State state;
 
     // Start is called before the first frame update
+    //초기 설정
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -68,6 +101,7 @@ public class OssethanMovement : MonoBehaviour
         }
 
         //방향에 따라 좌우 반전
+        //회전을 시키는 방식으로 해야 자식 오브젝트에 있는 히트 박스도 함께 회전함
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
@@ -77,10 +111,13 @@ public class OssethanMovement : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
+        //공격
         if (curTime <= 0)
         {
+            //Z키를 누르고 이동하지 않는 상태에서만 공격 가능
             if (Input.GetKey(KeyCode.Z) && state != State.Move)
             {
+                //콤보 확인
                 if (Time.time - lastAttackTime < comboTimeWindow)
                 {
                     lastAttackTime = Time.time;
@@ -102,21 +139,24 @@ public class OssethanMovement : MonoBehaviour
                 
             }
         }
-        else
+        else 
         {
             curTime -= Time.deltaTime;
         }
 
+        //점프
         if(Input.GetButtonDown("Jump"))
         {
             Jump();
         }
 
+        //점프 공격
         if (isJump && Input.GetKeyDown(KeyCode.Z))
         {
             JumpAttack();
         }
 
+        //패링
         if(Input.GetKeyDown(KeyCode.C))
         {
             Parrying();
@@ -125,12 +165,15 @@ public class OssethanMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        //이동
         move();
 
+        //슬라이딩
         Sliding();
 
         float horizontalInput = Input.GetAxis("Horizontal");
 
+        //플레이어가 바라보는 방향 확인
         if (horizontalInput > 0f)
         {
             facingDirection = 1; // 오른쪽
@@ -152,6 +195,7 @@ public class OssethanMovement : MonoBehaviour
 
         // 플레이어 이동
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
+
         // 애니메이션 재생
         if (moveDirection.magnitude > 0 && !isJump)
         {
@@ -170,6 +214,7 @@ public class OssethanMovement : MonoBehaviour
      
     }
 
+    //플레이어 점프 함수
     void Jump()
     {
         rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
@@ -179,16 +224,22 @@ public class OssethanMovement : MonoBehaviour
         isJump = true;
     }
 
+    //점프 공격
     void JumpAttack()
     {
         anim.SetTrigger("isJumpAttack");
+
+        //아래쪽으로 급강하
         rigid.velocity = new Vector2(rigid.velocity.x, -7);
+
+        //바닥에 닿으면 애니메이션 초기화
         if (isGround)
         {
             anim.ResetTrigger("isJumpAttack");
         }
     }
 
+    //기본 공격
     void DefaultAttack()
     {
         //Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
@@ -209,11 +260,15 @@ public class OssethanMovement : MonoBehaviour
         //        SceneManager.LoadScene("Puzzle");
         //    }
         //}
+
         anim.SetTrigger("isDefaultAttack" + comboCount);
         state = State.Attack;
-        curTime = coolTime;//공격을 하면 쿨타임 부여
-    }
 
+        //공격을 하면 쿨타임 부여
+        curTime = coolTime;
+    }
+    
+    //슬라이딩
     void Sliding()
     {
         if (isSliding)
@@ -250,11 +305,14 @@ public class OssethanMovement : MonoBehaviour
         }
     }
 
+    //패링
     void Parrying()
     {
         anim.SetTrigger("isParrying");  
     }
 
+
+    //충돌처리
     private void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.CompareTag("Ground"))
