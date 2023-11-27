@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    public int currentHp = 1;
+    public int currentHp;
+    public int maxHp;
+
     public float moveSpeed = 5f;
     public float jumpPower = 10;
+
     public float atkCoolTime = 3f;
     public float atkCoolTimeCalc = 3f;
 
@@ -20,6 +23,13 @@ public class Monster : MonoBehaviour
     public GameObject hitBoxCollider;
     public GameObject player;
     public Animator anim;
+
+    //공격 사거리
+    public Transform pos;
+
+    //히트 박스
+    public Vector2 boxSize;
+
     public LayerMask layerMask;
     
     protected void Awake()
@@ -119,8 +129,6 @@ public class Monster : MonoBehaviour
     {
         currentHp -= damage;
         isHit = true;
-
-        hitBoxCollider.SetActive(false);
     }
 
     protected void OnTriggerEnter2D(Collider2D collision)
@@ -129,5 +137,11 @@ public class Monster : MonoBehaviour
         //{
         //TakeDamage ( 0 );
         //}
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(pos.position, boxSize);
     }
 }

@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class OssethanMovement : MonoBehaviour
 {
+    //플레이어 현재 HP
+    public int currentHP;
+
+    //플레이어 최대 HP
+    public int maxHp = 15;
+
     //플레이어 속도
     public float moveSpeed = 5.0f;
 
@@ -77,7 +83,6 @@ public class OssethanMovement : MonoBehaviour
         Attack
     };
 
-
     public State state;
 
     // Start is called before the first frame update
@@ -87,6 +92,8 @@ public class OssethanMovement : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        currentHP = maxHp;
 
         state = State.Idle;
     }
@@ -161,6 +168,7 @@ public class OssethanMovement : MonoBehaviour
         {
             Parrying();
         }
+
     }
 
     void FixedUpdate()
@@ -242,24 +250,16 @@ public class OssethanMovement : MonoBehaviour
     //기본 공격
     void DefaultAttack()
     {
-        //Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+        Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
 
-        //foreach (Collider2D collider in collider2Ds)
-        //{
-        //    //태그가 몬스터인 오브젝트와 충돌시
-        //    if (collider.tag == "Monster" || collider.tag == "Spawner")
-        //    {
-        //        collider.GetComponent<Monster>().TakeDamage(1); //데미지를 입음, HealthPointManager의 TakeDamage와는 다름
-        //    }
-        //    if (collider.tag == "Dust")
-        //    {
-        //        collider.GetComponent<Dust>().TakeDamage(1);
-        //    }
-        //    if (collider.tag == "Door")
-        //    {
-        //        SceneManager.LoadScene("Puzzle");
-        //    }
-        //}
+        foreach (Collider2D collider in collider2Ds)
+        {
+            //태그가 몬스터인 오브젝트와 충돌시
+            if (collider.tag == "Monster" || collider.tag == "Spawner")
+            {
+                collider.GetComponent<Monster>().TakeDamage(1); 
+            }
+        }
 
         anim.SetTrigger("isDefaultAttack" + comboCount);
         state = State.Attack;
@@ -309,6 +309,11 @@ public class OssethanMovement : MonoBehaviour
     void Parrying()
     {
         anim.SetTrigger("isParrying");  
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHP -= damage;
     }
 
 

@@ -10,6 +10,7 @@ public class RangeMonster : Monster
     private void Awake()
     {
         base.Awake();
+        maxHp = 30;
         moveSpeed = 2f;
         jumpPower = 15f;
     }
@@ -42,6 +43,8 @@ public class RangeMonster : Monster
         //처음 상태를 정찰 상태로 설정
         state = State.patrol;
         isPatrolling = true;
+
+        currentHp = maxHp;
     }
 
     void Update()
