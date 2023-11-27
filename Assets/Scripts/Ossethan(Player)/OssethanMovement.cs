@@ -255,7 +255,7 @@ public class OssethanMovement : MonoBehaviour
         foreach (Collider2D collider in collider2Ds)
         {
             //태그가 몬스터인 오브젝트와 충돌시
-            if (collider.tag == "Monster" || collider.tag == "Spawner")
+            if (collider.tag == "Monster")
             {
                 collider.GetComponent<Monster>().TakeDamage(1); 
             }
@@ -311,7 +311,7 @@ public class OssethanMovement : MonoBehaviour
         anim.SetTrigger("isParrying");  
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHP -= damage;
     }

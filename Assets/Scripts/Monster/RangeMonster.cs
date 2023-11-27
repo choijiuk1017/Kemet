@@ -193,6 +193,17 @@ public class RangeMonster : Monster
     void Attack()
     {
         anim.SetTrigger("isAttack");
+
+        Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+
+        foreach (Collider2D collider in collider2Ds)
+        {
+            //태그가 몬스터인 오브젝트와 충돌시
+            if (collider.tag == "Player")
+            {
+                collider.GetComponent<OssethanMovement>().TakeDamage(5);
+            }
+        }
     }
 
     //공격 여부 코루틴
