@@ -257,6 +257,7 @@ public class OssethanMovement : MonoBehaviour
             //태그가 몬스터인 오브젝트와 충돌시
             if (collider.tag == "Monster")
             {
+                //몬스터의 TakeDamage 호출, 데미지는 1
                 collider.GetComponent<Monster>().TakeDamage(1); 
             }
         }

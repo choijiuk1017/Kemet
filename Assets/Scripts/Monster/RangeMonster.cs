@@ -34,6 +34,7 @@ public class RangeMonster : Monster
         patrol,
         chase,
         attack,
+        Death
     };
 
     public State state;
@@ -69,9 +70,7 @@ public class RangeMonster : Monster
         {
             Chase();
         }
-     
     }
-
 
     //정찰 함수
     void Patrol()
@@ -119,6 +118,13 @@ public class RangeMonster : Monster
                 isPatrolling = false;
 
                 state = State.chase;
+            }
+
+            if(currentHp <= 0)
+            {
+                currentHp = 0;
+
+                state = State.Death;
             }
         }
     }
@@ -201,6 +207,7 @@ public class RangeMonster : Monster
             //태그가 몬스터인 오브젝트와 충돌시
             if (collider.tag == "Player")
             {
+                //플레이어의 TakeDamage 호출, 데미지는 5
                 collider.GetComponent<OssethanMovement>().TakeDamage(5);
             }
         }
