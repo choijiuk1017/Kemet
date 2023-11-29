@@ -218,7 +218,7 @@ public class RangeMonster : Monster
     {
         //공격 여부 참으로 설정
         isAttackCoroutine = true;
-
+        isAttack = false;
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         moveSpeed = 0;
 
@@ -241,10 +241,12 @@ public class RangeMonster : Monster
             {
                 isAttackCoroutine = false;
                 state = State.chase;
+                isAttack = false;
 
                 if (distanceToPlayer > 5f)
                 {
                     state = State.patrol;
+                    isAttack = false;
                 }
             }
 
