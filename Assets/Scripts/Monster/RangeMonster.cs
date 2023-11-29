@@ -226,10 +226,13 @@ public class RangeMonster : Monster
         if (distanceToPlayer < 2f && state == State.attack)
         {
             Attack();
+            isAttack = true;
             yield return new WaitForSeconds(2f);
 
             //공격을 끝내면 공격 여부 초기화
             isAttackCoroutine = false;
+
+            isAttack = false;
 
         }
         else

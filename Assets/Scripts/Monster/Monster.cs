@@ -14,6 +14,7 @@ public class Monster : MonoBehaviour
     public float atkCoolTimeCalc = 3f;
 
     public bool isHit = false;
+    public bool isAttack = false;
     public bool isGround = true;
     public bool canAtk = true;
     public bool MonsterDirRight;

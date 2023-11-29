@@ -4,76 +4,54 @@ using UnityEngine;
 
 public class OssethanMovement : MonoBehaviour
 {
-    //플레이어 현재 HP
-    public int currentHP;
+    //int 변수
+    public int currentHP; //플레이어 현재 HP
+    public int maxHp = 15; //플레이어 최대 HP
+    public int maxComboCount = 3; //최대 콤보 횟수
 
-    //플레이어 최대 HP
-    public int maxHp = 15;
+    private int facingDirection = 1; //플레이어가 바라보고 있는 방향
+    private int comboCount = 0; //현재 콤보 횟수
 
-    //플레이어 속도
-    public float moveSpeed = 5.0f;
 
-    //플레이어 최대 속도
-    public float maxSpeed;
+    //float 변수
+    public float moveSpeed = 5.0f; //플레이어 속도
+    public float maxSpeed; //플레이어 최대 속도
+    public float coolTime = 0.5f; //공격 쿨타임
+    public float comboTimeWindow = 1.0f; //콤보를 유지하는 시간
+    public float jumpForce = 5.0f; //점프 높이
+    public float slideDuration = 1f; //슬라이딩 지속 시간
+    public float slideSpeed = 10f; //슬라이딩 속도
+    public float slideCooldown = 2f; //슬라이딩 쿨다운 시간
 
-    //플레이어가 바라보고 있는 방향
-    private int facingDirection = 1;
+    private float curTime; //현재 시간 변수, 공격 후 얼마나 지났는 지 측정 위함
+    private float lastAttackTime = 0f; //마지막으로 공격한 시간
+    private float slideTimer = 0f; //슬라이딩 직후 시간 측정  
+    private float slideCooldownTimer = 0f; //슬라이딩 쿨타임
 
-    //현재 시간 변수, 공격 후 얼마나 지났는 지 측정 위함
-    private float curTime;
 
-    //공격 쿨타임
-    public float coolTime = 0.5f;
+    //bool 변수
+    public bool isJump = false; //점프 실행 여부
+    public bool isGround = false; //현재 바닥 위에 있는지 확인 여부
+    public bool isParry = false; //패링 실행 여부
 
-    //콤보를 유지하는 시간
-    public float comboTimeWindow = 1.0f;
+    private bool isSliding = false; //슬라이딩 확인 여부
 
-    //최대 콤보 횟수
-    public int maxComboCount = 3;
 
-    //마지막으로 공격한 시간
-    private float lastAttackTime = 0f;
+    //Transform 변수
+    public Transform atkPos; //공격 사거리
+    public Transform parryPos; //패링 사거리
 
-    //현재 콤보 횟수
-    private int comboCount = 0;  
 
-    //점프 높이
-    public float jumpForce = 5.0f;
+    //Vector2 변수
+    public Vector2 atkBoxSize; //히트 박스
+    public Vector2 parryBoxSize; //패링 박스
 
-    //점프 실행 여부
-    public bool isJump = false;
-
-    //현재 바닥 위에 있는지 확인 여부
-    public bool isGround = false;
-
-    //슬라이딩 지속 시간
-    public float slideDuration = 1f;
-
-    //슬라이딩 속도
-    public float slideSpeed = 10f;
-
-    //슬라이딩 쿨다운 시간
-    public float slideCooldown = 2f; 
-
-    //슬라이딩 확인 여부
-    private bool isSliding = false;
-
-    //슬라이딩 직후 시간 측정 
-    private float slideTimer = 0f;
-
-    //슬라이딩 쿨타임
-    private float slideCooldownTimer = 0f;
-
-    //공격 사거리
-    public Transform pos;
-    
-    //히트 박스
-    public Vector2 boxSize;
 
     //기초 컴포넌트 요소
     private Rigidbody2D rigid;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
+
 
     //플레이어 상태 구조체
     public enum State
@@ -84,6 +62,7 @@ public class OssethanMovement : MonoBehaviour
     };
 
     public State state;
+
 
     // Start is called before the first frame update
     //초기 설정
@@ -250,7 +229,7 @@ public class OssethanMovement : MonoBehaviour
     //기본 공격
     void DefaultAttack()
     {
-        Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+        Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(atkPos.position, atkBoxSize, 0);
 
         foreach (Collider2D collider in collider2Ds)
         {
@@ -309,6 +288,16 @@ public class OssethanMovement : MonoBehaviour
     //패링
     void Parrying()
     {
+        Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(parryPos.position, parryBoxSize, 0);
+
+        foreach (Collider2D collider in collider2Ds)
+        {
+            //태그가 몬스터인 오브젝트와 충돌시
+            if (collider.tag == "Monster" && collider.GetComponent<Monster>().isAttack == true)
+            {
+                Debug.Log("isParry");
+            }
+        }
         anim.SetTrigger("isParrying");  
     }
 
@@ -332,6 +321,7 @@ public class OssethanMovement : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(pos.position, boxSize);
+        Gizmos.DrawWireCube(atkPos.position, atkBoxSize);
+        Gizmos.DrawWireCube(parryPos.position, parryBoxSize);
     }
 }

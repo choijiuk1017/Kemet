@@ -365,7 +365,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1840917323}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &727081993
 GameObject:
@@ -978,6 +978,7 @@ MonoBehaviour:
   atkCoolTime: 3
   atkCoolTimeCalc: 3
   isHit: 0
+  isAttack: 0
   isGround: 1
   canAtk: 1
   MonsterDirRight: 0
@@ -1025,6 +1026,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 989067581}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1396237613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1396237614}
+  m_Layer: 3
+  m_Name: ParryRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1396237614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396237613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05, y: 0.42, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1840917323}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1553311014
 GameObject:
@@ -1242,6 +1274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1396237614}
   - {fileID: 595506389}
   - {fileID: 2110030816}
   m_Father: {fileID: 0}
@@ -1261,19 +1294,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHP: 0
   maxHp: 15
+  maxComboCount: 3
   moveSpeed: 5
   maxSpeed: 5
   coolTime: 0.5
   comboTimeWindow: 1
-  maxComboCount: 3
   jumpForce: 10
-  isJump: 0
-  isGround: 0
   slideDuration: 0.9
   slideSpeed: 10
   slideCooldown: 0.3
-  pos: {fileID: 595506389}
-  boxSize: {x: 1, y: 1.8}
+  isJump: 0
+  isGround: 0
+  isParry: 0
+  atkPos: {fileID: 595506389}
+  parryPos: {fileID: 1396237614}
+  atkBoxSize: {x: 1.5, y: 1.7}
+  parryBoxSize: {x: 2, y: 2}
   state: 0
 --- !u!50 &1840917325
 Rigidbody2D:
@@ -1353,7 +1389,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1840917323}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &2110030817
 ParticleSystemRenderer:
