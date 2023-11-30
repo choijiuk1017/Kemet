@@ -40,18 +40,19 @@ public class OssethanMovement : MonoBehaviour
 
     //Transform 변수
     public Transform atkPos; //공격 사거리
-    public Transform parryPos; //패링 사거리
 
 
     //Vector2 변수
     public Vector2 atkBoxSize; //히트 박스
-    public Vector2 parryBoxSize; //패링 박스
 
 
     //기초 컴포넌트 요소
     private Rigidbody2D rigid;
     private Animator anim;
     private SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    private BoxCollider2D parryBox;
 
 
     //플레이어 상태 구조체
@@ -289,17 +290,14 @@ public class OssethanMovement : MonoBehaviour
     //패링
     void Parrying()
     {
-        Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(parryPos.position, parryBoxSize, 0);
+        parryBox.enabled = true;
+        anim.SetTrigger("isParrying");
+        Invoke("UnParrying", 1f);
+    }
 
-        foreach (Collider2D collider in collider2Ds)
-        {
-            //태그가 몬스터인 오브젝트와 충돌시
-            if (collider.tag == "Monster" && collider.GetComponent<Monster>().isAttack == true)
-            {
-                Debug.Log("isParry");
-            }
-        }
-        anim.SetTrigger("isParrying");  
+    void UnParrying()
+    {
+        parryBox.enabled = false;
     }
 
     public void TakeDamage(int damage)
@@ -323,6 +321,5 @@ public class OssethanMovement : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireCube(atkPos.position, atkBoxSize);
-        Gizmos.DrawWireCube(parryPos.position, parryBoxSize);
     }
 }

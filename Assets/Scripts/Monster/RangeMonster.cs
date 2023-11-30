@@ -212,6 +212,10 @@ public class RangeMonster : Monster
                 //플레이어의 TakeDamage 호출, 데미지는 5
                 collider.GetComponent<OssethanMovement>().TakeDamage(5);
             }
+            if(collider.tag == "Parry")
+            {
+                Debug.Log("parry");
+            }
         }
     }
 
