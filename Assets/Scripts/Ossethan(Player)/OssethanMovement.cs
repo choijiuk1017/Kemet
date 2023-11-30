@@ -22,6 +22,7 @@ public class OssethanMovement : MonoBehaviour
     public float slideDuration = 1f; //슬라이딩 지속 시간
     public float slideSpeed = 10f; //슬라이딩 속도
     public float slideCooldown = 2f; //슬라이딩 쿨다운 시간
+    public float parryTime = 0f; //패링한 시간
 
     private float curTime; //현재 시간 변수, 공격 후 얼마나 지났는 지 측정 위함
     private float lastAttackTime = 0f; //마지막으로 공격한 시간

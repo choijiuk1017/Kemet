@@ -27,6 +27,7 @@ public class RangeMonster : Monster
     //공격 중인지 확인하는 변수
     public bool isAttackCoroutine = false;
 
+
     //상태 구조체
     public enum State
     {
@@ -46,6 +47,7 @@ public class RangeMonster : Monster
         isPatrolling = true;
 
         currentHp = maxHp;
+
     }
 
     void Update()
@@ -218,7 +220,7 @@ public class RangeMonster : Monster
     {
         //공격 여부 참으로 설정
         isAttackCoroutine = true;
-        isAttack = false;
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         moveSpeed = 0;
 
