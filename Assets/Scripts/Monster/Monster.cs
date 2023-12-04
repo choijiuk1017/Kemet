@@ -7,6 +7,9 @@ public class Monster : MonoBehaviour
     public int currentHp;
     public int maxHp;
 
+    public int groggyGauge;
+    public int maxGroggyGauge;
+
     public float moveSpeed = 5f;
     public float jumpPower = 10;
 

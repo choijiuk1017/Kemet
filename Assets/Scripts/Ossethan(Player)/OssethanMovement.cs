@@ -292,7 +292,7 @@ public class OssethanMovement : MonoBehaviour
     {
         parryBox.enabled = true;
         anim.SetTrigger("isParrying");
-        Invoke("UnParrying", 1f);
+        Invoke("UnParrying", 0.7f);
     }
 
     void UnParrying()
