@@ -224,6 +224,15 @@ public class RangeMonster : Monster
         }
     }
 
+    void Execute()
+    {
+        if(isExecute)
+        {
+            currentHp = 0;
+            state = State.Death;
+        }
+    }
+
     //공격 여부 코루틴
     IEnumerator Thinking()
     {
