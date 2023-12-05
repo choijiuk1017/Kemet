@@ -13,6 +13,7 @@ public class RangeMonster : Monster
         maxHp = 30;
         moveSpeed = 2f;
         jumpPower = 15f;
+        maxGroggyGauge = 100;
     }
 
     //지면을 체크하는 위치 변수
@@ -47,6 +48,8 @@ public class RangeMonster : Monster
         isPatrolling = true;
 
         currentHp = maxHp;
+
+        groggyGauge = maxGroggyGauge;
 
     }
 
@@ -215,6 +218,8 @@ public class RangeMonster : Monster
             if(collider.tag == "Parry")
             {
                 Debug.Log("parry");
+                groggyGauge -= 40;
+                isParried = true;
             }
         }
     }
@@ -228,11 +233,24 @@ public class RangeMonster : Monster
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         moveSpeed = 0;
 
+        if(isParried)
+        {
+            isParried = false;
+            if(groggyGauge < 0 || groggyGauge == 0)
+            {
+                isExecute = true;
+
+                StopAllCoroutines();
+            }
+            yield return new WaitForSeconds(3f);
+        }
+
         //2초마다 한 번씩 공격하도록 설정
         if (distanceToPlayer < 2f && state == State.attack)
         {
             Attack();
             isAttack = true;
+
             yield return new WaitForSeconds(2f);
 
             //공격을 끝내면 공격 여부 초기화

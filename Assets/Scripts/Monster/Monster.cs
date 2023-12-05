@@ -21,6 +21,8 @@ public class Monster : MonoBehaviour
     public bool isGround = true;
     public bool canAtk = true;
     public bool MonsterDirRight;
+    public bool isParried = false;
+    public bool isExecute = false;
 
     protected Rigidbody2D rigid;
     protected BoxCollider2D boxCollider;
