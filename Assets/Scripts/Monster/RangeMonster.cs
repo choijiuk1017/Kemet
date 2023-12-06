@@ -67,13 +67,29 @@ public class RangeMonster : Monster
         }
 
         //정찰 모드일 때는 정찰, 아니면 추적
-        if (isPatrolling == true)
+        if (isPatrolling == true && !isExecute)
         {
             Patrol();
         }
-        else
+        else if(isPatrolling == false && !isExecute)
         {
             Chase();
+        }
+
+        if(isExecute)
+        {
+            //공격 여부 참으로 설정
+            isAttackCoroutine = true;
+
+
+
+            isPatrolling = false;
+            isAttack = false;
+            moveSpeed = 0;
+            currentHp = 0;
+            state = State.Death;
+            StopAllCoroutines();
+            Execute();
         }
     }
 
@@ -228,8 +244,7 @@ public class RangeMonster : Monster
     {
         if(isExecute)
         {
-            currentHp = 0;
-            state = State.Death;
+            
         }
     }
 
@@ -270,13 +285,13 @@ public class RangeMonster : Monster
         }
         else
         {
-            if (distanceToPlayer > 2f)
+            if (distanceToPlayer > 2f && !isExecute)
             {
                 isAttackCoroutine = false;
                 state = State.chase;
                 isAttack = false;
 
-                if (distanceToPlayer > 5f)
+                if (distanceToPlayer > 5f && !isExecute)
                 {
                     state = State.patrol;
                     isAttack = false;
