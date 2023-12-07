@@ -240,6 +240,8 @@ public class OssethanMovement : MonoBehaviour
             {
                 //몬스터의 TakeDamage 호출, 데미지는 1
                 collider.GetComponent<Monster>().TakeDamage(1); 
+                //그로기 감소 추가 예정
+
             }
         }
 
