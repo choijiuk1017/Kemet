@@ -219,6 +219,19 @@ public class RangeMonster : Monster
     //공격 함수
     void Attack()
     {
+        moveSpeed = 0;
+        //플레이어의 위치에 따라 몬스터가 바라보는 방향 설정
+        if (player.transform.position.x > transform.position.x)
+        {
+            MonsterDirRight = true;
+            MonsterFlip();
+        }
+        else
+        {
+            MonsterDirRight = false;
+            MonsterFlip();
+        }
+
         anim.SetTrigger("isAttack");
 
         Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
