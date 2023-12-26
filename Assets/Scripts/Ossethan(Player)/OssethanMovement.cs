@@ -133,7 +133,7 @@ public class OssethanMovement : MonoBehaviour
         }
 
         //점프
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && isGround)
         {
             Jump();
         }
@@ -211,6 +211,8 @@ public class OssethanMovement : MonoBehaviour
         anim.SetBool("isJump", true);
 
         isJump = true;
+
+        isGround = false;
     }
 
     //점프 공격
@@ -315,6 +317,8 @@ public class OssethanMovement : MonoBehaviour
         {
             anim.SetBool("isJump", false);
             isJump = false;
+
+            isGround = true;
         }
     }
 
