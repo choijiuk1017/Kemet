@@ -268,6 +268,13 @@ public class OssethanMovement : MonoBehaviour
                 slideTimer = 0f;
                 rigid.velocity = new Vector2(0f, rigid.velocity.y); // 슬라이딩이 끝났을 때 속도 초기화
             }
+
+            float move = Input.GetAxisRaw("Horizontal");
+
+            if (move > 0 || move < 0)
+            {
+                float move = 0;
+            }
         }
         else
         {
