@@ -126,6 +126,24 @@ public class OssethanMovement : MonoBehaviour
                 DefaultAttack();
                 
             }
+
+            if (slideCooldownTimer >= slideCooldown)
+            {
+                float moveDirection = Input.GetAxisRaw("Horizontal");
+                // 슬라이딩 쿨다운이 끝났을 때 슬라이딩 발동을 확인
+                if (Input.GetKey(KeyCode.Z) && state == State.Move)
+                {
+                    isSliding = true;
+
+                    anim.SetTrigger("isSlide");
+
+                    state = State.Attack;
+
+                    slideCooldownTimer = 0f;
+
+                    rigid.velocity = new Vector2(slideSpeed * moveDirection, rigid.velocity.y); // 슬라이딩 중에 가속도 적용
+                }
+            }
         }
         else 
         {
@@ -154,12 +172,6 @@ public class OssethanMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        //이동
-        move();
-
-        //슬라이딩
-        Sliding();
-
         float horizontalInput = Input.GetAxis("Horizontal");
 
         //플레이어가 바라보는 방향 확인
@@ -171,36 +183,47 @@ public class OssethanMovement : MonoBehaviour
         {
             facingDirection = -1; // 왼쪽
         }
+
+        //이동
+        move();
+
+     
+
+        //슬라이딩
+        Sliding();
+
+        
     }
 
     //플레이어 이동함수
     void move()
     {
-        // 상하좌우 입력 감지
-        float moveX = Input.GetAxisRaw("Horizontal");
-
-        // 이동 벡터 계산
-        Vector3 moveDirection = new Vector3(moveX, 0f, 0f).normalized;
-
-        // 플레이어 이동
-        transform.position += moveDirection * moveSpeed * Time.deltaTime;
-
-        // 애니메이션 재생
-        if (moveDirection.magnitude > 0 && !isJump)
+        if (!isSliding)
         {
-            anim.SetBool("isWalking", true);
+            // 상하좌우 입력 감지
+            float moveX = Input.GetAxisRaw("Horizontal");
 
-            state = State.Move;
+            // 이동 벡터 계산
+            Vector3 moveDirection = new Vector3(moveX, 0f, 0f).normalized;
+
+            // 플레이어 이동
+            transform.position += moveDirection * moveSpeed * Time.deltaTime;
+
+            // 애니메이션 재생
+            if (moveDirection.magnitude > 0 && !isJump)
+            {
+                anim.SetBool("isWalking", true);
+
+                state = State.Move;
+            }
+            else
+            {
+                // 정지 시 애니메이션 정지
+                anim.SetBool("isWalking", false);
+
+                state = State.Idle;
+            }
         }
-        else
-        {
-            // 정지 시 애니메이션 정지
-            anim.SetBool("isWalking", false);
-
-            state = State.Idle;
-        }
-
-     
     }
 
     //플레이어 점프 함수
@@ -267,34 +290,12 @@ public class OssethanMovement : MonoBehaviour
                 isSliding = false;
                 slideTimer = 0f;
                 rigid.velocity = new Vector2(0f, rigid.velocity.y); // 슬라이딩이 끝났을 때 속도 초기화
-            }
-
-            float move = Input.GetAxisRaw("Horizontal");
-
-            if (move > 0 || move < 0)
-            {
-                float move = 0;
-            }
+            }     
         }
         else
         {
             // 슬라이딩이 아닐 때 처리
             slideCooldownTimer += Time.deltaTime;
-            if (slideCooldownTimer >= slideCooldown)
-            {
-                // 슬라이딩 쿨다운이 끝났을 때 슬라이딩 발동을 확인
-                if (Input.GetKey(KeyCode.Z) && state == State.Move) // 원하는 키를 사용할 수 있습니다.
-                {
-                    isSliding = true;
-
-                    anim.SetTrigger("isSlide");
-                    state = State.Attack;
-
-                    slideCooldownTimer = 0f;
-   
-                    rigid.velocity = new Vector2(slideSpeed * facingDirection, rigid.velocity.y); // 슬라이딩 중에 가속도 적용
-                }
-            }
         }
     }
 
