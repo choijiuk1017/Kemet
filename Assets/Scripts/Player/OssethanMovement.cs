@@ -124,25 +124,7 @@ public class OssethanMovement : MonoBehaviour
                 }
 
                 DefaultAttack();
-                
-            }
 
-            if (slideCooldownTimer >= slideCooldown)
-            {
-                float moveDirection = Input.GetAxisRaw("Horizontal");
-                // 슬라이딩 쿨다운이 끝났을 때 슬라이딩 발동을 확인
-                if (Input.GetKey(KeyCode.Z) && state == State.Move)
-                {
-                    isSliding = true;
-
-                    anim.SetTrigger("isSlide");
-
-                    state = State.Attack;
-
-                    slideCooldownTimer = 0f;
-
-                    rigid.velocity = new Vector2(slideSpeed * moveDirection, rigid.velocity.y); // 슬라이딩 중에 가속도 적용
-                }
             }
         }
         else 
@@ -187,7 +169,6 @@ public class OssethanMovement : MonoBehaviour
         //이동
         move();
 
-     
 
         //슬라이딩
         Sliding();
@@ -296,6 +277,34 @@ public class OssethanMovement : MonoBehaviour
         {
             // 슬라이딩이 아닐 때 처리
             slideCooldownTimer += Time.deltaTime;
+
+            if (slideCooldownTimer >= slideCooldown)
+            {
+                float moveX = Input.GetAxisRaw("Horizontal");
+                // 슬라이딩 쿨다운이 끝났을 때 슬라이딩 발동을 확인
+                if (Input.GetKey(KeyCode.Z) && state == State.Move)
+                {
+
+                    isSliding = true;
+
+                    anim.SetTrigger("isSlide");
+
+                    state = State.Attack;
+
+                    slideCooldownTimer = 0f;
+
+                    if (moveX > 0)
+                    {
+                        rigid.velocity = new Vector2(slideSpeed * 1, rigid.velocity.y); // 슬라이딩 중에 가속도 적용
+                    }
+                    else if (moveX < 0)
+                    {
+                        rigid.velocity = new Vector2(slideSpeed * -1, rigid.velocity.y); // 슬라이딩 중에 가속도 적용
+                    }
+
+
+                }
+            }
         }
     }
 
