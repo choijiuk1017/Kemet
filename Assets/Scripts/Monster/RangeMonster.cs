@@ -182,18 +182,17 @@ public class RangeMonster : Monster
         }
         else
         {
-            //공격 사거리에 들어왔다면 추적을 멈춤
-            moveSpeed = 0f;
-
-            //공격 실행
-            state = State.attack;
-
             //공격 여부 확인 변수가 참이 아닐때만 공격하도록 설정
             if(!isAttackCoroutine)
             {
+                //공격 사거리에 들어왔다면 추적을 멈춤
+                moveSpeed = 0f;
+
+                //공격 실행
+                state = State.attack;
+
                 StartCoroutine(Thinking());
-            }
-           
+            }   
         }
 
         //공격 사거리보다 멀어졌다면 다시 추적 시작
@@ -300,6 +299,7 @@ public class RangeMonster : Monster
         {
             if (distanceToPlayer > 2f && !isExecute)
             {
+                yield return new WaitForSeconds(0.4f);
                 isAttackCoroutine = false;
                 state = State.chase;
                 isAttack = false;

@@ -280,7 +280,6 @@ public class OssethanMovement : MonoBehaviour
 
             if (slideCooldownTimer >= slideCooldown)
             {
-                float moveX = Input.GetAxisRaw("Horizontal");
                 // 슬라이딩 쿨다운이 끝났을 때 슬라이딩 발동을 확인
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
@@ -294,8 +293,15 @@ public class OssethanMovement : MonoBehaviour
                     slideCooldownTimer = 0f;
 
                     rigid.AddForce(new Vector2(slideSpeed * facingDirection, 0f), ForceMode2D.Impulse);
-                    
 
+                    if (facingDirection > 0f)
+                    {
+                        transform.eulerAngles = new Vector3(0, 0, 0);
+                    }
+                    else if (facingDirection < 0f)
+                    {
+                        transform.eulerAngles = new Vector3(0, 180, 0);
+                    }
                     
 
                 }
