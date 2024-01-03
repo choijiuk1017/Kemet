@@ -83,18 +83,18 @@ public class OssethanMovement : MonoBehaviour
     void Update()
     {
         //유저가 키에서 손을 떼면 이동을 멈춤
-        if (Input.GetButtonUp("Horizontal"))
+        if (Input.GetButtonUp("Horizontal") && !isSliding)
         {
             rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.5f, rigid.velocity.y);
         }
 
         //방향에 따라 좌우 반전
         //회전을 시키는 방식으로 해야 자식 오브젝트에 있는 히트 박스도 함께 회전함
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow) && !isSliding)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && !isSliding)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
@@ -282,7 +282,7 @@ public class OssethanMovement : MonoBehaviour
             {
                 float moveX = Input.GetAxisRaw("Horizontal");
                 // 슬라이딩 쿨다운이 끝났을 때 슬라이딩 발동을 확인
-                if (Input.GetKey(KeyCode.Z) && state == State.Move)
+                if (Input.GetKey(KeyCode.LeftShift))
                 {
 
                     isSliding = true;
@@ -293,15 +293,10 @@ public class OssethanMovement : MonoBehaviour
 
                     slideCooldownTimer = 0f;
 
-                    if (moveX > 0)
-                    {
-                        rigid.velocity = new Vector2(slideSpeed * 1, rigid.velocity.y); // 슬라이딩 중에 가속도 적용
-                    }
-                    else if (moveX < 0)
-                    {
-                        rigid.velocity = new Vector2(slideSpeed * -1, rigid.velocity.y); // 슬라이딩 중에 가속도 적용
-                    }
+                    rigid.AddForce(new Vector2(slideSpeed * facingDirection, 0f), ForceMode2D.Impulse);
+                    
 
+                    
 
                 }
             }
