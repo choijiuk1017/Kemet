@@ -299,7 +299,7 @@ public class RangeMonster : Monster
         {
             if (distanceToPlayer > 2f && !isExecute)
             {
-                yield return new WaitForSeconds(0.4f);
+                yield return new WaitForSeconds(1f);
                 isAttackCoroutine = false;
                 state = State.chase;
                 isAttack = false;
