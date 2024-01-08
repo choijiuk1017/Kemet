@@ -220,6 +220,8 @@ public class RangeMonster : Monster
     {
         moveSpeed = 0;
         //플레이어의 위치에 따라 몬스터가 바라보는 방향 설정
+
+        /*
         if (player.transform.position.x > transform.position.x)
         {
             MonsterDirRight = true;
@@ -230,6 +232,8 @@ public class RangeMonster : Monster
             MonsterDirRight = false;
             MonsterFlip();
         }
+        */
+
 
         anim.SetTrigger("isAttack");
 
@@ -269,6 +273,7 @@ public class RangeMonster : Monster
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         moveSpeed = 0;
 
+        /*
         if(isParried)
         {
             isParried = false;
@@ -280,26 +285,26 @@ public class RangeMonster : Monster
             }
             yield return new WaitForSeconds(3f);
         }
+        */
 
         //2초마다 한 번씩 공격하도록 설정
         if (distanceToPlayer < 2f && state == State.attack)
         {
+            yield return new WaitForSeconds(0.6f);
             Attack();
+
             isAttack = true;
-
-            yield return new WaitForSeconds(2f);
-
+            yield return new WaitForSeconds(1.5f);
             //공격을 끝내면 공격 여부 초기화
             isAttackCoroutine = false;
 
             isAttack = false;
-
         }
         else
         {
             if (distanceToPlayer > 2f && !isExecute)
             {
-                yield return new WaitForSeconds(1f);
+                //yield return new WaitForSeconds(1f);
                 isAttackCoroutine = false;
                 state = State.chase;
                 isAttack = false;
