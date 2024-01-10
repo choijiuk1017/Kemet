@@ -76,13 +76,11 @@ public class RangeMonster : Monster
             Chase();
         }
 
+        /*
         if(isExecute)
         {
             //공격 여부 참으로 설정
             isAttackCoroutine = true;
-
-
-
             isPatrolling = false;
             isAttack = false;
             moveSpeed = 0;
@@ -91,6 +89,7 @@ public class RangeMonster : Monster
             StopAllCoroutines();
             Execute();
         }
+        */
     }
 
     //정찰 함수
@@ -220,8 +219,7 @@ public class RangeMonster : Monster
     {
         moveSpeed = 0;
         //플레이어의 위치에 따라 몬스터가 바라보는 방향 설정
-
-        /*
+        
         if (player.transform.position.x > transform.position.x)
         {
             MonsterDirRight = true;
@@ -232,7 +230,7 @@ public class RangeMonster : Monster
             MonsterDirRight = false;
             MonsterFlip();
         }
-        */
+        
 
 
         anim.SetTrigger("isAttack");
