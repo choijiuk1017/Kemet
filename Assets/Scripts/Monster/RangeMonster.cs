@@ -22,6 +22,8 @@ public class RangeMonster : Monster
     //레이캐스트의 길이 변수
     public float distance;
 
+    private float lastPlayerPosition;
+
     //정찰 모드 확인 변수
     public bool isPatrolling;
 
@@ -152,75 +154,82 @@ public class RangeMonster : Monster
     //추적 함수
     void Chase()
     {
-        //플레이어와 거리 측정
-        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-
-        //플레이어가 공격 사거리에는 들어오지 않았으나 추적 범위에 있다면
-        if (distanceToPlayer > 2f && distanceToPlayer < 5f)
+        //공격하고 있을때는 발동되지 않도록
+        if(isAttackCoroutine == false)
         {
-            //속도 초기화
-            moveSpeed = 2f;
+            //플레이어와 거리 측정
+            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-            //목표 지점 설정, 플레이어의 위치
-            Vector2 targetPosition = new Vector2(player.transform.position.x, transform.position.y);
-            
-            //이동
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-
-            //플레이어의 위치에 따라 몬스터가 바라보는 방향 설정
-            if(player.transform.position.x > transform.position.x)
+            //플레이어가 공격 사거리에는 들어오지 않았으나 추적 범위에 있다면
+            if (distanceToPlayer > 2f && distanceToPlayer < 5f)
             {
-                MonsterDirRight = true;
-                MonsterFlip();
+                //속도 초기화
+                moveSpeed = 2f;
+
+                //목표 지점 설정, 플레이어의 위치
+                Vector2 targetPosition = new Vector2(player.transform.position.x, transform.position.y);
+
+                //이동
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+                //플레이어의 위치에 따라 몬스터가 바라보는 방향 설정
+                if (player.transform.position.x > transform.position.x)
+                {
+                    MonsterDirRight = true;
+                    MonsterFlip();
+                }
+                else
+                {
+                    MonsterDirRight = false;
+                    MonsterFlip();
+                }
             }
             else
             {
-                MonsterDirRight = false;
-                MonsterFlip();
+                //공격 여부 확인 변수가 참이 아닐때만 공격하도록 설정
+                if (!isAttackCoroutine)
+                {
+                    //공격 사거리에 들어왔다면 추적을 멈춤
+                    moveSpeed = 0f;
+
+                    //공격 실행
+                    state = State.attack;
+
+                    StartCoroutine(Thinking());
+                }
+            }
+
+            //공격 사거리보다 멀어졌다면 다시 추적 시작
+            if (distanceToPlayer >= 2f)
+            {
+                isAttackCoroutine = false;
+                StopAllCoroutines();
+
+                isPatrolling = false;
+
+                state = State.chase;
+
+                //추적 사거리보다도 멀어졌다면 다시 정찰 시작
+                if (distanceToPlayer >= 5f)
+                {
+                    isPatrolling = true;
+
+                    state = State.patrol;
+                }
             }
         }
-        else
-        {
-            //공격 여부 확인 변수가 참이 아닐때만 공격하도록 설정
-            if(!isAttackCoroutine)
-            {
-                //공격 사거리에 들어왔다면 추적을 멈춤
-                moveSpeed = 0f;
 
-                //공격 실행
-                state = State.attack;
-
-                StartCoroutine(Thinking());
-            }   
-        }
-
-        //공격 사거리보다 멀어졌다면 다시 추적 시작
-        if(distanceToPlayer >= 2f)
-        {
-            isAttackCoroutine = false;
-            StopAllCoroutines();
-
-            isPatrolling = false;
-
-            state = State.chase;
-
-            //추적 사거리보다도 멀어졌다면 다시 정찰 시작
-            if(distanceToPlayer >= 5f)
-            {
-                isPatrolling = true;
-
-                state = State.patrol;
-            }
-        }
     }
 
     //공격 함수
     void Attack()
     {
+        
+
         moveSpeed = 0;
         //플레이어의 위치에 따라 몬스터가 바라보는 방향 설정
-        
-        if (player.transform.position.x > transform.position.x)
+
+        if (lastPlayerPosition > transform.position.x)
         {
             MonsterDirRight = true;
             MonsterFlip();
@@ -230,8 +239,6 @@ public class RangeMonster : Monster
             MonsterDirRight = false;
             MonsterFlip();
         }
-        
-
 
         anim.SetTrigger("isAttack");
 
@@ -271,6 +278,8 @@ public class RangeMonster : Monster
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
         moveSpeed = 0;
 
+
+
         /*
         if(isParried)
         {
@@ -289,6 +298,10 @@ public class RangeMonster : Monster
         if (distanceToPlayer < 2f && state == State.attack)
         {
             yield return new WaitForSeconds(0.6f);
+            moveSpeed = 0;
+
+            lastPlayerPosition = player.transform.position.x;
+
             Attack();
 
             isAttack = true;
