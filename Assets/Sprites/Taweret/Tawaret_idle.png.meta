@@ -1,0 +1,473 @@
+fileFormatVersion: 2
+guid: 58f120d89bf9d3a4083a767c9fed6b87
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tawaret_idle_2
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 4862
+        width: 680
+        height: 1104
+      alignment: 9
+      pivot: {x: 0.79801583, y: 0.26227382}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce2b1fb0d831a0438277747630dde72
+      internalID: 896566680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_3
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 4872
+        width: 680
+        height: 1128
+      alignment: 9
+      pivot: {x: 0.8029013, y: 0.2614417}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48137578872812d4e8998ff086dd9517
+      internalID: -648678718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_4
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 4876
+        width: 643
+        height: 1158
+      alignment: 9
+      pivot: {x: 0.804831, y: 0.24754004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bac10c00bfa914469def831ffeda76d
+      internalID: -210467868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_6
+      rect:
+        serializedVersion: 2
+        x: 3044
+        y: 4842
+        width: 670
+        height: 1127
+      alignment: 9
+      pivot: {x: 0.7975054, y: 0.2523868}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb14712bad6510947a03b31b3f5286ff
+      internalID: -542128643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_8
+      rect:
+        serializedVersion: 2
+        x: 4011
+        y: 4883
+        width: 680
+        height: 1104
+      alignment: 9
+      pivot: {x: 0.80290097, y: 0.25926495}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e587f4ea126efc247970840a6a746468
+      internalID: 1415407386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_17
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 1786
+        width: 904
+        height: 1094
+      alignment: 9
+      pivot: {x: 0.5424459, y: 0.26723602}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377888a37582b164ab35a5b9717f209c
+      internalID: -338141851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_18
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 1772
+        width: 891
+        height: 1087
+      alignment: 9
+      pivot: {x: 0.53523505, y: 0.26573685}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36cee6ff68ffd1c48aceea7e34c9c03c
+      internalID: 1500799010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_19
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 1752
+        width: 865
+        height: 1069
+      alignment: 9
+      pivot: {x: 0.52419615, y: 0.26505542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc57bcd302a3e344acd8cc53e47ad33
+      internalID: 556478557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_20
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 1759
+        width: 899
+        height: 1086
+      alignment: 9
+      pivot: {x: 0.542682, y: 0.26552114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58c8810e56ae0c42bf6a7fa36410bc5
+      internalID: -1992319749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_21
+      rect:
+        serializedVersion: 2
+        x: 4828
+        y: 1752
+        width: 912
+        height: 1090
+      alignment: 9
+      pivot: {x: 0.5458979, y: 0.26318136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef485c74617dd249849ce25a8895269
+      internalID: 1634481222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_28
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 255
+        width: 732
+        height: 1281
+      alignment: 9
+      pivot: {x: 0.595308, y: 0.6851703}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147e0a353124aec44a37da2097b25abf
+      internalID: 1100706563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_29
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 272
+        width: 738
+        height: 1285
+      alignment: 9
+      pivot: {x: 0.61343986, y: 0.6791645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f795b67ef38b0148842fce8b4fc83b2
+      internalID: -666590030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_30
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 275
+        width: 731
+        height: 1282
+      alignment: 9
+      pivot: {x: 0.614526, y: 0.70135164}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2ae360ef5ede741abbcd5de20b9520
+      internalID: -1174146256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_31
+      rect:
+        serializedVersion: 2
+        x: 3700
+        y: 234
+        width: 738
+        height: 1282
+      alignment: 9
+      pivot: {x: 0.6087134, y: 0.69318867}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d50a39c086ca648870fbc0821b9c16
+      internalID: 1941903524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tawaret_idle_33
+      rect:
+        serializedVersion: 2
+        x: 4811
+        y: 203
+        width: 731
+        height: 1282
+      alignment: 9
+      pivot: {x: 0.6002099, y: 0.6959095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d654f825498342c4aa9ac15560d3ebe3
+      internalID: -459368911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Tawaret_idle_19: 556478557
+      Tawaret_idle_16: 545013732
+      Tawaret_idle_13: -540790325
+      Tawaret_idle_9: 1234617018
+      Tawaret_idle_3: -648678718
+      Tawaret_idle_20: -1992319749
+      Tawaret_idle_5: 895490467
+      Tawaret_idle_23: 1645645132
+      Tawaret_idle_21: 1634481222
+      Tawaret_idle_0: -1727730225
+      Tawaret_idle_10: 1024485685
+      Tawaret_idle_8: 1415407386
+      Tawaret_idle_1: 1444305719
+      Tawaret_idle_34: -690268121
+      Tawaret_idle_14: 1667604734
+      Tawaret_idle_29: -666590030
+      Tawaret_idle_31: 1941903524
+      Tawaret_idle_12: -631477820
+      Tawaret_idle_11: 1876406748
+      Tawaret_idle_32: -65159587
+      Tawaret_idle_35: 890577529
+      Tawaret_idle_24: -592987286
+      Tawaret_idle_28: 1100706563
+      Tawaret_idle_17: -338141851
+      Tawaret_idle_30: -1174146256
+      Tawaret_idle_25: 1184308137
+      Tawaret_idle_33: -459368911
+      Tawaret_idle_26: -1239267851
+      Tawaret_idle_2: 896566680
+      Tawaret_idle_7: 1364777692
+      Tawaret_idle_15: 1709043277
+      Tawaret_idle_6: -542128643
+      Tawaret_idle_4: -210467868
+      Tawaret_idle_22: 89452277
+      Tawaret_idle_18: 1500799010
+      Tawaret_idle_27: 554222354
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
