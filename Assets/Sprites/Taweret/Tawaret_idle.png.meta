@@ -112,7 +112,7 @@ TextureImporter:
         width: 680
         height: 1104
       alignment: 9
-      pivot: {x: 0.79801583, y: 0.26227382}
+      pivot: {x: 0.13266134, y: 0.86983854}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,7 +133,7 @@ TextureImporter:
         width: 680
         height: 1128
       alignment: 9
-      pivot: {x: 0.8029013, y: 0.2614417}
+      pivot: {x: 0.15150541, y: 0.8476645}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,7 +154,7 @@ TextureImporter:
         width: 643
         height: 1158
       alignment: 9
-      pivot: {x: 0.804831, y: 0.24754004}
+      pivot: {x: 0.13071357, y: 0.8240395}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,7 +175,7 @@ TextureImporter:
         width: 670
         height: 1127
       alignment: 9
-      pivot: {x: 0.7975054, y: 0.2523868}
+      pivot: {x: 0.13166468, y: 0.875626}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,7 +196,7 @@ TextureImporter:
         width: 680
         height: 1104
       alignment: 9
-      pivot: {x: 0.80290097, y: 0.25926495}
+      pivot: {x: 0.12824062, y: 0.86969566}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -429,7 +429,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tawaret_idle_19: 556478557
+      Tawaret_idle_27: 554222354
       Tawaret_idle_16: 545013732
       Tawaret_idle_13: -540790325
       Tawaret_idle_9: 1234617018
@@ -464,7 +464,7 @@ TextureImporter:
       Tawaret_idle_4: -210467868
       Tawaret_idle_22: 89452277
       Tawaret_idle_18: 1500799010
-      Tawaret_idle_27: 554222354
+      Tawaret_idle_19: 556478557
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
