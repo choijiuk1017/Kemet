@@ -112,7 +112,7 @@ TextureImporter:
         width: 680
         height: 1104
       alignment: 9
-      pivot: {x: 0.13515028, y: 0.8779487}
+      pivot: {x: 0.12851776, y: 0.8794728}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,7 +133,7 @@ TextureImporter:
         width: 773
         height: 1157
       alignment: 9
-      pivot: {x: 0.1304161, y: 0.8866276}
+      pivot: {x: 0.13540614, y: 0.87387025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,7 +154,7 @@ TextureImporter:
         width: 860
         height: 1129
       alignment: 9
-      pivot: {x: 0.26833695, y: 0.8795684}
+      pivot: {x: 0.2689016, y: 0.87959737}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,7 +175,7 @@ TextureImporter:
         width: 941
         height: 915
       alignment: 9
-      pivot: {x: 0.50582564, y: 0.8594545}
+      pivot: {x: 0.4936046, y: 0.8468862}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,7 +217,7 @@ TextureImporter:
         width: 1021
         height: 940
       alignment: 9
-      pivot: {x: 0.47954097, y: 0.65634924}
+      pivot: {x: 0.4777171, y: 0.6622927}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,7 +233,7 @@ TextureImporter:
       name: Tawaret_pattern_1_10
       rect:
         serializedVersion: 2
-        x: 151
+        x: 147
         y: 3541
         width: 1059
         height: 918
@@ -255,11 +255,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2649
-        y: 3599
+        y: 3596
         width: 860
         height: 789
       alignment: 9
-      pivot: {x: 0.48087782, y: 0.7501151}
+      pivot: {x: 0.4974493, y: 0.758393}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,7 +280,7 @@ TextureImporter:
         width: 933
         height: 830
       alignment: 9
-      pivot: {x: 0.48237425, y: 0.7047375}
+      pivot: {x: 0.51299936, y: 0.71521497}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,12 +296,12 @@ TextureImporter:
       name: Tawaret_pattern_1_15
       rect:
         serializedVersion: 2
-        x: 5168
-        y: 3610
+        x: 5171
+        y: 3616
         width: 860
         height: 823
       alignment: 9
-      pivot: {x: 0.49046263, y: 0.687357}
+      pivot: {x: 0.48801383, y: 0.6812621}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,7 +322,7 @@ TextureImporter:
         width: 952
         height: 820
       alignment: 9
-      pivot: {x: 0.52837163, y: 0.59411114}
+      pivot: {x: 0.5320243, y: 0.57714874}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,7 +385,7 @@ TextureImporter:
         width: 789
         height: 783
       alignment: 9
-      pivot: {x: 0.47582978, y: 0.8328588}
+      pivot: {x: 0.46118134, y: 0.82793826}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -406,7 +406,7 @@ TextureImporter:
         width: 618
         height: 1029
       alignment: 9
-      pivot: {x: 0.20170361, y: 0.8706584}
+      pivot: {x: 0.18300118, y: 0.8706579}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,7 +427,7 @@ TextureImporter:
         width: 618
         height: 1100
       alignment: 9
-      pivot: {x: 0.1708455, y: 0.89296544}
+      pivot: {x: 0.15837784, y: 0.8684493}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -448,7 +448,7 @@ TextureImporter:
         width: 687
         height: 1107
       alignment: 9
-      pivot: {x: 0.16689304, y: 0.8789958}
+      pivot: {x: 0.1556775, y: 0.8789956}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
