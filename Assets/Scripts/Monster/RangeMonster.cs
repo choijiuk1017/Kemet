@@ -250,7 +250,7 @@ public class RangeMonster : Monster
             if (collider.tag == "Player")
             {
                 //플레이어의 TakeDamage 호출, 데미지는 5
-                collider.GetComponent<OssethanMovement>().TakeDamage(5);
+                collider.GetComponent<Seth>().TakeDamage(5);
             }
             if(collider.tag == "Parry")
             {

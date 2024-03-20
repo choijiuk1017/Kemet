@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DataController : MonoBehaviour
 {
-    public OssethanMovement player;
+    public Seth player;
 
     public GameObject Lamp1;
     public GameObject Lamp2;

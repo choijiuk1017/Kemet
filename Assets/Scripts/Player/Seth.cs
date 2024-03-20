@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OssethanMovement : MonoBehaviour
+public class Seth : MonoBehaviour
 {
     //int 변수
     public int currentHP; //플레이어 현재 HP
@@ -92,11 +92,11 @@ public class OssethanMovement : MonoBehaviour
         //회전을 시키는 방식으로 해야 자식 오브젝트에 있는 히트 박스도 함께 회전함
         if (Input.GetKeyDown(KeyCode.RightArrow) && !isSliding)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.eulerAngles = new Vector3(0, 180, 0);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow) && !isSliding)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
         //공격
