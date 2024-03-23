@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: 4e8b789587869b244af72824fde8f422
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_1
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 2677
+        width: 792
+        height: 903
+      alignment: 9
+      pivot: {x: 0.54585105, y: 0.5663319}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1761ee830dbce640a5d5c81534a980f
+      internalID: 456687583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 2674
+        width: 797
+        height: 898
+      alignment: 9
+      pivot: {x: 0.5451588, y: 0.56890994}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d615426414542c24c971d26ae3ea6907
+      internalID: -1685097574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 2677
+        width: 825
+        height: 897
+      alignment: 9
+      pivot: {x: 0.5352391, y: 0.56910133}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce420f16edd541459942dcc88eb427d
+      internalID: -468330829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_4
+      rect:
+        serializedVersion: 2
+        x: 3405
+        y: 2690
+        width: 439
+        height: 787
+      alignment: 9
+      pivot: {x: 0.25099826, y: 0.58086234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17af8660ec849ce4fba453d3bac17396
+      internalID: 630104291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_11
+      rect:
+        serializedVersion: 2
+        x: 3812
+        y: 1626
+        width: 518
+        height: 709
+      alignment: 9
+      pivot: {x: 0.3249097, y: 0.6406415}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac0e08d6940c63245aff496bbfcae2ee
+      internalID: -416485287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_13
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1629
+        width: 486
+        height: 613
+      alignment: 9
+      pivot: {x: 0.23042907, y: 0.74595517}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8be6fb8db5412646bd38b0f109a06b2
+      internalID: -1381217525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_15
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 1618
+        width: 623
+        height: 613
+      alignment: 9
+      pivot: {x: 0.46291414, y: 0.7473308}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8620f4528c102ac48b88b61b547d5a86
+      internalID: -927821411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_17
+      rect:
+        serializedVersion: 2
+        x: 2919
+        y: 1618
+        width: 623
+        height: 629
+      alignment: 9
+      pivot: {x: 0.4355755, y: 0.7209104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185e802804a53da428eecd0d3578c3a6
+      internalID: -1124447428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_22
+      rect:
+        serializedVersion: 2
+        x: 2658
+        y: 523
+        width: 881
+        height: 947
+      alignment: 9
+      pivot: {x: 0.5981437, y: 0.48617452}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc9e79167389154896e6f4aa118df72
+      internalID: -1704295010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_28
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 524
+        width: 965
+        height: 593
+      alignment: 9
+      pivot: {x: 0.6246742, y: 0.78203326}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf654a056fe951428f41d1e9d5c2293
+      internalID: 1392699871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_29
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 530
+        width: 961
+        height: 766
+      alignment: 9
+      pivot: {x: 0.6299265, y: 0.6051628}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248ce3ee8d99b75408ddfa4ebabd0156
+      internalID: 1617356537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth__default_attack_animation_30
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 521
+        width: 557
+        height: 720
+      alignment: 9
+      pivot: {x: 0.37966278, y: 0.64182365}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a79d3333ec0cc45998be83cc81aac9
+      internalID: 1231208237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Seth__default_attack_animation_15: -927821411
+      Seth__default_attack_animation_6: -1768189393
+      Seth__default_attack_animation_4: 630104291
+      Seth__default_attack_animation_7: -579180935
+      Seth__default_attack_animation_22: -1704295010
+      Seth__default_attack_animation_13: -1381217525
+      Seth__default_attack_animation_20: -489660190
+      Seth__default_attack_animation_29: 1617356537
+      Seth__default_attack_animation_21: 904485094
+      Seth__default_attack_animation_25: -1100855804
+      Seth__default_attack_animation_27: 674034695
+      Seth__default_attack_animation_30: 1231208237
+      Seth__default_attack_animation_1: 456687583
+      Seth__default_attack_animation_9: -1554892303
+      Seth__default_attack_animation_8: 173693074
+      Seth__default_attack_animation_5: 1613146625
+      Seth__default_attack_animation_0: 598405299
+      Seth__default_attack_animation_3: -468330829
+      Seth__default_attack_animation_10: -925317445
+      Seth__default_attack_animation_14: 573410040
+      Seth__default_attack_animation_16: 1583096484
+      Seth__default_attack_animation_19: 564708603
+      Seth__default_attack_animation_26: -1781347160
+      Seth__default_attack_animation_23: 51835208
+      Seth__default_attack_animation_12: -1544679789
+      Seth__default_attack_animation_2: -1685097574
+      Seth__default_attack_animation_24: 1512073499
+      Seth__default_attack_animation_11: -416485287
+      Seth__default_attack_animation_17: -1124447428
+      Seth__default_attack_animation_28: 1392699871
+      Seth__default_attack_animation_18: -606542563
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
