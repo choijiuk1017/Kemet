@@ -133,7 +133,7 @@ public class Seth : MonoBehaviour
         }
 
         //점프
-        if(Input.GetButtonDown("Jump") && isGround)
+        if(Input.GetButtonDown("Jump") && isGround && !Input.GetKeyDown(KeyCode.Z))
         {
             Jump();
         }
@@ -224,14 +224,14 @@ public class Seth : MonoBehaviour
     {
         anim.SetTrigger("isJumpAttack");
 
-        //아래쪽으로 급강하
-        rigid.velocity = new Vector2(rigid.velocity.x, -7);
+        ////아래쪽으로 급강하
+        //rigid.velocity = new Vector2(rigid.velocity.x, -7);
 
-        //바닥에 닿으면 애니메이션 초기화
-        if (isGround)
-        {
-            anim.ResetTrigger("isJumpAttack");
-        }
+        ////바닥에 닿으면 애니메이션 초기화
+        //if (isGround)
+        //{
+        //    anim.ResetTrigger("isJumpAttack");
+        //}
     }
 
     //기본 공격
