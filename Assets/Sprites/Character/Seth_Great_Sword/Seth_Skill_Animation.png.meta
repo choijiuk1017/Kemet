@@ -1,0 +1,294 @@
+fileFormatVersion: 2
+guid: 5c6ad3514026e454e80d9aa48052925b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Seth_Skill_Animation_1
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 1637
+        width: 800
+        height: 871
+      alignment: 9
+      pivot: {x: 0.5489316, y: 0.52121305}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288cebe82a1604345b3cb308f90ca643
+      internalID: 950504086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_Skill_Animation_6
+      rect:
+        serializedVersion: 2
+        x: 2726
+        y: 1642
+        width: 559
+        height: 736
+      alignment: 9
+      pivot: {x: 0.3610163, y: 0.6307267}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8676bb4404e383b439f8bd52b318faf9
+      internalID: 718437124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_Skill_Animation_7
+      rect:
+        serializedVersion: 2
+        x: 3505
+        y: 1637
+        width: 559
+        height: 739
+      alignment: 9
+      pivot: {x: 0.35679254, y: 0.6298184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea2d8eaf0c7c194dafde287aa2536c6
+      internalID: -609827815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_Skill_Animation_8
+      rect:
+        serializedVersion: 2
+        x: 4274
+        y: 1637
+        width: 559
+        height: 731
+      alignment: 9
+      pivot: {x: 0.3588448, y: 0.6388385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3006a91ee636af9438b1876feda63b35
+      internalID: 2001838688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_Skill_Animation_9
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 1642
+        width: 799
+        height: 663
+      alignment: 9
+      pivot: {x: 0.5436632, y: 0.68729305}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abca94dc0efdf034484a4fd215724fe0
+      internalID: 1567038791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_Skill_Animation_17
+      rect:
+        serializedVersion: 2
+        x: 2744
+        y: 292
+        width: 1256
+        height: 696
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48babb9dfd7acfb4c88b14c7cd0f1b8d
+      internalID: -1228792229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_Skill_Animation_20
+      rect:
+        serializedVersion: 2
+        x: 4021
+        y: 270
+        width: 777
+        height: 593
+      alignment: 9
+      pivot: {x: 0.53212476, y: 0.76082987}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e5bc7a49ac3f74fb800c42346b082d
+      internalID: -11533852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Seth_Skill_Animation_11: 1837051106
+      Seth_Skill_Animation_20: -11533852
+      Seth_Skill_Animation_8: 2001838688
+      Seth_Skill_Animation_19: 812647106
+      Seth_Skill_Animation_2: 382252243
+      Seth_Skill_Animation_24: 466185685
+      Seth_Skill_Animation_21: -953106681
+      Seth_Skill_Animation_17: -1228792229
+      Seth_Skill_Animation_10: 889966276
+      Seth_Skill_Animation_12: -625959707
+      Seth_Skill_Animation_1: 950504086
+      Seth_Skill_Animation_0: 27861482
+      Seth_Skill_Animation_5: 822493423
+      Seth_Skill_Animation_13: 931442341
+      Seth_Skill_Animation_15: -345166522
+      Seth_Skill_Animation_18: 2070022167
+      Seth_Skill_Animation_3: 1075717103
+      Seth_Skill_Animation_4: -906596052
+      Seth_Skill_Animation_16: -2009698186
+      Seth_Skill_Animation_7: -609827815
+      Seth_Skill_Animation_23: -1755397183
+      Seth_Skill_Animation_22: -2079862653
+      Seth_Skill_Animation_9: 1567038791
+      Seth_Skill_Animation_14: 1946874225
+      Seth_Skill_Animation_6: 718437124
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

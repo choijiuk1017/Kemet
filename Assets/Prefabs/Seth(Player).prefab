@@ -138,6 +138,7 @@ MonoBehaviour:
   isJump: 0
   isGround: 0
   isParry: 0
+  skillEffectPrefab: {fileID: 6754906609814001285, guid: 7fa6c70e7b960d94d93b05c2988a70c9, type: 3}
   atkPos: {fileID: 4450003577204373376}
   atkBoxSize: {x: 1.5, y: 3.5}
   parryBox: {fileID: 4450003577714855382}

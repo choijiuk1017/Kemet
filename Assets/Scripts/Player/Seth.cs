@@ -37,6 +37,8 @@ public class Seth : MonoBehaviour
 
     private bool isSliding = false; //슬라이딩 확인 여부
 
+    public GameObject skillEffectPrefab;
+
 
     //Transform 변수
     public Transform atkPos; //공격 사거리
@@ -148,6 +150,11 @@ public class Seth : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.C))
         {
             Parrying();
+        }
+
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            ActivateSkill();
         }
 
     }
@@ -308,6 +315,21 @@ public class Seth : MonoBehaviour
             }
         }
     }
+
+    void ActivateSkill()
+    {
+        anim.SetTrigger("isSkill");
+
+        GameObject skillEffect = Instantiate(skillEffectPrefab, transform.position, Quaternion.identity);
+        SkillEffectController effectController = skillEffect.GetComponent<SkillEffectController>();
+        if (effectController != null)
+        {
+            effectController.InitiateMovement(transform.right * -1f); // 플레이어가 보는 방향으로 이동 시작
+            Destroy(skillEffect, 3f); // 3초 후에 이펙트 파괴
+        }
+
+    }
+
 
     //패링
     void Parrying()
