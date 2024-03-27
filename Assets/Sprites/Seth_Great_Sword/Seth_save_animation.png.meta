@@ -1,0 +1,366 @@
+fileFormatVersion: 2
+guid: 8751ff38c6d8b484196c29dd53d3c677
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Seth_save_animation_1
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1941
+        width: 321
+        height: 756
+      alignment: 9
+      pivot: {x: 0.579343, y: 0.572191}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4686049fe1a46245a7940113d774dc7
+      internalID: -2070650478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_save_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1938
+        width: 314
+        height: 755
+      alignment: 9
+      pivot: {x: 0.58111143, y: 0.57710606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5f18ee38b2e4a45b7f14948f695251
+      internalID: -867010690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_save_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 1946
+        width: 321
+        height: 755
+      alignment: 9
+      pivot: {x: 0.5906781, y: 0.57710576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668841df11267204a86a437d77aad22a
+      internalID: 1884267794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_save_animation_4
+      rect:
+        serializedVersion: 2
+        x: 2710
+        y: 1938
+        width: 326
+        height: 755
+      alignment: 9
+      pivot: {x: 0.6004474, y: 0.57228667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104e08f37bfc0444097d8cf803edf79d
+      internalID: 250772938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_save_animation_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 400
+        width: 372
+        height: 873
+      alignment: 9
+      pivot: {x: 0.6369307, y: 0.49583235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fa02251d3344346843b657bb68a6af
+      internalID: -1981909620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_save_animation_7
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 406
+        width: 428
+        height: 885
+      alignment: 9
+      pivot: {x: 0.68702257, y: 0.48355505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420a02bfaa7fed049a6aa875f9d9cdf2
+      internalID: -2083201124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_save_animation_8
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 393
+        width: 484
+        height: 894
+      alignment: 9
+      pivot: {x: 0.71800596, y: 0.48779038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eda2493ce3614f4d9e202d50ad1c812
+      internalID: 376292830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_save_animation_9
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 403
+        width: 482
+        height: 886
+      alignment: 9
+      pivot: {x: 0.72645813, y: 0.4835735}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af72ab5c6d2ff1d479eb141b65e60fba
+      internalID: 1491021425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_save_animation_10
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 398
+        width: 597
+        height: 893
+      alignment: 9
+      pivot: {x: 0.7072145, y: 0.49185124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770a7ffde2b217342919699d88d1cc15
+      internalID: 947114207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_save_animation_11
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 404
+        width: 291
+        height: 889
+      alignment: 9
+      pivot: {x: 0.53750956, y: 0.48772177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60817dc88751ba40b63594a7bc31001
+      internalID: -885148003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Seth_save_animation_12
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 405
+        width: 413
+        height: 880
+      alignment: 9
+      pivot: {x: 0.6938153, y: 0.49793258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60fd66fdcbfce646b22b36fc684102b
+      internalID: -2039677277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Seth_save_animation_9: 1491021425
+      Seth_save_animation_4: 250772938
+      Seth_save_animation_12: -2039677277
+      Seth_save_animation_2: -867010690
+      Seth_save_animation_6: -2040449265
+      Seth_save_animation_1: -2070650478
+      Seth_save_animation_11: -885148003
+      Seth_save_animation_5: -1981909620
+      Seth_save_animation_7: -2083201124
+      Seth_save_animation_8: 376292830
+      Seth_save_animation_0: -872237406
+      Seth_save_animation_10: 947114207
+      Seth_save_animation_3: 1884267794
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
