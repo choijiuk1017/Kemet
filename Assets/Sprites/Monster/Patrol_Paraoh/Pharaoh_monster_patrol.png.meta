@@ -1,0 +1,322 @@
+fileFormatVersion: 2
+guid: 38bece3a872359d4b8e317049e65ed50
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pharaoh_monster_patrol_0
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1731
+        width: 674
+        height: 926
+      alignment: 9
+      pivot: {x: 0.4893281, y: 0.62040114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2623cfe6bd8ede42a87f7fbd1c5dd98
+      internalID: 420587463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_patrol_2
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 1736
+        width: 668
+        height: 923
+      alignment: 9
+      pivot: {x: 0.59691143, y: 0.62079245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d9f332202648a4181adc3a83002ee0
+      internalID: 1393300430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_patrol_3
+      rect:
+        serializedVersion: 2
+        x: 2277
+        y: 1736
+        width: 668
+        height: 923
+      alignment: 9
+      pivot: {x: 0.6830547, y: 0.62858593}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa255e8308ec004a8485915ee7c2866
+      internalID: 1519080452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_patrol_4
+      rect:
+        serializedVersion: 2
+        x: 3104
+        y: 1737
+        width: 671
+        height: 924
+      alignment: 9
+      pivot: {x: 0.6018383, y: 0.624554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60303d85b1187748863e5603b0fead6
+      internalID: -531233494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_patrol_5
+      rect:
+        serializedVersion: 2
+        x: 4009
+        y: 1745
+        width: 673
+        height: 926
+      alignment: 9
+      pivot: {x: 0.48931295, y: 0.62040114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54def4709d1b3924794bcaf60247965f
+      internalID: 1386192643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_patrol_7
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 410
+        width: 672
+        height: 927
+      alignment: 9
+      pivot: {x: 0.4464808, y: 0.6241508}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2544e193ce89f48972e2545735bc7d
+      internalID: 2051377788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_patrol_8
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 404
+        width: 672
+        height: 926
+      alignment: 9
+      pivot: {x: 0.4143695, y: 0.6281688}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0940b81b6cf1247bd5c342dcb55949
+      internalID: -675755245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_patrol_9
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 414
+        width: 674
+        height: 928
+      alignment: 9
+      pivot: {x: 0.45197603, y: 0.6201415}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410407b658bf7ef45944659cd8c9c498
+      internalID: -940114123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_patrol_10
+      rect:
+        serializedVersion: 2
+        x: 3035
+        y: 413
+        width: 674
+        height: 926
+      alignment: 9
+      pivot: {x: 0.49466404, y: 0.6165171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84dc03aa26092134e8cb6882d102c252
+      internalID: 863294785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pharaoh_monster_patrol_8: -675755245
+      Pharaoh_monster_patrol_3: 1519080452
+      Pharaoh_monster_patrol_2: 1393300430
+      Pharaoh_monster_patrol_10: 863294785
+      Pharaoh_monster_patrol_4: -531233494
+      Pharaoh_monster_patrol_0: 420587463
+      Pharaoh_monster_patrol_7: 2051377788
+      Pharaoh_monster_patrol_1: 2024361128
+      Pharaoh_monster_patrol_6: -750064213
+      Pharaoh_monster_patrol_9: -940114123
+      Pharaoh_monster_patrol_5: 1386192643
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
