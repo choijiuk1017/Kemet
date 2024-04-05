@@ -852,35 +852,15 @@ GameObject:
   - component: {fileID: 989067580}
   - component: {fileID: 989067579}
   - component: {fileID: 989067578}
-  - component: {fileID: 989067577}
   - component: {fileID: 989067582}
+  - component: {fileID: 989067583}
   m_Layer: 6
-  m_Name: Monster
+  m_Name: Pharaoh_Patrol_Monster
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &989067577
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989067576}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 62c4fd5770f4a7043a9d502b20318991, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &989067578
 Rigidbody2D:
   serializedVersion: 4
@@ -915,18 +895,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.13239509, y: 0.28442323}
+  m_Offset: {x: -0.23580945, y: -0.3619163}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.5, y: 5.945}
+    pivot: {x: 0.4875448, y: 0.64328814}
+    oldSize: {x: 3.365, y: 4.48863}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.682849, y: 3.9823358}
+  m_Size: {x: 1.8896778, y: 3.982335}
   m_EdgeRadius: 0
 --- !u!212 &989067580
 SpriteRenderer:
@@ -969,7 +949,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 3d1a681fdf79e924aa67dec8e5389993, type: 3}
+  m_Sprite: {fileID: 397371742, guid: 9b44ecc03fb111247b1015b5bdc41c05, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -988,7 +968,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989067576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.21, y: -3.4, z: 0}
+  m_LocalPosition: {x: -5.24, y: -2.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1038,6 +1018,26 @@ MonoBehaviour:
   isPatrolling: 0
   isAttackCoroutine: 0
   state: 0
+--- !u!95 &989067583
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989067576}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e6d612e7702da2846a30e8e98431d154, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1018394461
 GameObject:
   m_ObjectHideFlags: 0
