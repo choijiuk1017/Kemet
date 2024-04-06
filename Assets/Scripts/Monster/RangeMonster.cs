@@ -22,10 +22,16 @@ public class RangeMonster : Monster
     //레이캐스트의 길이 변수
     public float distance;
 
+    public Vector2 patrolDirection;
+
     private float lastPlayerPosition;
 
     //정찰 모드 확인 변수
     public bool isPatrolling;
+
+    public bool isWaiting = false;
+
+    float waitTime = 1.5f;
 
     //공격 중인지 확인하는 변수
     public bool isAttackCoroutine = false;
@@ -108,20 +114,23 @@ public class RangeMonster : Monster
             float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
             //지면 확인 위치와 플레이어 위치를 비교하여 현재 바라보고 있는 방향 설정
-            Vector2 patrolDirection = transform.position.x - groundDetected.position.x > 0 ? Vector2.left: Vector2.right;
+            patrolDirection = transform.position.x - groundDetected.position.x > 0 ?  Vector2.left : Vector2.right;
 
-            //이동
-            transform.Translate(patrolDirection * moveSpeed * Time.deltaTime);
+            Vector2 moveDirection = patrolDirection * moveSpeed;
+
+            // Rigidbody를 이용한 이동
+            rigid.velocity = moveDirection;
 
             //지면 확인을 위한 레이캐스트
             RaycastHit2D groundInfo = Physics2D.Raycast(groundDetected.position, Vector2.down, distance);
 
             Debug.DrawRay(groundDetected.position, Vector2.down * 10f, Color.green);
 
-            //지면이 확인되지 않을 경우
+            // 지면이 확인되지 않을 경우
             if (!groundInfo.collider)
             {
-                //반대 방향으로 이동
+                
+                // 반대 방향으로 이동
                 if (MonsterDirRight)
                 {
                     MonsterFlip();
@@ -132,6 +141,7 @@ public class RangeMonster : Monster
                     MonsterFlip();
                     MonsterDirRight = true;
                 }
+ 
             }
 
             //플레이어와 어느정도 가까워 지면 추적 상태로 변경
@@ -149,6 +159,19 @@ public class RangeMonster : Monster
                 state = State.Death;
             }
         }
+    }
+
+    IEnumerator WaitForNextPatrol()
+    {
+        moveSpeed = 0f;
+        anim.SetTrigger("isPatrol");
+
+        yield return new WaitForSeconds(waitTime);
+
+
+        anim.ResetTrigger("isPatrol");
+
+        moveSpeed = 2f;
     }
 
     //추적 함수
@@ -173,7 +196,7 @@ public class RangeMonster : Monster
                 transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
                 //플레이어의 위치에 따라 몬스터가 바라보는 방향 설정
-                if (player.transform.position.x > transform.position.x)
+                if (player.transform.position.x < transform.position.x)
                 {
                     MonsterDirRight = true;
                     MonsterFlip();
@@ -229,7 +252,7 @@ public class RangeMonster : Monster
         moveSpeed = 0;
         //플레이어의 위치에 따라 몬스터가 바라보는 방향 설정
 
-        if (lastPlayerPosition > transform.position.x)
+        if (lastPlayerPosition < transform.position.x)
         {
             MonsterDirRight = true;
             MonsterFlip();

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e35134ffb713fea4bb923910ee0c24c2
+guid: ed607517b402e7e45add6ee0c8cd5a0c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,106 +104,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Army-monster_idle_0
+      name: Pharaoh_monster_move_animation_1
       rect:
         serializedVersion: 2
-        x: 46
-        y: 799
-        width: 399
-        height: 341
+        x: 769
+        y: 1662
+        width: 658
+        height: 813
       alignment: 9
-      pivot: {x: 0.78675807, y: 0.25394294}
+      pivot: {x: 0.62389916, y: 0.60027754}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83e2f95af7c816549aa8c2e66303cb16
-      internalID: -963922148
+      spriteID: d106d19b0802b654fbd65574c7cc9c8b
+      internalID: -124307922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-monster_idle_1
+      name: Pharaoh_monster_move_animation_2
       rect:
         serializedVersion: 2
-        x: 561
-        y: 779
-        width: 397
-        height: 354
+        x: 1583
+        y: 1665
+        width: 625
+        height: 798
       alignment: 9
-      pivot: {x: 0.79204535, y: 0.25436005}
+      pivot: {x: 0.7391416, y: 0.6362164}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0eab577bf3a0a3489786ed32a812b1c
-      internalID: -1050493400
+      spriteID: 17e18bcd7ef166c4fb1dfb69e246610a
+      internalID: 1749453159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-monster_idle_2
+      name: Pharaoh_monster_move_animation_3
       rect:
         serializedVersion: 2
-        x: 1046
-        y: 772
-        width: 404
-        height: 353
+        x: 2418
+        y: 1665
+        width: 652
+        height: 805
       alignment: 9
-      pivot: {x: 0.79076093, y: 0.22773392}
+      pivot: {x: 0.6615095, y: 0.6012741}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3cbd876eb4b8e748b20ef73142c987e
-      internalID: 365133212
+      spriteID: 1d669566093bace47b59ff6ebc58e4c8
+      internalID: -287064755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-monster_idle_3
+      name: Pharaoh_monster_move_animation_4
       rect:
         serializedVersion: 2
-        x: 90
-        y: 298
-        width: 397
-        height: 355
+        x: 3383
+        y: 1662
+        width: 668
+        height: 811
       alignment: 9
-      pivot: {x: 0.7882025, y: 0.255052}
+      pivot: {x: 0.57627785, y: 0.5921476}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2b8aa168655bcd4b8f9be60582fdf7d
-      internalID: -1783515444
+      spriteID: 19bb11893f57988429f87991a2e7d54b
+      internalID: -1529601058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Army-monster_idle_4
+      name: Pharaoh_monster_move_animation_5
       rect:
         serializedVersion: 2
-        x: 607
-        y: 293
-        width: 400
-        height: 341
+        x: 4303
+        y: 1657
+        width: 667
+        height: 801
       alignment: 9
-      pivot: {x: 0.7860411, y: 0.24499539}
+      pivot: {x: 0.47962907, y: 0.6017795}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d01bb1ac8fdf484694078d9ede05d2a
-      internalID: -1023743468
+      spriteID: 4bf09f16c2a15854aa07ca9242613b35
+      internalID: -1850069250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_move_animation_8
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 333
+        width: 672
+        height: 789
+      alignment: 9
+      pivot: {x: 0.42417628, y: 0.6162436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eced5d49181a6f245bfd271cf4ef8d1a
+      internalID: -924992279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_move_animation_9
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 333
+        width: 671
+        height: 806
+      alignment: 9
+      pivot: {x: 0.4848129, y: 0.6011484}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f758b11f90f6a004892f64640fb966ca
+      internalID: -147818542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_move_animation_10
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 333
+        width: 673
+        height: 811
+      alignment: 9
+      pivot: {x: 0.5555215, y: 0.5921477}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d10786bdfeead4194f8e28b1fe58e7
+      internalID: 677020430
       vertices: []
       indices: 
       edges: []
@@ -219,11 +282,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Army-monster_idle_3: -1783515444
-      Army-monster_idle_1: -1050493400
-      Army-monster_idle_0: -963922148
-      Army-monster_idle_4: -1023743468
-      Army-monster_idle_2: 365133212
+      Pharaoh_monster_move_animation_3: -287064755
+      Pharaoh_monster_move_animation_1: -124307922
+      Pharaoh_monster_move_animation_8: -924992279
+      Pharaoh_monster_move_animation_7: 1260248598
+      Pharaoh_monster_move_animation_10: 677020430
+      Pharaoh_monster_move_animation_0: -1542833475
+      Pharaoh_monster_move_animation_6: 2132840517
+      Pharaoh_monster_move_animation_2: 1749453159
+      Pharaoh_monster_move_animation_4: -1529601058
+      Pharaoh_monster_move_animation_9: -147818542
+      Pharaoh_monster_move_animation_5: -1850069250
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
