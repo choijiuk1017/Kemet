@@ -1,0 +1,304 @@
+fileFormatVersion: 2
+guid: a86c52cd084d0764c8285c6fbe674c32
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pharaoh_monster_death_animation_0
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 1106
+        width: 710
+        height: 686
+      alignment: 9
+      pivot: {x: 0.77945435, y: 0.6446154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf630d443dbe9274dbf3349cc6e902c1
+      internalID: 1244878778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_death_animation_2
+      rect:
+        serializedVersion: 2
+        x: 2902
+        y: 1104
+        width: 708
+        height: 688
+      alignment: 9
+      pivot: {x: 0.79260737, y: 0.6526771}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b736d3b899ca3004b9643cced5bc616f
+      internalID: -459497172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_death_animation_3
+      rect:
+        serializedVersion: 2
+        x: 4049
+        y: 1099
+        width: 710
+        height: 701
+      alignment: 9
+      pivot: {x: 0.8123315, y: 0.64568335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c209a41b09cad0642816748e1760480c
+      internalID: -259292841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_death_animation_4
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1102
+        width: 710
+        height: 688
+      alignment: 9
+      pivot: {x: 0.76712555, y: 0.6526771}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c201f81d4133fb145af2bf2024e71a6f
+      internalID: -547302389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_death_animation_7
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 216
+        width: 757
+        height: 591
+      alignment: 9
+      pivot: {x: 0.82762986, y: 0.9344658}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c5dbc64cf79c440a8bdf2d88ac551b
+      internalID: 74156470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_death_animation_9
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 52
+        width: 883
+        height: 850
+      alignment: 9
+      pivot: {x: 0.7974002, y: 0.9823419}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a820bab210088f14fa4c20714760d6a3
+      internalID: -1621378532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_death_animation_11
+      rect:
+        serializedVersion: 2
+        x: 2550
+        y: 57
+        width: 887
+        height: 847
+      alignment: 9
+      pivot: {x: 0.86818856, y: 0.9420587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e449e2688d8364b821dcc5af9aeeb8
+      internalID: 316348484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pharaoh_monster_death_animation_12
+      rect:
+        serializedVersion: 2
+        x: 3837
+        y: 43
+        width: 948
+        height: 859
+      alignment: 9
+      pivot: {x: 0.86708707, y: 0.8902403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e874733deb3be84449e1c14c114b1d9a
+      internalID: 1112509533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pharaoh_monster_death_animation_12: 1112509533
+      Pharaoh_monster_death_animation_6: 1177705047
+      Pharaoh_monster_death_animation_9: -1621378532
+      Pharaoh_monster_death_animation_5: 1856187718
+      Pharaoh_monster_death_animation_8: -2037526262
+      Pharaoh_monster_death_animation_0: 1244878778
+      Pharaoh_monster_death_animation_1: -2001119953
+      Pharaoh_monster_death_animation_4: -547302389
+      Pharaoh_monster_death_animation_7: 74156470
+      Pharaoh_monster_death_animation_10: 1446061460
+      Pharaoh_monster_death_animation_3: -259292841
+      Pharaoh_monster_death_animation_13: 1388951691
+      Pharaoh_monster_death_animation_11: 316348484
+      Pharaoh_monster_death_animation_2: -459497172
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
