@@ -1,0 +1,336 @@
+fileFormatVersion: 2
+guid: 3cd26c8cf4968bc46b19a05bac54006c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rush_monster_rushing_animation_2
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 3510
+        width: 1076
+        height: 1070
+      alignment: 9
+      pivot: {x: 0.39120108, y: 0.29759327}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b3218eb471c5545a2a805fed65dadf
+      internalID: 692171854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rushing_animation_4
+      rect:
+        serializedVersion: 2
+        x: 3839
+        y: 3497
+        width: 1039
+        height: 1071
+      alignment: 9
+      pivot: {x: 0.36197525, y: 0.31144547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f311d9a7674e52a4b8e950bd2b7b0f75
+      internalID: -1201406160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rushing_animation_6
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 2357
+        width: 964
+        height: 1073
+      alignment: 9
+      pivot: {x: 0.32391268, y: 0.31452456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578a9e3bd56f33b448cd82a0a8fa8fac
+      internalID: 518164434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rushing_animation_8
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 2367
+        width: 981
+        height: 1085
+      alignment: 9
+      pivot: {x: 0.32696402, y: 0.30308878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804a1198ae6fea64aaa687bed3c6c04a
+      internalID: -599646387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rushing_animation_15
+      rect:
+        serializedVersion: 2
+        x: 3922
+        y: 2377
+        width: 995
+        height: 1067
+      alignment: 9
+      pivot: {x: 0.33528188, y: 0.30799565}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061a1f00b34e6d14a8c58efc6203a32f
+      internalID: 1800755383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rushing_animation_23
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 2365
+        width: 987
+        height: 1088
+      alignment: 9
+      pivot: {x: 0.33691165, y: 0.30363172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46aea31345031ad4ca7b1561f0859599
+      internalID: 1274246387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rushing_animation_34
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1105
+        width: 986
+        height: 1135
+      alignment: 9
+      pivot: {x: 0.32571736, y: 0.29655182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9c0de72bf0d4e4dba62b21e274cb8b
+      internalID: -2029742756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rushing_animation_36
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1111
+        width: 924
+        height: 1090
+      alignment: 9
+      pivot: {x: 0.28205824, y: 0.2930793}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f281b9fb9a8e4da4fb44c387ae21a58f
+      internalID: -1989561037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Rush_monster_rushing_animation_3: 1490139439
+      Rush_monster_rushing_animation_10: 1994722350
+      Rush_monster_rushing_animation_4: -1201406160
+      Rush_monster_rushing_animation_13: -1691759257
+      Rush_monster_rushing_animation_38: -1136412895
+      Rush_monster_rushing_animation_9: -727995635
+      Rush_monster_rushing_animation_27: 1325348828
+      Rush_monster_rushing_animation_25: 790921562
+      Rush_monster_rushing_animation_32: -1481330489
+      Rush_monster_rushing_animation_6: 518164434
+      Rush_monster_rushing_animation_12: 29586968
+      Rush_monster_rushing_animation_30: -554957423
+      Rush_monster_rushing_animation_20: -1098709410
+      Rush_monster_rushing_animation_5: 179452759
+      Rush_monster_rushing_animation_37: 1169533456
+      Rush_monster_rushing_animation_29: 890121568
+      Rush_monster_rushing_animation_11: 263108142
+      Rush_monster_rushing_animation_7: 1552452308
+      Rush_monster_rushing_animation_1: 1263465108
+      Rush_monster_rushing_animation_18: 836594908
+      Rush_monster_rushing_animation_41: -1752979372
+      Rush_monster_rushing_animation_28: 1621123820
+      Rush_monster_rushing_animation_21: 1035949298
+      Rush_monster_rushing_animation_42: -376765349
+      Rush_monster_rushing_animation_45: 1602961418
+      Rush_monster_rushing_animation_39: 144405372
+      Rush_monster_rushing_animation_17: 1941505625
+      Rush_monster_rushing_animation_26: 325310019
+      Rush_monster_rushing_animation_19: 525741487
+      Rush_monster_rushing_animation_31: -1349523088
+      Rush_monster_rushing_animation_0: 934519923
+      Rush_monster_rushing_animation_40: -1424553398
+      Rush_monster_rushing_animation_23: 1274246387
+      Rush_monster_rushing_animation_43: 1354834185
+      Rush_monster_rushing_animation_14: 397689203
+      Rush_monster_rushing_animation_15: 1800755383
+      Rush_monster_rushing_animation_34: -2029742756
+      Rush_monster_rushing_animation_22: -1266153484
+      Rush_monster_rushing_animation_24: -967730283
+      Rush_monster_rushing_animation_36: -1989561037
+      Rush_monster_rushing_animation_8: -599646387
+      Rush_monster_rushing_animation_33: -813866051
+      Rush_monster_rushing_animation_2: 692171854
+      Rush_monster_rushing_animation_16: 1868039713
+      Rush_monster_rushing_animation_35: 1626166348
+      Rush_monster_rushing_animation_44: 2006762369
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

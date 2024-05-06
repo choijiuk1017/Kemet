@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: 9016a33763813724e87d8e1779d4a983
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rush_monster_rush_starting_animation_1
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 3510
+        width: 930
+        height: 971
+      alignment: 9
+      pivot: {x: 0.35954893, y: 0.32366887}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 537575e2f9b24e842ab0c02e5c386839
+      internalID: -1902260191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rush_starting_animation_2
+      rect:
+        serializedVersion: 2
+        x: 2916
+        y: 3507
+        width: 1230
+        height: 989
+      alignment: 9
+      pivot: {x: 0.36689612, y: 0.3182673}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bdbcf910c3a5db47b891384d779e34b
+      internalID: 662562341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rush_starting_animation_4
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 2372
+        width: 1152
+        height: 991
+      alignment: 9
+      pivot: {x: 0.29875812, y: 0.31548733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e056803931968544bb7bbdb8d4f540c1
+      internalID: 1783788511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rush_starting_animation_6
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 2369
+        width: 1144
+        height: 989
+      alignment: 9
+      pivot: {x: 0.29605317, y: 0.32186374}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5cb2f1a4cc15794eacf0ff5cc74cbdf
+      internalID: 739348621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rush_starting_animation_7
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 2372
+        width: 977
+        height: 964
+      alignment: 9
+      pivot: {x: 0.3416072, y: 0.32712287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8349ad8cf17b95e41b6af9c56d78e9d2
+      internalID: 1788684276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rush_starting_animation_8
+      rect:
+        serializedVersion: 2
+        x: 3978
+        y: 2372
+        width: 979
+        height: 964
+      alignment: 9
+      pivot: {x: 0.34922633, y: 0.32712287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63467aa6e1c36714684209c15221aeab
+      internalID: 1616644683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rush_starting_animation_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1110
+        width: 976
+        height: 964
+      alignment: 9
+      pivot: {x: 0.3536414, y: 0.32465297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ecbc6fa70348a4b843e2af5df0e004
+      internalID: 1205091607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rush_starting_animation_16
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 1122
+        width: 979
+        height: 964
+      alignment: 9
+      pivot: {x: 0.3467944, y: 0.3246531}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c66b64a1e8b1aa4797b0e65e473cce5
+      internalID: -880494020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rush_starting_animation_17
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 1117
+        width: 977
+        height: 962
+      alignment: 9
+      pivot: {x: 0.34160697, y: 0.3292381}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c9ee50e8947a948b186754e398eb7a
+      internalID: 1525889514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_rush_starting_animation_18
+      rect:
+        serializedVersion: 2
+        x: 3868
+        y: 1110
+        width: 977
+        height: 964
+      alignment: 9
+      pivot: {x: 0.3489177, y: 0.3271226}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2954239affbd8944e87b40b30c747e2e
+      internalID: -1245308589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Rush_monster_rush_starting_animation_1: -1902260191
+      Rush_monster_rush_starting_animation_15: 1205091607
+      Rush_monster_rush_starting_animation_18: -1245308589
+      Rush_monster_rush_starting_animation_8: 1616644683
+      Rush_monster_rush_starting_animation_6: 739348621
+      Rush_monster_rush_starting_animation_3: -856333998
+      Rush_monster_rush_starting_animation_11: -412454798
+      Rush_monster_rush_starting_animation_12: 709756460
+      Rush_monster_rush_starting_animation_10: -1119590921
+      Rush_monster_rush_starting_animation_5: -606402262
+      Rush_monster_rush_starting_animation_9: -1052580471
+      Rush_monster_rush_starting_animation_0: 381649945
+      Rush_monster_rush_starting_animation_16: -880494020
+      Rush_monster_rush_starting_animation_2: 662562341
+      Rush_monster_rush_starting_animation_13: -385499461
+      Rush_monster_rush_starting_animation_17: 1525889514
+      Rush_monster_rush_starting_animation_4: 1783788511
+      Rush_monster_rush_starting_animation_7: 1788684276
+      Rush_monster_rush_starting_animation_14: -1173648345
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
