@@ -1,0 +1,326 @@
+fileFormatVersion: 2
+guid: fe59296438d180f419e5b9efd331b557
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rush_monster_death_animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1127
+        width: 1043
+        height: 992
+      alignment: 9
+      pivot: {x: 0.3791463, y: 0.3235182}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4e690c072773340822f687c89b1578
+      internalID: -392197432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_death_animation_2
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 1127
+        width: 1063
+        height: 995
+      alignment: 9
+      pivot: {x: 0.39788973, y: 0.32756937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5c69f243cd6764b9622a2604f4f8de
+      internalID: -519497022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_death_animation_4
+      rect:
+        serializedVersion: 2
+        x: 4739
+        y: 1050
+        width: 1261
+        height: 1069
+      alignment: 9
+      pivot: {x: 0.34715557, y: 0.37980196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85067b2598dffa046a74c58f9368f85f
+      internalID: 1383723238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_death_animation_1
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 1115
+        width: 993
+        height: 1014
+      alignment: 9
+      pivot: {x: 0.35190463, y: 0.32044107}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00731cd48f4c81245a5213e8f0fb4adf
+      internalID: 802829206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_death_animation_3
+      rect:
+        serializedVersion: 2
+        x: 3734
+        y: 1127
+        width: 954
+        height: 1002
+      alignment: 9
+      pivot: {x: 0.3552113, y: 0.3236765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8920bc869c3b9224394644c94dd7f9cc
+      internalID: 119734018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_death_animation_5
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 7
+        width: 1300
+        height: 820
+      alignment: 9
+      pivot: {x: 0.41845718, y: 0.49608257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c08413e3dcc5e48a65cf2c0bc39829
+      internalID: -714555400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_death_animation_6
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 0
+        width: 1453
+        height: 904
+      alignment: 9
+      pivot: {x: 0.43809766, y: 0.4538055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4a306215acbd24d943d8189e6b1e1a
+      internalID: 1938641404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_death_animation_7
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 47
+        width: 1431
+        height: 864
+      alignment: 9
+      pivot: {x: 0.41469818, y: 0.444231}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f75dac3c4203a540aab3d4b0c17c6a2
+      internalID: -860448184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rush_monster_death_animation_8
+      rect:
+        serializedVersion: 2
+        x: 4833
+        y: 22
+        width: 1060
+        height: 854
+      alignment: 9
+      pivot: {x: 0.40908617, y: 0.43981653}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4acd82cc3546d41996c4e611c3e3df
+      internalID: 580773775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Rush_monster_death_animation_18: 1444376302
+      Rush_monster_death_animation_7: -860448184
+      Rush_monster_death_animation_11: 402651565
+      Rush_monster_death_animation_2: -519497022
+      Rush_monster_death_animation_0: -392197432
+      Rush_monster_death_animation_6: 1938641404
+      Rush_monster_death_animation_3: 119734018
+      Rush_monster_death_animation_8: 580773775
+      Rush_monster_death_animation_16: -1659498837
+      Rush_monster_death_animation_1: 802829206
+      Rush_monster_death_animation_4: 1383723238
+      Rush_monster_death_animation_5: -714555400
+      Rush_monster_death_animation_12: 1587347451
+      Rush_monster_death_animation_15: 1781963701
+      Rush_monster_death_animation_13: -1220319254
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
