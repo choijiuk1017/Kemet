@@ -1,0 +1,694 @@
+fileFormatVersion: 2
+guid: d4866f0eb33166448b1d1cd09ee30251
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 500
+        width: 27
+        height: 284
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02e7ddab078a7242bd34abceec34027
+      internalID: 950545542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 506
+        width: 31
+        height: 274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b80c1e49689bd47a1ff03154445808
+      internalID: 1616604217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 511
+        width: 36
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07fb2515358e514da5202488b365f43
+      internalID: 1451761632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 487
+        width: 130
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f24d968eb0fadd4fb90e5ce2cad6a13
+      internalID: 1151952546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 486
+        width: 79
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad7ac5faac0cfc49923c36cdd4ed5ae
+      internalID: 78218375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_5
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 594
+        width: 358
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f73df5f6cedec344b9615140b59ce6f
+      internalID: -58323575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_6
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 614
+        width: 270
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5825f51ba512e04eb023d376e552ba3
+      internalID: 1678896180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_7
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 684
+        width: 43
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8282c85104a3f2459e70d5766b9b365
+      internalID: -250976486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_8
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 762
+        width: 62
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a986c82da1ebb04fb41976cabd63d5d
+      internalID: -1598688860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_9
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 727
+        width: 185
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ad384add2d8aa40b44ba7f5392062a
+      internalID: -1566376692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_10
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 649
+        width: 194
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0feffe65bf3ab4094acf86ebb8dd75
+      internalID: 741226901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_11
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 685
+        width: 79
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca67dc529eb5a074a86a45e3e1bdb2f9
+      internalID: -1968332287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_12
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 627
+        width: 154
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f9e08159c235d44bfd291882d576b6
+      internalID: 1347810163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_13
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 632
+        width: 124
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ccfe9a3abcc0b43861e53a3b0912c4
+      internalID: -819635233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_14
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 7
+        width: 584
+        height: 572
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c8a19836601b1419df1861d1cc95ea
+      internalID: 434514134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_15
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 552
+        width: 68
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64844e0124514de46b1674178c1cb085
+      internalID: -430099670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_16
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 504
+        width: 125
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8944b08fb9cd74796abfb510fc5368
+      internalID: -1387236822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_17
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 485
+        width: 194
+        height: 134
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97e7dbd643fad949885245bfe12c1c5
+      internalID: 1369029399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_18
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 446
+        width: 156
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0b718ee2f5da0499d0c67ddb679b75
+      internalID: -1769557677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_19
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 7
+        width: 64
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a095b7a70f376c4888031e29df57dc0
+      internalID: 1485282221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_20
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 7
+        width: 64
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ccf78ad4c89f6f49b68f675c0770814
+      internalID: 1053906361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_21
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 7
+        width: 70
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83de13eab19be03478f35c725d8d9021
+      internalID: -263243083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_22
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 7
+        width: 68
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa9627f1f073a6499e7322b9612c779
+      internalID: -354485159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_23
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 56
+        width: 64
+        height: 335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21f9a9873ab09847a24b35dacda3b7a
+      internalID: 197231426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_24
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 7
+        width: 64
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866ea543f02cfad40bd20a23a5f67bdb
+      internalID: 881235061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ester-garrido-mercydreams-deco-background-rs-removebg_25
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 99
+        width: 518
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb843de237271734592e2bca612eb1f0
+      internalID: -931191709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ester-garrido-mercydreams-deco-background-rs-removebg_18: -1769557677
+      ester-garrido-mercydreams-deco-background-rs-removebg_21: -263243083
+      ester-garrido-mercydreams-deco-background-rs-removebg_23: 197231426
+      ester-garrido-mercydreams-deco-background-rs-removebg_15: -430099670
+      ester-garrido-mercydreams-deco-background-rs-removebg_12: 1347810163
+      ester-garrido-mercydreams-deco-background-rs-removebg_3: 1151952546
+      ester-garrido-mercydreams-deco-background-rs-removebg_6: 1678896180
+      ester-garrido-mercydreams-deco-background-rs-removebg_9: -1566376692
+      ester-garrido-mercydreams-deco-background-rs-removebg_14: 434514134
+      ester-garrido-mercydreams-deco-background-rs-removebg_8: -1598688860
+      ester-garrido-mercydreams-deco-background-rs-removebg_11: -1968332287
+      ester-garrido-mercydreams-deco-background-rs-removebg_0: 950545542
+      ester-garrido-mercydreams-deco-background-rs-removebg_20: 1053906361
+      ester-garrido-mercydreams-deco-background-rs-removebg_13: -819635233
+      ester-garrido-mercydreams-deco-background-rs-removebg_19: 1485282221
+      ester-garrido-mercydreams-deco-background-rs-removebg_25: -931191709
+      ester-garrido-mercydreams-deco-background-rs-removebg_22: -354485159
+      ester-garrido-mercydreams-deco-background-rs-removebg_7: -250976486
+      ester-garrido-mercydreams-deco-background-rs-removebg_10: 741226901
+      ester-garrido-mercydreams-deco-background-rs-removebg_4: 78218375
+      ester-garrido-mercydreams-deco-background-rs-removebg_16: -1387236822
+      ester-garrido-mercydreams-deco-background-rs-removebg_2: 1451761632
+      ester-garrido-mercydreams-deco-background-rs-removebg_1: 1616604217
+      ester-garrido-mercydreams-deco-background-rs-removebg_24: 881235061
+      ester-garrido-mercydreams-deco-background-rs-removebg_17: 1369029399
+      ester-garrido-mercydreams-deco-background-rs-removebg_5: -58323575
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
