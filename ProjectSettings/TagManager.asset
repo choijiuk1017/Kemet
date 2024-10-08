@@ -44,15 +44,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Tile
-    uniqueID: 624550003
-    locked: 0
   - name: Background
     uniqueID: 1464410379
+    locked: 0
+  - name: UnderTile
+    uniqueID: 427927129
     locked: 0
   - name: OnTile
     uniqueID: 820141907
     locked: 0
-  - name: UnderTile
-    uniqueID: 427927129
+  - name: Tile
+    uniqueID: 624550003
     locked: 0
