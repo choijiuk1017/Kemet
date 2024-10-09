@@ -19,12 +19,18 @@ namespace Core.CameraSystem
         public Transform startPoint;
         public Transform endPoint;
 
+        public float verticalFollowThreshold = 0.2f;
+
         private Camera mainCamera;
         private float initialCameraX;
         private float initialCameraY;
         private float endCameraX;
 
         private float cameraWidth;
+
+        private float minY = -5f;
+
+
 
         private void Start()
         {
@@ -54,33 +60,49 @@ namespace Core.CameraSystem
         {
             if (mainCamera == null || target == null) return;
 
-            // 타겟의 화면 내 위치를 뷰포트 좌표로 계산 (0~1 사이 값)
             Vector3 targetViewportPos = mainCamera.WorldToViewportPoint(target.position);
             Vector3 targetCameraPos = mainCamera.transform.position;
 
-            bool shouldFollow = false;
+            bool shouldFollowX = false;
+            bool shouldFollowY = false;
 
-            // 타겟이 화면의 오른쪽 70% 지점을 넘어갔을 때 카메라가 따라감
+            // X축: 플레이어가 화면의 70% 이상 넘어갔을 때 카메라가 따라감
             if (targetViewportPos.x > followThreshold && mainCamera.transform.position.x < endCameraX)
             {
                 targetCameraPos.x = target.position.x;
-                shouldFollow = true;
+                shouldFollowX = true;
             }
-            // 타겟이 화면의 왼쪽 70% 지점을 넘어갔을 때 카메라가 따라감 (반대 방향)
             else if (targetViewportPos.x < (1 - followThreshold) && mainCamera.transform.position.x > initialCameraX)
             {
                 targetCameraPos.x = target.position.x;
-                shouldFollow = true;
+                shouldFollowX = true;
             }
 
-            if (shouldFollow)
+            // Y축: 플레이어가 위/아래로 일정 범위를 벗어나면 카메라가 따라감
+            if (Mathf.Abs(targetViewportPos.y - 0.5f) > verticalFollowThreshold)
             {
-                // 카메라 이동 위치를 클램프하여 경계를 벗어나지 않게 설정
+                targetCameraPos.y = target.position.y;
+                shouldFollowY = true;
+            }
+
+            if (shouldFollowX || shouldFollowY)
+            {
                 targetCameraPos.x = Mathf.Clamp(targetCameraPos.x, initialCameraX, endCameraX);
+
+                // 카메라의 아래쪽 경계를 고려한 Y 좌표 제한
+                float cameraHeight = mainCamera.orthographicSize * 2;  // 카메라 높이
+                float cameraBottomY = targetCameraPos.y - cameraHeight / 2;  // 카메라의 아래쪽 Y 좌표 계산
+
+                // 카메라의 아래쪽 경계가 -5 이하로 내려가지 않도록 클램프
+                if (cameraBottomY < minY)
+                {
+                    targetCameraPos.y = minY + cameraHeight / 2;
+                }
+
                 mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetCameraPos, followSpeed * Time.deltaTime);
             }
 
-            // 카메라가 시작 지점이나 끝 지점을 넘어가지 않도록 제어
+            // X축 경계 제어
             if (mainCamera.transform.position.x <= initialCameraX)
             {
                 mainCamera.transform.position = new Vector3(initialCameraX, mainCamera.transform.position.y, mainCamera.transform.position.z);
