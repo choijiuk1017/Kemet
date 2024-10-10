@@ -7,39 +7,22 @@ namespace Core.Unit.Monster
 {
     public class Monster : Unit
     {
-        public Unit target;
+        public GameObject targetObject;
 
-        public float detactionRange;
 
-        private Rigidbody2D rigid;
+        public Rigidbody2D rigid;
 
-        public enum State {Idle, Moving, Patrol, Attacking, Dead}
-        public State currentState = State.Idle;
+        
 
         protected override void Init()
         {
             base.Init();
 
             rigid = GetComponent<Rigidbody2D>();
+
+            targetObject = GameObject.Find("Seth");
         }
 
-        private void Update()
-        {
-            if (isAlive)
-            {
-                
-            }
-        }
-
-        protected virtual void AIBehavior()
-        {
-            if (target != null)
-            {
-                float diatanceToTarget = Vector2.Distance(transform.position, target.position);
-
-            }
-
-        }
 
         protected override void Die()
         {

@@ -1,0 +1,48 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Core.Unit.Monster.FSM;
+using Core.Unit.Monster;
+using Core.Unit.Monster.State.PatrolMonster;
+
+namespace Core.Unit.Monster.State.PatrolMonster
+{
+    public class PMIdleState : State<PatrolMonsterAI>
+    {
+        private const float chaseRange = 7f;
+        [SerializeField]
+        private float distance;
+        public override void Enter(PatrolMonsterAI entity)
+        {
+            
+
+        }
+
+        public override void Execute(PatrolMonsterAI entity)
+        {
+            distance = Vector2.Distance(entity.patrolMonster.targetObject.transform.position, entity.transform.position);
+
+            if (distance > chaseRange)
+            {
+                entity.ChangeState(MonsterStateType.Patrol);
+            }
+            //else if(distance < chaseRange)
+            //{
+            //    entity.ChangeState(MonsterStateType.Chasing);
+            //}
+        }
+
+        public override void Exit(PatrolMonsterAI entity)
+        {
+        }
+
+        public override void OnTransition(PatrolMonsterAI entity)
+        {
+
+        }
+
+    }
+
+}
+
