@@ -10,16 +10,23 @@ namespace Core.Unit.Monster.State.PatrolMonster
 {
     public class PMAttackState : State<PatrolMonsterAI>
     {
+        private float attackCooldown = 2f;
+        private float timeSinceLastAttack = 0f;
 
         public override void Enter(PatrolMonsterAI entity)
         {
-
+            timeSinceLastAttack = 0f;
 
         }
 
         public override void Execute(PatrolMonsterAI entity)
         {
-            
+            timeSinceLastAttack += Time.deltaTime; 
+            if(timeSinceLastAttack >= attackCooldown)
+            {
+                Attack(entity);
+                timeSinceLastAttack = 0f;
+            }
         }
 
         public override void Exit(PatrolMonsterAI entity)
@@ -29,6 +36,11 @@ namespace Core.Unit.Monster.State.PatrolMonster
         public override void OnTransition(PatrolMonsterAI entity)
         {
 
+        }
+
+        private void Attack(PatrolMonsterAI entity)
+        {
+            entity.anim.SetTrigger("Attack");
         }
     }
 }
