@@ -17,7 +17,7 @@ namespace Core.Unit.Monster
         public PatrolMonsterAI PatrolMonsterAI => patrolMonsterAI;
 
         public bool isGroundAhead { get; private set; }
-        public bool isWallAhead { get; private set; }   
+        public bool isWallAhead { get; private set; }
 
 
         protected override void Init()
@@ -74,6 +74,12 @@ namespace Core.Unit.Monster
             base.Die();
             
         }
+
+        public override void Groggy()
+        {
+            
+        }
+
 
         public void Flip()
         {

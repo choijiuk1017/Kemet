@@ -12,7 +12,10 @@ namespace Core.Unit.Monster
 
         public Rigidbody2D rigid;
 
-        
+
+        public bool isGroggy = false;
+
+        public float groggyGauge;
 
         protected override void Init()
         {
@@ -21,6 +24,11 @@ namespace Core.Unit.Monster
             rigid = GetComponent<Rigidbody2D>();
 
             targetObject = GameObject.Find("Seth");
+        }
+
+        public virtual void Groggy()
+        {
+
         }
 
 

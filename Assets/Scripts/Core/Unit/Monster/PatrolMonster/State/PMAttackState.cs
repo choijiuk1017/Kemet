@@ -1,18 +1,35 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Core.Unit.Monster.FSM;
+using Core.Unit.Monster;
+using Core.Unit.Monster.State.PatrolMonster;
 
-public class PMAttackState : MonoBehaviour
+namespace Core.Unit.Monster.State.PatrolMonster
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PMAttackState : State<PatrolMonsterAI>
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public override void Enter(PatrolMonsterAI entity)
+        {
+
+
+        }
+
+        public override void Execute(PatrolMonsterAI entity)
+        {
+            
+        }
+
+        public override void Exit(PatrolMonsterAI entity)
+        {
+        }
+
+        public override void OnTransition(PatrolMonsterAI entity)
+        {
+
+        }
     }
 }
+    

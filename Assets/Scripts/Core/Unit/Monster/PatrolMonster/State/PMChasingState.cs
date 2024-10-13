@@ -59,18 +59,18 @@ namespace Core.Unit.Monster.State.PatrolMonster
         {
             Vector2 direction = (entity.patrolMonster.targetObject.transform.position - entity.transform.position).normalized;
 
+            if (direction.x > 0 && entity.transform.localScale.x < 0)
+            {
+                entity.transform.localScale = new Vector3(Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
+            }
+            else if (direction.x < 0 && entity.transform.localScale.x > 0)
+            {
+                entity.transform.localScale = new Vector3(-Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
+            }
+
+
             entity.patrolMonster.rigid.velocity = new Vector2(direction.x * entity.patrolMonster.moveSpeed, entity.patrolMonster.rigid.velocity.y);
 
-            if(direction.x > 0 && isMovingRight)
-            {
-                entity.patrolMonster.Flip();
-                isMovingRight = true;
-            }
-            else if(direction.x < 0 && !isMovingRight)
-            {
-                entity.patrolMonster.Flip();
-                isMovingRight =false;   
-            }
         }
     }
 

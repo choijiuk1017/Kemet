@@ -46,6 +46,7 @@ namespace Core.Unit.Monster
             states[(int)MonsterStateType.Idle] = GetComponent<PMIdleState>();
             states[(int)MonsterStateType.Patrol] = GetComponent<PMPatrolState>();
             states[(int)MonsterStateType.Chasing] = GetComponent<PMChasingState>();
+            states[(int)MonsterStateType.Attacking] = GetComponent<PMAttackState>();
 
             fsm.Init(this, states[(int)MonsterStateType.Idle]);
         }
@@ -54,7 +55,15 @@ namespace Core.Unit.Monster
         // Update is called once per frame
         void Update()
         {
-            fsm.StateUpdate();
+            if(!patrolMonster.isGroggy)
+            {
+                fsm.StateUpdate();
+            }
+            if (patrolMonster.isGroggy)
+            {
+                patrolMonster.Groggy();
+            }
+            
         }
 
         public void ChangeState(MonsterStateType newState)
