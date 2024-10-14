@@ -10,7 +10,7 @@ namespace Core.Unit.Monster
 {
     public enum MonsterStateType
     {
-        Idle, Patrol, Chasing, Attacking, Last
+        Idle, Patrol, Chasing, Attacking, Groggy, Dead, Last 
     }
     
 
@@ -47,6 +47,8 @@ namespace Core.Unit.Monster
             states[(int)MonsterStateType.Patrol] = GetComponent<PMPatrolState>();
             states[(int)MonsterStateType.Chasing] = GetComponent<PMChasingState>();
             states[(int)MonsterStateType.Attacking] = GetComponent<PMAttackState>();
+            states[(int)MonsterStateType.Groggy] = GetComponent<PMGroggyState>();   
+            states[(int)MonsterStateType.Dead] = GetComponent<PMDeadState>();
 
             fsm.Init(this, states[(int)MonsterStateType.Idle]);
         }
@@ -55,14 +57,9 @@ namespace Core.Unit.Monster
         // Update is called once per frame
         void Update()
         {
-            if(!patrolMonster.isGroggy)
-            {
-                fsm.StateUpdate();
-            }
-            if (patrolMonster.isGroggy)
-            {
-                patrolMonster.Groggy();
-            }
+
+            fsm.StateUpdate();
+
             
         }
 

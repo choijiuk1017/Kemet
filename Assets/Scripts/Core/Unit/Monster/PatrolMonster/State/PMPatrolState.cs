@@ -26,7 +26,8 @@ namespace Core.Unit.Monster.State.PatrolMonster
 
         public override void Enter(PatrolMonsterAI entity)
         {
-
+            entity.anim.SetBool("Walk", true);
+            
             startPosition = entity.transform.position;
 
             totalDistance = 0f;
@@ -37,18 +38,32 @@ namespace Core.Unit.Monster.State.PatrolMonster
 
         public override void Execute(PatrolMonsterAI entity)
         {
-            float playerDistance = Vector2.Distance(entity.patrolMonster.targetObject.transform.position, entity.transform.position);
 
-            if (entity.patrolMonster.targetObject != null)
+            if(!entity.patrolMonster.isGroggy)
             {
-                if (playerDistance <= 7f)
+                float playerDistance = Vector2.Distance(entity.patrolMonster.targetObject.transform.position, entity.transform.position);
+
+                if (entity.patrolMonster.targetObject != null)
                 {
-                    entity.ChangeState(MonsterStateType.Chasing);
+                    if (playerDistance <= 7f)
+                    {
+                        entity.ChangeState(MonsterStateType.Chasing);
+                    }
+                    else
+                    {
+                        Patrol(entity);
+                    }
                 }
-                else
-                {
-                    Patrol(entity);
-                }
+
+            }
+            else
+            {
+                entity.ChangeState(MonsterStateType.Groggy);
+            }
+
+            if (!entity.patrolMonster.isAlive)
+            {
+                entity.ChangeState(MonsterStateType.Dead);
             }
 
         }
@@ -87,7 +102,7 @@ namespace Core.Unit.Monster.State.PatrolMonster
 
             }
 
-            // 일정 거리를 이동하거나, 바닥이 없거나, 앞에 벽이 있으면방향 전환
+            // 일정 거리를 이동하면 방향 전환
             if (totalDistance >= moveDistance)
             {
                 entity.anim.SetBool("Walk", false);
@@ -123,7 +138,7 @@ namespace Core.Unit.Monster.State.PatrolMonster
             totalDistance += Vector2.Distance(entity.transform.position, lastPosition);
             lastPosition = entity.transform.position;
 
-            entity.anim.SetBool("Walk", true);
+            //entity.anim.SetBool("Walk", true);
 
             float distanceMoved = Vector2.Distance(entity.transform.position, lastPosition);
 

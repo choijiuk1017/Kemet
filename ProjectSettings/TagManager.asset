@@ -51,9 +51,9 @@ TagManager:
   - name: UnderTile
     uniqueID: 427927129
     locked: 0
-  - name: OnTile
-    uniqueID: 820141907
-    locked: 0
   - name: Tile
     uniqueID: 624550003
+    locked: 0
+  - name: OnTile
+    uniqueID: 820141907
     locked: 0

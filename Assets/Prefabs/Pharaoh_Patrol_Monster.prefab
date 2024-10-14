@@ -50,6 +50,8 @@ GameObject:
   - component: {fileID: 3710954347988241496}
   - component: {fileID: 1011926902139650145}
   - component: {fileID: 6538248490415747355}
+  - component: {fileID: 4685897754530828171}
+  - component: {fileID: 6585668454956102349}
   m_Layer: 6
   m_Name: Pharaoh_Patrol_Monster
   m_TagString: Monster
@@ -206,6 +208,9 @@ MonoBehaviour:
   attackRange: 0
   targetObject: {fileID: 0}
   rigid: {fileID: 0}
+  isGroggy: 0
+  maxGroggyGauge: 100
+  groggyGauge: 0
   groundDetected: {fileID: 4639022080756887360}
   wallDetected: {fileID: 5783099832200937006}
 --- !u!114 &6544972529368093598
@@ -236,7 +241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72420484b9721ca4d9ec8e2f8eac824c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 0
 --- !u!114 &3710954347988241496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +275,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c11dd79cf7556941a13c5a65d85d934, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4685897754530828171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4639022080589957593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40f9c8c1b5fb704f82ba6b6939b27fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6585668454956102349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4639022080589957593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d3f30502953fcf4f899c06be663f804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4639022080619349948

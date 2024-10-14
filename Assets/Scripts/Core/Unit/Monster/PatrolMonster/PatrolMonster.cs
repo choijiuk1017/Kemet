@@ -23,7 +23,15 @@ namespace Core.Unit.Monster
         protected override void Init()
         {
             base.Init();
+            maxGroggyGauge = 100;
+            maxHealth = 100;
 
+            moveSpeed = 3f;
+
+            damage = 10f;
+            defense = 10f;
+
+            attackRange = 3f;
             
         }
         private void Update()
@@ -31,6 +39,11 @@ namespace Core.Unit.Monster
             // 매 프레임 바닥과 벽을 감지
             DetectGround();
             DetectWall();
+
+            if (groggyGauge >= maxGroggyGauge)
+            {
+                isGroggy = true;
+            }
         }
 
 
@@ -62,23 +75,15 @@ namespace Core.Unit.Monster
         {
             base.TakeDamage(damageAmount);
 
+            groggyGauge += 10;
+
             if (currentHealth <= 0)
             {
                 Die();
             }
-        }
-
-        // 죽었을 때 애니메이션 및 파괴 처리
-        protected override void Die()
-        {
-            base.Die();
             
         }
 
-        public override void Groggy()
-        {
-            
-        }
 
 
         public void Flip()

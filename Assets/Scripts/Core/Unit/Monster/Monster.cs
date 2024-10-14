@@ -15,6 +15,7 @@ namespace Core.Unit.Monster
 
         public bool isGroggy = false;
 
+        public float maxGroggyGauge = 100;
         public float groggyGauge;
 
         protected override void Init()
@@ -44,6 +45,7 @@ namespace Core.Unit.Monster
             Destroy(gameObject, 2f);
         }
 
+        
     }
 }
 
