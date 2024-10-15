@@ -23,53 +23,41 @@ namespace Core.Unit.Monster.State.PatrolMonster
 
         public override void Execute(PatrolMonsterAI entity)
         {
-            if(!entity.patrolMonster.isGroggy)
-            {
-                float playerDistance = Vector2.Distance(entity.patrolMonster.targetObject.transform.position, entity.transform.position);
-
-                if (isAttacking)
-                {
-                    entity.patrolMonster.rigid.velocity = Vector2.zero;
-                    return;
-                }
-
-
-                timeSinceLastAttack += Time.deltaTime;
-
-                if (entity.patrolMonster.targetObject != null)
-                {
-                    if (playerDistance <= 2f)
-                    {
-                        if (timeSinceLastAttack >= attackCooldown)
-                        {
-                            Attack(entity);
-                            timeSinceLastAttack = 0f;
-                        }
-                        entity.patrolMonster.rigid.velocity = Vector2.zero;
-                    }
-                    else if (playerDistance > 2f && isAttacking == false)
-                    {
-                        entity.patrolMonster.rigid.velocity = Vector2.zero;
-                        entity.ChangeState(MonsterStateType.Idle);
-                    }
-                }
-
-            }
-            else
+            if (entity.patrolMonster.isGroggy)
             {
                 entity.ChangeState(MonsterStateType.Groggy);
+                return;  // 이미 상태를 변경했으므로 이후 코드를 실행할 필요가 없습니다.
             }
 
-
-            if(!entity.patrolMonster.isAlive)
+            if (!entity.patrolMonster.isAlive)
             {
                 entity.ChangeState(MonsterStateType.Dead);
+                return;
+            }
+
+            float playerDistance = Vector2.Distance(entity.patrolMonster.targetObject.transform.position, entity.transform.position);
+
+            if (isAttacking)
+            {
+                return;  // 공격 중이면 다른 행동을 하지 않음
+            }
+
+            timeSinceLastAttack += Time.deltaTime;
+
+            if (playerDistance <= 2f && timeSinceLastAttack >= attackCooldown)
+            {
+                Attack(entity);
+                timeSinceLastAttack = 0f;
+            }
+            else if (playerDistance > 2f)
+            {
+                entity.ChangeState(MonsterStateType.Idle);
             }
         }
 
         public override void Exit(PatrolMonsterAI entity)
         {
-            entity.patrolMonster.rigid.velocity = Vector2.zero;
+            
             isAttacking = false;
         }
 
@@ -90,8 +78,9 @@ namespace Core.Unit.Monster.State.PatrolMonster
         public void EndAttack()
         {
             isAttacking = false;
-            Debug.Log(isAttacking);
         }
+        
+
         
     }
 }

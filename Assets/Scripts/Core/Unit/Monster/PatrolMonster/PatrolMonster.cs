@@ -25,10 +25,11 @@ namespace Core.Unit.Monster
             base.Init();
             maxGroggyGauge = 100;
             maxHealth = 100;
+            currentHealth = maxHealth;
 
             moveSpeed = 3f;
 
-            damage = 10f;
+            damage = 20f;
             defense = 10f;
 
             attackRange = 3f;
@@ -92,6 +93,23 @@ namespace Core.Unit.Monster
             scale.x *= -1; // X 축 스케일 반전으로 스프라이트를 뒤집음
             this.transform.localScale = scale;
         }
+
+        public void HitBoxOn()
+        {
+            Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(atkPos.position, atkBoxSize, 0);
+
+            foreach (Collider2D collider in collider2Ds)
+            {
+                if (collider.tag == "Player")
+                {
+                    collider.GetComponent<Core.Unit.Player.Seth>().TakeDamage(damage);
+                    Debug.Log("몬스터 공격 중");
+                }
+            }
+        }
+
+
+        
 
     }
 }

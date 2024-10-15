@@ -18,6 +18,14 @@ namespace Core.Unit.Monster
         public float maxGroggyGauge = 100;
         public float groggyGauge;
 
+
+        //Transform 변수
+        public Transform atkPos; //공격 사거리
+
+
+        //Vector2 변수
+        public Vector2 atkBoxSize; //히트 박스
+
         protected override void Init()
         {
             base.Init();
@@ -27,25 +35,12 @@ namespace Core.Unit.Monster
             targetObject = GameObject.Find("Seth");
         }
 
-        public virtual void Groggy()
+
+        void OnDrawGizmos()
         {
-
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireCube(atkPos.position, atkBoxSize);
         }
-
-
-        protected override void Die()
-        {
-            base.Die();
-
-            if(anim != null)
-            {
-                anim.SetTrigger("Die");
-            }
-
-            Destroy(gameObject, 2f);
-        }
-
-        
     }
 }
 

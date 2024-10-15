@@ -14,43 +14,44 @@ namespace Core.Unit.Monster.State.PatrolMonster
         public override void Enter(PatrolMonsterAI entity)
         {
             entity.anim.SetBool("Walk", true);
-
-           
         }
 
         public override void Execute(PatrolMonsterAI entity)
         {
-            if (!entity.patrolMonster.isGroggy)
-            {
-                float playerDistance = Vector2.Distance(entity.patrolMonster.targetObject.transform.position, entity.transform.position);
 
-                if (entity.patrolMonster.targetObject != null)
-                {
-                    if (playerDistance <= 7f)
-                    {
-                        Chasing(entity);
-
-                        if (playerDistance <= 2f)
-                        {
-                            entity.patrolMonster.rigid.velocity = Vector2.zero;
-                            entity.anim.SetBool("Walk", false);
-                            entity.ChangeState(MonsterStateType.Attacking);
-                        }
-                    }
-                    else
-                    {
-                        entity.ChangeState(MonsterStateType.Patrol);
-                    }
-                }
-            }
-            else
+            if (entity.patrolMonster.isGroggy)
             {
                 entity.ChangeState(MonsterStateType.Groggy);
+                return;
             }
 
             if (!entity.patrolMonster.isAlive)
             {
                 entity.ChangeState(MonsterStateType.Dead);
+                return;
+            }
+
+            float playerDistance = Vector2.Distance(entity.patrolMonster.targetObject.transform.position, entity.transform.position);
+
+            if (playerDistance <= 7f)
+            {
+                Chasing(entity);
+
+                if (!entity.patrolMonster.isGroundAhead || entity.patrolMonster.isWallAhead)
+                {
+                    StopAndTransition(entity, MonsterStateType.Idle);
+                    return;
+                }
+
+                if (playerDistance <= 2f)
+                {
+                    StopAndTransition(entity, MonsterStateType.Attacking);
+                    return;
+                }
+            }
+            else
+            {
+                entity.ChangeState(MonsterStateType.Patrol);
             }
 
         }
@@ -67,10 +68,9 @@ namespace Core.Unit.Monster.State.PatrolMonster
 
         private void Chasing(PatrolMonsterAI entity)
         {
-            entity.anim.SetBool("Walk", true);
-
             Vector2 direction = (entity.patrolMonster.targetObject.transform.position - entity.transform.position).normalized;
 
+            // 방향에 따른 회전 처리
             if (direction.x > 0 && entity.transform.localScale.x < 0)
             {
                 entity.transform.localScale = new Vector3(Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
@@ -80,9 +80,14 @@ namespace Core.Unit.Monster.State.PatrolMonster
                 entity.transform.localScale = new Vector3(-Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
             }
 
+            entity.patrolMonster.rigid.velocity = new Vector2(direction.x * entity.patrolMonster.moveSpeed * 1.5f, entity.patrolMonster.rigid.velocity.y);
+        }
 
-            entity.patrolMonster.rigid.velocity = new Vector2(direction.x * entity.patrolMonster.moveSpeed * 1.5f, entity.patrolMonster.rigid.velocity.y) ;
-
+        private void StopAndTransition(PatrolMonsterAI entity, MonsterStateType newState)
+        {
+            entity.patrolMonster.rigid.velocity = Vector2.zero;
+            entity.anim.SetBool("Walk", false);
+            entity.ChangeState(newState);
         }
     }
 

@@ -10,51 +10,60 @@ namespace Core.Unit.Monster.State.PatrolMonster
 {
     public class PMIdleState : State<PatrolMonsterAI>
     {
-        private float distance;
+        private const float waitTime = 1f;
 
-        private float waitTime = 1f;
+
         public override void Enter(PatrolMonsterAI entity)
         {
             elapsedTime = 0f;
-
         }
 
         public override void Execute(PatrolMonsterAI entity)
         {
             elapsedTime += Time.deltaTime;
 
+
             // 대기 시간이 지나기 전까지는 아무 행동도 하지 않음
             if (elapsedTime < waitTime)
             {
-                return; // 대기 시간 동안 아무것도 하지 않음
-            }
-
-            if (!entity.patrolMonster.isGroggy)
-            {
-                distance = Vector2.Distance(entity.patrolMonster.targetObject.transform.position, entity.transform.position);
-
-                if (distance > 7f)
-                {
-                    entity.ChangeState(MonsterStateType.Patrol);
-                }
-                else if (distance <= 7f && distance > 2f)
-                {
-                    entity.ChangeState(MonsterStateType.Chasing);
-                }
-                else
-                {
-                    entity.ChangeState(MonsterStateType.Attacking);
-                }
-
-            }
-            else
-            {
-                entity.ChangeState(MonsterStateType.Groggy);
+                return;
             }
 
             if (!entity.patrolMonster.isAlive)
             {
                 entity.ChangeState(MonsterStateType.Dead);
+                return;
+            }
+
+            if (entity.patrolMonster.isGroggy)
+            {
+                entity.ChangeState(MonsterStateType.Groggy);
+                return;
+            }
+
+            float distance = Vector2.Distance(entity.patrolMonster.targetObject.transform.position, entity.transform.position);
+
+            if (!entity.patrolMonster.isGroundAhead || entity.patrolMonster.isWallAhead)
+            {
+                if (distance > 7f)
+                {
+                    entity.ChangeState(MonsterStateType.Patrol);
+                }
+                return; // 벽이나 낭떠러지가 있을 경우 더 이상의 상태 변경을 방지
+            }
+
+            // 몬스터의 거리에 따른 상태 변경
+            if (distance > 7f)
+            {
+                entity.ChangeState(MonsterStateType.Patrol);
+            }
+            else if (distance <= 7f && distance > 2f)
+            {
+                entity.ChangeState(MonsterStateType.Chasing);
+            }
+            else
+            {
+                entity.ChangeState(MonsterStateType.Attacking);
             }
 
         }

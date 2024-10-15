@@ -45,7 +45,7 @@ namespace Core.Unit
         }
 
         //¿Ãµø
-        protected virtual void Move(Vector2 direction)
+        protected virtual void Move()
         {
 
         }
