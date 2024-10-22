@@ -24,6 +24,7 @@ namespace Core.Unit.Monster
         {
             base.Init();
             maxGroggyGauge = 100;
+            groggyGauge = 0f;
             maxHealth = 100;
             currentHealth = maxHealth;
 
@@ -40,6 +41,18 @@ namespace Core.Unit.Monster
             // 매 프레임 바닥과 벽을 감지
             DetectGround();
             DetectWall();
+
+            if (isDamaged)
+            {
+                damageFlashTimer += Time.deltaTime;
+
+                if (damageFlashTimer >= damageFlashDuration)
+                {
+                    spriteRenderer.color = originalColor; // 원래 색으로 돌아옴
+                    isDamaged = false; // 데미지 상태 해제
+                    damageFlashTimer = 0f;
+                }
+            }
 
             if (groggyGauge >= maxGroggyGauge)
             {
@@ -71,19 +84,7 @@ namespace Core.Unit.Monster
         }
 
 
-        // 데미지 받았을 때 죽는 상태로 전환
-        public override void TakeDamage(float damageAmount)
-        {
-            base.TakeDamage(damageAmount);
-
-            groggyGauge += 10;
-
-            if (currentHealth <= 0)
-            {
-                Die();
-            }
-            
-        }
+        
 
 
 
@@ -96,11 +97,25 @@ namespace Core.Unit.Monster
 
         public void HitBoxOn()
         {
+            bool parrySuccess = false;
+
             Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(atkPos.position, atkBoxSize, 0);
 
             foreach (Collider2D collider in collider2Ds)
             {
-                if (collider.tag == "Player")
+                if (collider.tag == "Parry")
+                {
+                    GetComponent<SpriteRenderer>().color = Color.yellow; 
+                    isDamaged = true; // 데미지 상태 활성화
+                    groggyGauge += 50;
+                    Debug.Log("플레이어 패링 성공");
+                    parrySuccess = true;
+                }
+            }
+
+            foreach (Collider2D collider in collider2Ds)
+            {
+                if (collider.tag == "Player" && !parrySuccess) // 패링 성공 시 데미지 무시
                 {
                     collider.GetComponent<Core.Unit.Player.Seth>().TakeDamage(damage);
                     Debug.Log("몬스터 공격 중");

@@ -19,6 +19,12 @@ namespace Core.Unit.Player
 
         public float jumpForce = 5.0f; //점프 높이
 
+        // 슬라이딩 관련 변수
+        public float slideForce = 500f; // 슬라이딩 시 추가할 힘
+        public float slideDuration = 0.5f; // 슬라이딩 지속 시간
+        private bool isSliding = false; // 슬라이딩 중인지 여부
+        private float slideTime = 0f; // 슬라이딩 시간 측정
+
 
         public float parryTime = 0f; //패링한 시간
 
@@ -36,6 +42,7 @@ namespace Core.Unit.Player
 
         [SerializeField]
         private BoxCollider2D parryBox;
+
 
         public enum State
         {
@@ -63,13 +70,27 @@ namespace Core.Unit.Player
             position = this.transform.position;
 
             rigid = this.GetComponent<Rigidbody2D>();
-
+           
 
             state = State.Idle;
         }
 
         private void Update()
-        {            
+        {
+
+            if (isDamaged)
+            {
+                damageFlashTimer += Time.deltaTime;
+
+                if (damageFlashTimer >= damageFlashDuration)
+                {
+                    spriteRenderer.color = originalColor; // 원래 색으로 돌아옴
+                    isDamaged = false; // 데미지 상태 해제
+                    damageFlashTimer = 0f;
+                }
+            }
+
+
             //유저가 키에서 손을 떼면 이동을 멈춤
             if (Input.GetButtonUp("Horizontal"))
             {
@@ -78,20 +99,41 @@ namespace Core.Unit.Player
 
             //방향에 따라 좌우 반전
             //회전을 시키는 방식으로 해야 자식 오브젝트에 있는 히트 박스도 함께 회전함
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow) && !isSliding && !Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 transform.eulerAngles = new Vector3(0, 180, 0);
             }
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && !isSliding && !Input.GetKeyDown(KeyCode.RightArrow))
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftShift) && isGround && !isSliding)
+            {
+                StartSlide();
+            }
+
+            // 슬라이드 동작 추가
+            if (Input.GetKeyDown(KeyCode.LeftShift) && isGround && !isSliding)
+            {
+                StartSlide();
+            }
+
+            // 슬라이딩 중인 경우, 슬라이드 시간 처리
+            if (isSliding)
+            {
+                slideTime += Time.deltaTime;
+                if (slideTime >= slideDuration)
+                {
+                    EndSlide();
+                }
             }
 
 
             if (curTime <= 0)
             {
                 //Z키를 누르고 이동하지 않는 상태에서만 공격 가능
-                if (Input.GetKey(KeyCode.Z) && state != State.Move)
+                if (Input.GetKey(KeyCode.Z) && state != State.Move && !isJump && !isSliding)
                 {
                     //콤보 확인
                     if (Time.time - lastAttackTime < comboTimeWindow)
@@ -111,8 +153,18 @@ namespace Core.Unit.Player
                         lastAttackTime = Time.time;
                     }
 
-                    DefaultAttack();
+                    anim.SetTrigger("isDefaultAttack" + comboCount);
 
+                    //공격을 하면 쿨타임 부여
+                    curTime = coolTime;
+
+                }
+                
+                if (isJump && Input.GetKeyDown(KeyCode.Z))
+                {
+                    anim.SetTrigger("isJumpAttack");
+
+                    curTime = coolTime;
                 }
             }
             else
@@ -121,27 +173,32 @@ namespace Core.Unit.Player
             }
 
             //점프
-            if (Input.GetButtonDown("Jump") && isGround && !Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetButtonDown("Jump") && isGround && !Input.GetKeyDown(KeyCode.Z) && !isSliding)
             {
                 Jump();
             }
 
-            //점프 공격
-            if (isJump && Input.GetKeyDown(KeyCode.Z))
-            {
-                JumpAttack();
-            }
+            
 
             //패링
-            if (Input.GetKeyDown(KeyCode.C))
+            if (Input.GetKeyDown(KeyCode.C) && !isSliding)
             {
-                Parrying();
+                anim.SetTrigger("isParrying");
             }
         }
 
         private void FixedUpdate()
         {
-            Move();
+            // 일반 이동 처리 (슬라이딩 중이 아닐 때만)
+            if (!isSliding)
+            {
+                Move();
+            }
+            else
+            {
+                // 슬라이딩 중에는 추가적인 물리적 힘을 주지 않음. 슬라이딩 초기 AddForce로 해결.
+                return;
+            }
         }
 
         protected override void Move()
@@ -171,31 +228,40 @@ namespace Core.Unit.Player
             }
         }
 
+        // 슬라이드 시작
+        void StartSlide()
+        {
+            isSliding = true;
+            slideTime = 0f;
+            anim.SetTrigger("isSliding"); // 슬라이딩 애니메이션 트리거
+
+            // 플레이어가 회전된 상태에 맞춰 슬라이딩 방향 결정 (eulerAngles.y)
+            float slideDirection = transform.eulerAngles.y == 0 ? -1 : 1; // y가 0이면 오른쪽, 180이면 왼쪽
+
+            // 슬라이드 힘 적용
+            rigid.AddForce(new Vector2(slideDirection * slideForce, 0f), ForceMode2D.Impulse);
+
+        }
+
+        // 슬라이드 종료
+        void EndSlide()
+        {
+            isSliding = false;
+            anim.ResetTrigger("isSliding");
+            state = State.Idle;
+        }
+
+
         //플레이어 점프 함수
         void Jump()
         {
             rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
 
-            anim.SetBool("isJump", true);
+            anim.SetTrigger("isJump");
 
             isJump = true;
 
             isGround = false;
-        }
-
-        //점프 공격
-        void JumpAttack()
-        {
-            anim.SetTrigger("isJumpAttack");
-
-            ////아래쪽으로 급강하
-            //rigid.velocity = new Vector2(rigid.velocity.x, -7);
-
-            ////바닥에 닿으면 애니메이션 초기화
-            //if (isGround)
-            //{
-            //    anim.ResetTrigger("isJumpAttack");
-            //}
         }
 
         void DefaultAttack()
@@ -209,15 +275,10 @@ namespace Core.Unit.Player
                 {
                     //몬스터의 TakeDamage 호출, 데미지는 1
                     collider.GetComponent<Core.Unit.Monster.Monster>().TakeDamage(damage); 
-                    //그로기 감소 추가 예정
+
 
                 }
             }
-
-            anim.SetTrigger("isDefaultAttack" + comboCount);
-
-            //공격을 하면 쿨타임 부여
-            curTime = coolTime;
         }
 
         void OnDrawGizmos()
@@ -231,7 +292,11 @@ namespace Core.Unit.Player
         {
             if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("Stair"))
             {
-                anim.SetBool("isJump", false);
+                if (isJump && !isGround)
+                {
+                    anim.SetTrigger("isLand");
+                }
+                
                 isJump = false;
 
                 isGround = true;
@@ -242,8 +307,8 @@ namespace Core.Unit.Player
         void Parrying()
         {
             parryBox.enabled = true;
-            anim.SetTrigger("isParrying");
-            Invoke("UnParrying", 0.7f);
+                     
+            Invoke("UnParrying", 0.3f);
         }
 
         void UnParrying()

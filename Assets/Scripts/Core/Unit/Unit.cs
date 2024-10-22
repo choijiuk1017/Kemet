@@ -33,6 +33,13 @@ namespace Core.Unit
 
         protected Animator anim;
 
+        protected SpriteRenderer spriteRenderer;
+        protected Color originalColor;
+        protected Color damageColor = Color.red;
+        protected bool isDamaged = false;
+        protected float damageFlashTimer = 0f;
+        public float damageFlashDuration = 0.2f;
+
         protected void Start()
         {
             Init();
@@ -42,6 +49,8 @@ namespace Core.Unit
         protected virtual void Init()
         {
             anim = GetComponent<Animator>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            originalColor = spriteRenderer.color; // 원래 색상 저장
         }
 
         //이동
@@ -61,7 +70,10 @@ namespace Core.Unit
 
             currentHealth -= finalDamage;
 
-            if(currentHealth <= 0)
+            spriteRenderer.color = damageColor; // 빨간색으로 변경
+            isDamaged = true; // 데미지 상태 활성화
+
+            if (currentHealth <= 0)
             {
                 Die();
             }

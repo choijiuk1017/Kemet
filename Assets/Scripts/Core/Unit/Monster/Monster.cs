@@ -15,7 +15,7 @@ namespace Core.Unit.Monster
 
         public bool isGroggy = false;
 
-        public float maxGroggyGauge = 100;
+        public float maxGroggyGauge;
         public float groggyGauge;
 
 
@@ -35,6 +35,27 @@ namespace Core.Unit.Monster
             targetObject = GameObject.Find("Seth");
         }
 
+
+        public override void TakeDamage(float damageAmount)
+        {
+            base.TakeDamage(damageAmount);
+
+            groggyGauge += 10;
+
+            spriteRenderer.color = damageColor; // 빨간색으로 변경
+            isDamaged = true; // 데미지 상태 활성화
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+
+            if(groggyGauge >= maxGroggyGauge)
+            {
+                isGroggy = true;
+            }
+
+        }
 
         void OnDrawGizmos()
         {

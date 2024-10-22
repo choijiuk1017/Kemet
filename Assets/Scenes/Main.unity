@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 583362728}
   - component: {fileID: 583362727}
   m_Layer: 0
-  m_Name: ester-garrido-mercydreams-deco-background-rs-removebg_14
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,6 +389,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4450003576736383761, guid: bbb060161a84e744a881ea91012f02b3, type: 3}
+      propertyPath: slideForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4450003576736383762, guid: bbb060161a84e744a881ea91012f02b3, type: 3}
       propertyPath: m_Name
       value: Seth

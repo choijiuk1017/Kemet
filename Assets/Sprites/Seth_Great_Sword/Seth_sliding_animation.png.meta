@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: faae67f1a160c0b4294dd3cd1b74b1e5
+guid: b3763b16bc370e048ae5474b8ac90543
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,106 +104,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slide_0
+      name: Seth_sliding_animation_4
       rect:
         serializedVersion: 2
-        x: 10
-        y: 997
-        width: 228
-        height: 165
+        x: 86
+        y: 217
+        width: 631
+        height: 921
       alignment: 9
-      pivot: {x: 0.85665494, y: 0.39048222}
+      pivot: {x: 0.4629266, y: 0.5680389}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3086317aa5f358a4c9558f65784da547
-      internalID: -691935482
+      spriteID: 087af58e3ed948a4386e9a743b31dcb2
+      internalID: 209837703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slide_3
+      name: Seth_sliding_animation_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 748
-        width: 278
-        height: 170
+        x: 2763
+        y: 284
+        width: 539
+        height: 739
       alignment: 9
-      pivot: {x: 0.7816749, y: 0.44685167}
+      pivot: {x: 0.4906135, y: 0.6129664}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc1aa1bceaeab0e438a2e9e88de71045
-      internalID: -1215795872
+      spriteID: a62cdd35f653ab04596983e90962631f
+      internalID: -192728548
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slide_4
+      name: Seth_sliding_animation_2
       rect:
         serializedVersion: 2
-        x: 398
-        y: 761
-        width: 291
-        height: 180
+        x: 1647
+        y: 233
+        width: 845
+        height: 789
       alignment: 9
-      pivot: {x: 0.7587417, y: 0.33268058}
+      pivot: {x: 0.5, y: 0.64107674}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e342464cbd56ab469995df6c9acb489
-      internalID: 1412489077
+      spriteID: 16029111bd296e04da1185adecadf846
+      internalID: 443943993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slide_5
+      name: Seth_sliding_animation_3
       rect:
         serializedVersion: 2
-        x: 777
-        y: 772
-        width: 288
-        height: 158
+        x: 760
+        y: 221
+        width: 834
+        height: 799
       alignment: 9
-      pivot: {x: 0.7614369, y: 0.3951609}
+      pivot: {x: 0.4969667, y: 0.6519757}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a4f9d5c89550464d8f4239b88367c0c
-      internalID: 676073365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slide_7
-      rect:
-        serializedVersion: 2
-        x: 1138
-        y: 761
-        width: 272
-        height: 177
-      alignment: 9
-      pivot: {x: 0.77681553, y: 0.4574616}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95934e46c3760fd4ab044a682de000b1
-      internalID: -1855957247
+      spriteID: 8cd526ae4b17bc94ba5ac740b72c4327
+      internalID: -158737824
       vertices: []
       indices: 
       edges: []
@@ -219,22 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slide_6: -36158650
-      Slide_4: 1412489077
-      Slide_9: 212179236
-      Slide_10: -1981790326
-      Slide_11: 426575097
-      Slide_15: 166759089
-      Slide_14: 931708408
-      Slide_1: -2060053579
-      Slide_2: 1915014428
-      Slide_8: -1884564071
-      Slide_7: -1855957247
-      Slide_3: -1215795872
-      Slide_0: -691935482
-      Slide_12: -283445913
-      Slide_5: 676073365
-      Slide_13: -444344090
+      Seth_sliding_animation_2: 443943993
+      Seth_sliding_animation_1: -192728548
+      Seth_sliding_animation_4: 209837703
+      Seth_sliding_animation_3: -158737824
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
