@@ -18,6 +18,12 @@ namespace Core.Unit.Monster
         public float maxGroggyGauge;
         public float groggyGauge;
 
+        public Transform groundDetected;
+        public Transform wallDetected;
+
+
+        public bool isGroundAhead { get; private set; }
+        public bool isWallAhead { get; private set; }
 
         //Transform 변수
         public Transform atkPos; //공격 사거리
@@ -56,6 +62,27 @@ namespace Core.Unit.Monster
             }
 
         }
+        public virtual void DetectGround()
+        {
+            RaycastHit2D groundHit = Physics2D.Raycast(groundDetected.position, Vector2.down, 1f);
+
+            Debug.DrawRay(groundDetected.position, Vector2.down * 1f, Color.green);
+
+            isGroundAhead = groundHit.collider != null;
+        }
+
+
+        public virtual void DetectWall()
+        {
+            // wallDetected 위치에서 앞 방향으로 레이캐스트 실행 (몬스터의 방향에 따라)
+            Vector2 rayDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+            RaycastHit2D wallHit = Physics2D.Raycast(wallDetected.position, rayDirection, 0.3f);
+            Debug.DrawRay(wallDetected.position, rayDirection * 0.3f, Color.red); // 디버그용 레이
+
+            // 벽이 감지되면 true, 아니면 false
+            isWallAhead = wallHit.collider != null && wallHit.collider.tag == "Ground";
+        }
+
 
         void OnDrawGizmos()
         {

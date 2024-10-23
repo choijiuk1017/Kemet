@@ -15,9 +15,10 @@ namespace Core.CameraSystem
         // 카메라 속도
         public float followSpeed = 2f;
 
+        [SerializeField]
         // 카메라 시작지점, 끝지점
-        public Transform startPoint;
-        public Transform endPoint;
+        private Transform startPoint;
+        private Transform endPoint;
 
         public float verticalFollowThreshold = 0.2f;
 
@@ -35,6 +36,9 @@ namespace Core.CameraSystem
         private void Start()
         {
             mainCamera = Camera.main;
+
+            startPoint = GameObject.Find("StartPosition").transform;
+            endPoint = GameObject.Find("EndPosition").transform;
 
             if (mainCamera != null && startPoint != null)
             {

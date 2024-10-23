@@ -27,12 +27,12 @@ namespace Core.Unit.Monster.State.PatrolMonster
                 entity.patrolMonster.groggyGauge = 0f;
                 entity.patrolMonster.isGroggy = false;
                 standUpTime = 0f;
-                entity.ChangeState(MonsterStateType.Idle);
+                entity.ChangeState(PMMonsterStateType.Idle);
             }
 
             if (!entity.patrolMonster.isAlive)
             {
-                entity.ChangeState(MonsterStateType.Dead);
+                entity.ChangeState(PMMonsterStateType.Dead);
             }
 
         }

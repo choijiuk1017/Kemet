@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Core.Unit.Monster
 {
-    public enum MonsterStateType
+    public enum PMMonsterStateType
     {
         Idle, Patrol, Chasing, Attacking, Groggy, Dead, Last 
     }
@@ -21,10 +21,10 @@ namespace Core.Unit.Monster
         private State<PatrolMonsterAI>[] states;
 
         [SerializeField]
-        private MonsterStateType prevState;
+        private PMMonsterStateType prevState;
 
         [SerializeField]
-        private MonsterStateType curState;
+        private PMMonsterStateType curState;
 
         public PatrolMonster patrolMonster;
 
@@ -41,16 +41,16 @@ namespace Core.Unit.Monster
             patrolMonster = this.GetComponent<PatrolMonster>();
 
             fsm = new MonsterFSM<PatrolMonsterAI>();
-            states = new State<PatrolMonsterAI>[(int)MonsterStateType.Last];
+            states = new State<PatrolMonsterAI>[(int)PMMonsterStateType.Last];
 
-            states[(int)MonsterStateType.Idle] = GetComponent<PMIdleState>();
-            states[(int)MonsterStateType.Patrol] = GetComponent<PMPatrolState>();
-            states[(int)MonsterStateType.Chasing] = GetComponent<PMChasingState>();
-            states[(int)MonsterStateType.Attacking] = GetComponent<PMAttackState>();
-            states[(int)MonsterStateType.Groggy] = GetComponent<PMGroggyState>();   
-            states[(int)MonsterStateType.Dead] = GetComponent<PMDeadState>();
+            states[(int)PMMonsterStateType.Idle] = GetComponent<PMIdleState>();
+            states[(int)PMMonsterStateType.Patrol] = GetComponent<PMPatrolState>();
+            states[(int)PMMonsterStateType.Chasing] = GetComponent<PMChasingState>();
+            states[(int)PMMonsterStateType.Attacking] = GetComponent<PMAttackState>();
+            states[(int)PMMonsterStateType.Groggy] = GetComponent<PMGroggyState>();   
+            states[(int)PMMonsterStateType.Dead] = GetComponent<PMDeadState>();
 
-            fsm.Init(this, states[(int)MonsterStateType.Idle]);
+            fsm.Init(this, states[(int)PMMonsterStateType.Idle]);
         }
 
 
@@ -63,7 +63,7 @@ namespace Core.Unit.Monster
             
         }
 
-        public void ChangeState(MonsterStateType newState)
+        public void ChangeState(PMMonsterStateType newState)
         {
 
             curState = newState;

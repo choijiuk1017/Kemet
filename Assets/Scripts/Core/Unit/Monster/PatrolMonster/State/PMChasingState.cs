@@ -21,13 +21,13 @@ namespace Core.Unit.Monster.State.PatrolMonster
 
             if (entity.patrolMonster.isGroggy)
             {
-                entity.ChangeState(MonsterStateType.Groggy);
+                entity.ChangeState(PMMonsterStateType.Groggy);
                 return;
             }
 
             if (!entity.patrolMonster.isAlive)
             {
-                entity.ChangeState(MonsterStateType.Dead);
+                entity.ChangeState(PMMonsterStateType.Dead);
                 return;
             }
 
@@ -39,19 +39,19 @@ namespace Core.Unit.Monster.State.PatrolMonster
 
                 if (!entity.patrolMonster.isGroundAhead || entity.patrolMonster.isWallAhead)
                 {
-                    StopAndTransition(entity, MonsterStateType.Idle);
+                    StopAndTransition(entity, PMMonsterStateType.Idle);
                     return;
                 }
 
                 if (playerDistance <= 2f)
                 {
-                    StopAndTransition(entity, MonsterStateType.Attacking);
+                    StopAndTransition(entity, PMMonsterStateType.Attacking);
                     return;
                 }
             }
             else
             {
-                entity.ChangeState(MonsterStateType.Patrol);
+                entity.ChangeState(PMMonsterStateType.Patrol);
             }
 
         }
@@ -83,7 +83,7 @@ namespace Core.Unit.Monster.State.PatrolMonster
             entity.patrolMonster.rigid.velocity = new Vector2(direction.x * entity.patrolMonster.moveSpeed * 1.5f, entity.patrolMonster.rigid.velocity.y);
         }
 
-        private void StopAndTransition(PatrolMonsterAI entity, MonsterStateType newState)
+        private void StopAndTransition(PatrolMonsterAI entity, PMMonsterStateType newState)
         {
             entity.patrolMonster.rigid.velocity = Vector2.zero;
             entity.anim.SetBool("Walk", false);

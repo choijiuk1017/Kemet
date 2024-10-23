@@ -4,35 +4,34 @@ using UnityEngine;
 using Core.Unit;
 using Core.Unit.Monster;
 
+
 namespace Core.Unit.Monster
 {
-    public class PatrolMonster : Monster
+
+    public class RushMonster : Monster
     {
-        private PatrolMonsterAI patrolMonsterAI;
-
-
-        //읽기 전용으로 AI에 접근 가능
-        public PatrolMonsterAI PatrolMonsterAI => patrolMonsterAI;
-
-
+        private RushMonsterAI rushMonsterAI;
+      
+        public RushMonsterAI RushMonsterAI => rushMonsterAI;
 
 
         protected override void Init()
         {
             base.Init();
             maxGroggyGauge = 100;
+
             groggyGauge = 0f;
+
             maxHealth = 100;
             currentHealth = maxHealth;
 
-            moveSpeed = 3f;
+            moveSpeed = 2f;
 
-            damage = 20f;
-            defense = 10f;
+            damage = 30f;
 
-            attackRange = 3f;
-            
+            defense = 5f;
         }
+
         private void Update()
         {
             // 매 프레임 바닥과 벽을 감지
@@ -57,7 +56,6 @@ namespace Core.Unit.Monster
             }
         }
 
-
         public void Flip()
         {
             Vector3 scale = this.transform.localScale;
@@ -75,7 +73,7 @@ namespace Core.Unit.Monster
             {
                 if (collider.tag == "Parry")
                 {
-                    GetComponent<SpriteRenderer>().color = Color.yellow; 
+                    GetComponent<SpriteRenderer>().color = Color.yellow;
                     isDamaged = true; // 데미지 상태 활성화
                     groggyGauge += 50;
                     Debug.Log("플레이어 패링 성공");
@@ -93,8 +91,7 @@ namespace Core.Unit.Monster
             }
         }
 
-
-        
-
     }
+
 }
+

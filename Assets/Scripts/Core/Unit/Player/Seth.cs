@@ -24,6 +24,8 @@ namespace Core.Unit.Player
         public float slideDuration = 0.5f; // 슬라이딩 지속 시간
         private bool isSliding = false; // 슬라이딩 중인지 여부
         private float slideTime = 0f; // 슬라이딩 시간 측정
+        public float slopeCheckDistance = 0.5f; // 경사 체크 거리
+        public float maxSlopeAngle = 45f; // 캐릭터가 슬라이딩할 수 있는 최대 경사각
 
 
         public float parryTime = 0f; //패링한 시간
@@ -32,6 +34,7 @@ namespace Core.Unit.Player
         public bool isJump = false; //점프 실행 여부
         public bool isGround = false; //현재 바닥 위에 있는지 확인 여부
         public bool isParry = false; //패링 실행 여부
+        public bool isStair = false;
 
         //Transform 변수
         public Transform atkPos; //공격 사거리
@@ -108,13 +111,7 @@ namespace Core.Unit.Player
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift) && isGround && !isSliding)
-            {
-                StartSlide();
-            }
-
-            // 슬라이드 동작 추가
-            if (Input.GetKeyDown(KeyCode.LeftShift) && isGround && !isSliding)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && isGround && !isSliding && !isStair)
             {
                 StartSlide();
             }
@@ -196,8 +193,7 @@ namespace Core.Unit.Player
             }
             else
             {
-                // 슬라이딩 중에는 추가적인 물리적 힘을 주지 않음. 슬라이딩 초기 AddForce로 해결.
-                return;
+                SlopeCheck();
             }
         }
 
@@ -251,6 +247,21 @@ namespace Core.Unit.Player
             state = State.Idle;
         }
 
+        void SlopeCheck()
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, slopeCheckDistance);
+
+            if(hit)
+            {
+                float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
+
+                if (slopeAngle <= maxSlopeAngle)
+                {
+                    rigid.velocity = new Vector2(rigid.velocity.x, -slideForce * Time.fixedDeltaTime);
+                }
+            }
+        }
+
 
         //플레이어 점프 함수
         void Jump()
@@ -290,7 +301,7 @@ namespace Core.Unit.Player
         //충돌처리
         private void OnCollisionEnter2D(Collision2D col)
         {
-            if (col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("Stair"))
+            if (col.gameObject.CompareTag("Ground"))
             {
                 if (isJump && !isGround)
                 {
@@ -298,6 +309,18 @@ namespace Core.Unit.Player
                 }
                 
                 isJump = false;
+                isStair = false;
+                isGround = true;
+            }
+            else if(col.gameObject.CompareTag("Stair"))
+            {
+                if (isJump && !isGround)
+                {
+                    anim.SetTrigger("isLand");
+                }
+
+                isJump = false;
+                isStair = true;
 
                 isGround = true;
             }

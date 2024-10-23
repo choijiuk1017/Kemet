@@ -25,13 +25,13 @@ namespace Core.Unit.Monster.State.PatrolMonster
         {
             if (entity.patrolMonster.isGroggy)
             {
-                entity.ChangeState(MonsterStateType.Groggy);
+                entity.ChangeState(PMMonsterStateType.Groggy);
                 return;  // 이미 상태를 변경했으므로 이후 코드를 실행할 필요가 없습니다.
             }
 
             if (!entity.patrolMonster.isAlive)
             {
-                entity.ChangeState(MonsterStateType.Dead);
+                entity.ChangeState(PMMonsterStateType.Dead);
                 return;
             }
 
@@ -51,7 +51,7 @@ namespace Core.Unit.Monster.State.PatrolMonster
             }
             else if (playerDistance > 2f)
             {
-                entity.ChangeState(MonsterStateType.Idle);
+                entity.ChangeState(PMMonsterStateType.Idle);
             }
         }
 

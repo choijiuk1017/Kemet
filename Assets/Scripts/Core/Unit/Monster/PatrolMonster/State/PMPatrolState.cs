@@ -38,13 +38,13 @@ namespace Core.Unit.Monster.State.PatrolMonster
 
             if (entity.patrolMonster.isGroggy)
             {
-                entity.ChangeState(MonsterStateType.Groggy);
+                entity.ChangeState(PMMonsterStateType.Groggy);
                 return;
             }
 
             if (!entity.patrolMonster.isAlive)
             {
-                entity.ChangeState(MonsterStateType.Dead);
+                entity.ChangeState(PMMonsterStateType.Dead);
                 return;
             }
 
@@ -52,7 +52,7 @@ namespace Core.Unit.Monster.State.PatrolMonster
 
             if (playerDistance <= 7f)
             {
-                entity.ChangeState(MonsterStateType.Chasing);
+                entity.ChangeState(PMMonsterStateType.Chasing);
             }
             else
             {
