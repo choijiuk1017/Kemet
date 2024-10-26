@@ -44,7 +44,8 @@ namespace Core.Unit.Monster.State.RushMonster
 
             if(platerDistance <= 10f)
             {
-                entity.ChangeState(RMMonsterStateType.Rushing);
+                entity.rushMonster.isStartRush = true;
+                entity.ChangeState(RMMonsterStateType.Idle);
             }
 
         }

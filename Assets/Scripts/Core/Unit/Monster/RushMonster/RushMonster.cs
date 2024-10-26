@@ -14,6 +14,8 @@ namespace Core.Unit.Monster
       
         public RushMonsterAI RushMonsterAI => rushMonsterAI;
 
+        public bool isStartRush = false;
+
 
         protected override void Init()
         {
@@ -63,7 +65,7 @@ namespace Core.Unit.Monster
             this.transform.localScale = scale;
         }
 
-        public void HitBoxOn()
+        public void RushHitBox()
         {
             bool parrySuccess = false;
 
@@ -74,21 +76,25 @@ namespace Core.Unit.Monster
                 if (collider.tag == "Parry")
                 {
                     GetComponent<SpriteRenderer>().color = Color.yellow;
-                    isDamaged = true; // 데미지 상태 활성화
-                    groggyGauge += 50;
+
+                    isDamaged = true;
+                    groggyGauge += 50f;
                     Debug.Log("플레이어 패링 성공");
+
                     parrySuccess = true;
+
                 }
             }
 
-            foreach (Collider2D collider in collider2Ds)
+            foreach(Collider2D collider in collider2Ds)
             {
-                if (collider.tag == "Player" && !parrySuccess) // 패링 성공 시 데미지 무시
+                if(collider.tag == "Player" && !parrySuccess)
                 {
                     collider.GetComponent<Core.Unit.Player.Seth>().TakeDamage(damage);
-                    Debug.Log("몬스터 공격 중");
+                    Debug.Log("몬스터 공격");
                 }
             }
+
         }
 
     }

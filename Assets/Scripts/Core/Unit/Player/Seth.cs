@@ -10,14 +10,21 @@ namespace Core.Unit.Player
         Rigidbody2D rigid;
 
 
+        //공격 관련 변수
         private int comboCount = 0; //현재 콤보 횟수
         public int maxComboCount = 3; //최대 콤보 횟수
         public float coolTime = 0.5f; //공격 쿨타임
         public float comboTimeWindow = 1.0f; //콤보를 유지하는 시간
         private float curTime; //현재 시간 변수, 공격 후 얼마나 지났는 지 측정 위함
         private float lastAttackTime = 0f; //마지막으로 공격한 시간
+        public Transform atkPos; //공격 사거리
 
+        public Vector2 atkBoxSize; //히트 박스
+
+
+        //점프 관련 함수
         public float jumpForce = 5.0f; //점프 높이
+        public bool isJump = false; //점프 실행 여부
 
         // 슬라이딩 관련 변수
         public float slideForce = 500f; // 슬라이딩 시 추가할 힘
@@ -27,26 +34,23 @@ namespace Core.Unit.Player
         public float slopeCheckDistance = 0.5f; // 경사 체크 거리
         public float maxSlopeAngle = 45f; // 캐릭터가 슬라이딩할 수 있는 최대 경사각
 
-
+        //패링 관련 변수
         public float parryTime = 0f; //패링한 시간
-
-
-        public bool isJump = false; //점프 실행 여부
-        public bool isGround = false; //현재 바닥 위에 있는지 확인 여부
         public bool isParry = false; //패링 실행 여부
-        public bool isStair = false;
-
-        //Transform 변수
-        public Transform atkPos; //공격 사거리
-
-
-        //Vector2 변수
-        public Vector2 atkBoxSize; //히트 박스
-
         [SerializeField]
         private BoxCollider2D parryBox;
 
+        //타격 판정 변수
+        private bool isStunned = false;
+        private float stunDuration = 0.5f;
+        private float stunTimer = 0f;
 
+        //기타 변수
+        public bool isGround = false; //현재 바닥 위에 있는지 확인 여부
+        public bool isStair = false;
+
+
+        //플레이어의 상태를 나타낼 구조체
         public enum State
         {
             Idle,
@@ -91,6 +95,17 @@ namespace Core.Unit.Player
                     isDamaged = false; // 데미지 상태 해제
                     damageFlashTimer = 0f;
                 }
+            }
+
+            if(isStunned)
+            {
+                stunTimer += Time.deltaTime;
+                if(stunTimer >= stunDuration)
+                {
+                    isStunned = false;
+                    stunTimer = 0f; 
+                }
+                return;
             }
 
 
@@ -186,14 +201,22 @@ namespace Core.Unit.Player
 
         private void FixedUpdate()
         {
-            // 일반 이동 처리 (슬라이딩 중이 아닐 때만)
-            if (!isSliding)
+
+            if (!isStunned)
             {
-                Move();
+                // 일반 이동 처리 (슬라이딩 중이 아닐 때만)
+                if (!isSliding)
+                {
+                    Move();
+                }
+                else
+                {
+                    SlopeCheck();
+                }
             }
             else
             {
-                SlopeCheck();
+                rigid.velocity = Vector2.zero;
             }
         }
 
@@ -290,6 +313,13 @@ namespace Core.Unit.Player
 
                 }
             }
+        }
+
+        public override void TakeDamage(float damageAmount)
+        {
+            base.TakeDamage(damageAmount);
+            isStunned = true;
+            anim.SetTrigger("TakeDamage");
         }
 
         void OnDrawGizmos()

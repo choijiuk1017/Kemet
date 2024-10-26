@@ -60,9 +60,13 @@ namespace Core.Unit.Monster.State.RushMonster
             {
                 entity.ChangeState(RMMonsterStateType.Patrol);
             }
-            else if (distance <= 10f && distance < 2f)
+            else if (distance <= 10f && !entity.rushMonster.isStartRush)
             {
                 entity.ChangeState(RMMonsterStateType.StartRushing);
+            }
+            else if(distance <= 10f && entity.rushMonster.isStartRush)
+            {
+                entity.ChangeState(RMMonsterStateType.Rushing);
             }
 
 
