@@ -40,13 +40,9 @@ namespace Core.Unit.Monster.State.RushMonster
                 return;
             }
 
-            float platerDistance = Vector2.Distance(entity.rushMonster.targetObject.transform.position, entity.transform.position);
 
-            if(platerDistance <= 10f)
-            {
-                entity.rushMonster.isStartRush = true;
-                entity.ChangeState(RMMonsterStateType.Idle);
-            }
+            entity.rushMonster.isStartRush = true;
+            entity.ChangeState(RMMonsterStateType.Idle);
 
         }
 

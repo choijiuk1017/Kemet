@@ -11,14 +11,16 @@ namespace Core.Unit.Monster.State.RushMonster
 
     public class RMStopRushingState : State<RushMonsterAI>
     {
+
+
         public override void Enter(RushMonsterAI entity)
         {
+            entity.ChangeState(RMMonsterStateType.Groggy);
         }
 
         public override void Execute(RushMonsterAI entity)
         {
-
-
+            
         }
 
         public override void Exit(RushMonsterAI entity)

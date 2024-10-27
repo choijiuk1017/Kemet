@@ -60,9 +60,16 @@ namespace Core.Unit.Monster
 
         public void ChangeState(RMMonsterStateType newState)
         {
+            prevState = curState;
+
             curState = newState;
 
             fsm.ChangeState(states[(int)newState]);  
+        }
+        
+        public RMMonsterStateType GetPrevState()
+        {
+            return prevState;
         }
     }
 

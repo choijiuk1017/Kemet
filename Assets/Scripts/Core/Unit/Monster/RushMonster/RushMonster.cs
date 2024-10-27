@@ -78,7 +78,7 @@ namespace Core.Unit.Monster
                     GetComponent<SpriteRenderer>().color = Color.yellow;
 
                     isDamaged = true;
-                    groggyGauge += 50f;
+                    groggyGauge += 100f;
                     Debug.Log("플레이어 패링 성공");
 
                     parrySuccess = true;
@@ -93,6 +93,31 @@ namespace Core.Unit.Monster
                     collider.GetComponent<Core.Unit.Player.Seth>().TakeDamage(damage);
                     Debug.Log("몬스터 공격");
                 }
+            }
+
+        }
+
+
+        public override void TakeDamage(float damageAmount)
+        {
+            float defenseFactor = 50f;
+            float finalDamage = damageAmount * (1 - defense / (defense + defenseFactor));
+
+            finalDamage = Mathf.Max(finalDamage, 0);
+
+            currentHealth -= finalDamage;
+
+            spriteRenderer.color = damageColor; // 빨간색으로 변경
+            isDamaged = true; // 데미지 상태 활성화
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
+
+            if (groggyGauge >= maxGroggyGauge)
+            {
+                isGroggy = true;
             }
 
         }

@@ -19,7 +19,7 @@ namespace Core.Unit.Monster.State.RushMonster
         public override void Enter(RushMonsterAI entity)
         {
             entity.anim.SetTrigger("Rushing");
-
+            
         }
 
         public override void Execute(RushMonsterAI entity)
@@ -35,9 +35,7 @@ namespace Core.Unit.Monster.State.RushMonster
                 return;
             }
 
-            float playerDistance = Vector2.Distance(entity.rushMonster.targetObject.transform.position, entity.transform.position);
-
-            if(playerDistance <= 10f)
+            if(entity.rushMonster.isStartRush)
             {
                 Rushing(entity);
 
@@ -47,16 +45,15 @@ namespace Core.Unit.Monster.State.RushMonster
                     lastDamageTime = Time.time;
                     hitCount++;
                 }
+                else if(hitCount == maxHitCount)
+                {
+                    StopAndTransition(entity, RMMonsterStateType.StopRushing);
+                }
                 
-
-
                 if(!entity.rushMonster.isGroundAhead || entity.rushMonster.isWallAhead)
                 {
                     StopAndTransition(entity, RMMonsterStateType.StopRushing);
-                    
                 }
-
-                
             }
 
 
