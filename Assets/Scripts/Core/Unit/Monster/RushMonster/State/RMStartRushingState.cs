@@ -10,6 +10,8 @@ namespace Core.Unit.Monster.State.RushMonster
 {
     public class RMStartRushingState : State<RushMonsterAI>
     {
+        private float startTime;
+        private float delayTime = 2.0f; // 2초 지연 시간
         public override void Enter(RushMonsterAI entity)
         {
             Vector2 direction = (entity.rushMonster.targetObject.transform.position - entity.transform.position).normalized;
@@ -24,6 +26,7 @@ namespace Core.Unit.Monster.State.RushMonster
             }
 
             entity.anim.SetTrigger("StartRushing");
+            startTime = Time.time;  
         }
 
         public override void Execute(RushMonsterAI entity)
@@ -42,7 +45,12 @@ namespace Core.Unit.Monster.State.RushMonster
 
 
             entity.rushMonster.isStartRush = true;
-            entity.ChangeState(RMMonsterStateType.Idle);
+
+            if(Time.time >= startTime + delayTime)
+            {
+                entity.ChangeState(RMMonsterStateType.Rushing);
+
+            }
 
         }
 

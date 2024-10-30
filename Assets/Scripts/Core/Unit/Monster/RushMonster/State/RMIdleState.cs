@@ -56,23 +56,14 @@ namespace Core.Unit.Monster.State.RushMonster
                 return; //벽이나 낭떠러지가 있을 경우 더 이상의 상태 변환을 방지
             }
 
-            if(distance > 10f && !entity.rushMonster.isStartRush)
+            if(distance > 10f)
             {
                 entity.ChangeState(RMMonsterStateType.Patrol);
             }
-            else if (distance <= 10f && !entity.rushMonster.isStartRush && !entity.rushMonster.isGroggy && !entity.rushMonster.isWallAhead)
+            else if (distance <= 10f && !entity.rushMonster.isGroggy && !entity.rushMonster.isWallAhead)
             {
                 entity.ChangeState(RMMonsterStateType.StartRushing);
             }
-
-
-            if(entity.rushMonster.isStartRush && !entity.rushMonster.isGroggy && !entity.rushMonster.isWallAhead)
-            {
-                entity.ChangeState(RMMonsterStateType.Rushing);
-            }
-
-
-
 
         }
 

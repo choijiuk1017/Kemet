@@ -10,8 +10,7 @@ namespace Core.Unit.Monster.State.RushMonster
 {
     public class RMRushingState : State<RushMonsterAI>
     {
-        public GameObject rushCollider;
-
+        
         private float lastDamageTime = 0f;
         private float damageInterval = 0.5f;
         private int hitCount = 0;
@@ -24,10 +23,6 @@ namespace Core.Unit.Monster.State.RushMonster
 
         public override void Execute(RushMonsterAI entity)
         {
-            if (entity.rushMonster.isGroggy)
-            {
-                entity.ChangeState(RMMonsterStateType.Groggy);
-            }
 
             if(!entity.rushMonster.isAlive)
             {
@@ -48,11 +43,19 @@ namespace Core.Unit.Monster.State.RushMonster
                 else if(hitCount == maxHitCount)
                 {
                     StopAndTransition(entity, RMMonsterStateType.StopRushing);
+                    
                 }
                 
                 if(!entity.rushMonster.isGroundAhead || entity.rushMonster.isWallAhead)
                 {
+
                     StopAndTransition(entity, RMMonsterStateType.StopRushing);
+                }
+
+                if (entity.rushMonster.isGroggy)
+                {
+                    StopAndTransition(entity, RMMonsterStateType.StopRushing);
+
                 }
             }
 
@@ -62,7 +65,6 @@ namespace Core.Unit.Monster.State.RushMonster
 
         public override void Exit(RushMonsterAI entity)
         {
-
             hitCount = 0;
         }
 
@@ -74,7 +76,7 @@ namespace Core.Unit.Monster.State.RushMonster
 
         private void Rushing(RushMonsterAI entity)
         {
-            rushCollider.SetActive(true);
+            entity.rushMonster.rushCollider.SetActive(true);
 
             Vector2 direction = (entity.rushMonster.targetObject.transform.position - entity.transform.position).normalized;
 
@@ -93,6 +95,7 @@ namespace Core.Unit.Monster.State.RushMonster
 
         private void StopAndTransition(RushMonsterAI entity, RMMonsterStateType newState)
         {
+            entity.rushMonster.rushCollider.SetActive(false);
             entity.rushMonster.rigid.velocity = Vector2.zero;
             entity.ChangeState(newState);
         }

@@ -23,7 +23,6 @@ namespace Core.Unit.Monster.State.RushMonster
 
         public override void Enter(RushMonsterAI entity)
         {
-            entity.anim.SetBool("Walk", true);
 
             totalDistance = 0f; 
             pauseTimer = 0f;

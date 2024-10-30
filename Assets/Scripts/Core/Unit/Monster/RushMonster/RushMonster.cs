@@ -16,6 +16,7 @@ namespace Core.Unit.Monster
 
         public bool isStartRush = false;
 
+        public GameObject rushCollider;
 
         protected override void Init()
         {
@@ -31,7 +32,7 @@ namespace Core.Unit.Monster
 
             damage = 30f;
 
-            defense = 5f;
+            defense = 1f;
         }
 
         private void Update()

@@ -15,12 +15,13 @@ namespace Core.Unit.Monster.State.RushMonster
 
         public override void Enter(RushMonsterAI entity)
         {
+            entity.rushMonster.rushCollider.SetActive(false);
+
             entity.ChangeState(RMMonsterStateType.Groggy);
         }
 
         public override void Execute(RushMonsterAI entity)
         {
-            
         }
 
         public override void Exit(RushMonsterAI entity)

@@ -23,7 +23,7 @@ namespace Core.Unit.Player
 
 
         //점프 관련 함수
-        public float jumpForce = 5.0f; //점프 높이
+        public float jumpForce = 7.0f; //점프 높이
         public bool isJump = false; //점프 실행 여부
 
         // 슬라이딩 관련 변수

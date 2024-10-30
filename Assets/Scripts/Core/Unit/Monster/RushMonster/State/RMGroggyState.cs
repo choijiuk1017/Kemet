@@ -14,7 +14,17 @@ namespace Core.Unit.Monster.State.RushMonster
         private float standUpTime = 0f;
         public override void Enter(RushMonsterAI entity)
         {
-            entity.anim.SetTrigger("Groggy");
+            entity.rushMonster.rushCollider.SetActive(false);
+
+            if (entity.rushMonster.isStartRush)
+            {
+                entity.anim.SetTrigger("StopRushing");
+            }
+            else
+            {
+                entity.anim.SetTrigger("Groggy");
+            }
+            
         }
 
         public override void Execute(RushMonsterAI entity)

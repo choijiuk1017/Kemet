@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7345187745029837670}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundDetected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7761483863311115762}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1302417328971911123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallDetected
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 2707567212033212367}
   - component: {fileID: 3437800206870149373}
   - component: {fileID: 263005771942140437}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rush_Monster
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -329,6 +329,7 @@ MonoBehaviour:
   atkPos: {fileID: 7761483863311115762}
   atkBoxSize: {x: 0.5, y: 3}
   isStartRush: 0
+  rushCollider: {fileID: 3394356857701755668}
 --- !u!114 &5667755077980481824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c69deeccfac754eb807a256117602a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rushCollider: {fileID: 3394356857701755668}
 --- !u!114 &3437800206870149373
 MonoBehaviour:
   m_ObjectHideFlags: 0
