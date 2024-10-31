@@ -13,6 +13,10 @@ namespace Core.Unit.Monster.State.RushMonster
         
         private float lastDamageTime = 0f;
         private float damageInterval = 0.5f;
+
+        private Vector2 rushDirection; // 돌진 방향을 저장할 변수
+        private bool isRushing; // 돌진 중인지 체크하는 변수
+
         private int hitCount = 0;
         private int maxHitCount = 3;
         public override void Enter(RushMonsterAI entity)
@@ -76,25 +80,32 @@ namespace Core.Unit.Monster.State.RushMonster
 
         private void Rushing(RushMonsterAI entity)
         {
-            entity.rushMonster.rushCollider.SetActive(true);
+            if (!isRushing) // 돌진이 시작될 때만 방향을 설정
+            {
+                Vector2 targetPosition = entity.rushMonster.targetObject.transform.position;
+                rushDirection = (targetPosition - (Vector2)entity.transform.position).normalized;
 
-            Vector2 direction = (entity.rushMonster.targetObject.transform.position - entity.transform.position).normalized;
+                entity.rushMonster.rushCollider.SetActive(true);
+                isRushing = true;
+            }
 
-            if (direction.x > 0 && entity.transform.localScale.x < 0)
+            if (rushDirection.x > 0 && entity.transform.localScale.x < 0)
             {
                 entity.transform.localScale = new Vector3(Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
             }
-            else if (direction.x < 0 && entity.transform.localScale.x > 0)
+            else if (rushDirection.x < 0 && entity.transform.localScale.x > 0)
             {
                 entity.transform.localScale = new Vector3(-Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
             }
 
-            entity.rushMonster.rigid.velocity = new Vector2(direction.x * entity.rushMonster.moveSpeed * 5f, entity.rushMonster.rigid.velocity.y);
-
+            // 고정된 방향으로 계속 이동
+            entity.rushMonster.rigid.velocity = new Vector2(rushDirection.x * entity.rushMonster.moveSpeed * 5f, entity.rushMonster.rigid.velocity.y);
         }
 
         private void StopAndTransition(RushMonsterAI entity, RMMonsterStateType newState)
         {
+            rushDirection = Vector2.zero;
+            isRushing = false;
             entity.rushMonster.rushCollider.SetActive(false);
             entity.rushMonster.rigid.velocity = Vector2.zero;
             entity.ChangeState(newState);
