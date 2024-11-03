@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,159 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Summoner_monster_awake_animation_0
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 214
+        width: 507
+        height: 648
+      alignment: 9
+      pivot: {x: 0.78775465, y: 0.027202794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1975190fc2d04dd40850f80b04c0e75c
+      internalID: 2055282905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_awake_animation_1
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 211
+        width: 505
+        height: 651
+      alignment: 9
+      pivot: {x: 0.7946722, y: 0.02938149}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42cb91059941b24f8d454516930df45
+      internalID: 5840514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_awake_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 216
+        width: 510
+        height: 651
+      alignment: 9
+      pivot: {x: 0.78606194, y: 0.038345758}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c566e3cc1d1c87e4e91bb7e64d4665e1
+      internalID: 1277327823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_awake_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 219
+        width: 550
+        height: 721
+      alignment: 9
+      pivot: {x: 0.6803751, y: 0.026509406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbc49a6befa17b4e84af8ac181f3a76
+      internalID: -1152529609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_awake_animation_4
+      rect:
+        serializedVersion: 2
+        x: 3531
+        y: 213
+        width: 517
+        height: 803
+      alignment: 9
+      pivot: {x: 0.56208116, y: 0.027623368}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7422ff8ab28f46943823b45d6881bdd1
+      internalID: -2141104047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_awake_animation_5
+      rect:
+        serializedVersion: 2
+        x: 4300
+        y: 220
+        width: 628
+        height: 669
+      alignment: 9
+      pivot: {x: 0.36990494, y: 0.028959356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e19ca1e74d74694686772329f60b157
+      internalID: 1635570080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +239,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Summoner_monster_awake_animation_1: 5840514
+      Summoner_monster_awake_animation_0: 2055282905
+      Summoner_monster_awake_animation_4: -2141104047
+      Summoner_monster_awake_animation_3: -1152529609
+      Summoner_monster_awake_animation_5: 1635570080
+      Summoner_monster_awake_animation_2: 1277327823
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

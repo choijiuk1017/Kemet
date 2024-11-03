@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,222 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Summoner_monster_death_animation_0
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1591
+        width: 507
+        height: 649
+      alignment: 9
+      pivot: {x: 0.7876777, y: 0.04054371}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e8f9f6bee167d45b9773fcb013e398
+      internalID: -774539482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_death_animation_1
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 1595
+        width: 483
+        height: 659
+      alignment: 9
+      pivot: {x: 0.7818406, y: 0.032760598}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d995009fa1ab640aa6f9ce2ed2e1e4
+      internalID: -787209651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_death_animation_2
+      rect:
+        serializedVersion: 2
+        x: 2162
+        y: 1583
+        width: 476
+        height: 657
+      alignment: 9
+      pivot: {x: 0.77236706, y: 0.03627198}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abef9fd2a626cd49a3b659e4f9677de
+      internalID: -319956509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_death_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2992
+        y: 1584
+        width: 522
+        height: 644
+      alignment: 9
+      pivot: {x: 0.81045705, y: 0.042009246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e9e1b05475312e4e9f2027f1d489978
+      internalID: -863587228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_death_animation_4
+      rect:
+        serializedVersion: 2
+        x: 3792
+        y: 1591
+        width: 659
+        height: 610
+      alignment: 9
+      pivot: {x: 0.8049357, y: 0.027108815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9bf0720da1d6e4fb986b39a8658dbc
+      internalID: -1592310767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_death_animation_5
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 392
+        width: 905
+        height: 444
+      alignment: 9
+      pivot: {x: 0.7435352, y: 0.08390458}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56cec64ce56e1e449821457fc7e8b93
+      internalID: -500330741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_death_animation_6
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 392
+        width: 973
+        height: 380
+      alignment: 9
+      pivot: {x: 0.62991315, y: 0.099119246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aac4bd7a91982344b407e8d8b7db34e
+      internalID: 555963830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_death_animation_7
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 299
+        width: 1259
+        height: 467
+      alignment: 9
+      pivot: {x: 0.69307995, y: 0.18074274}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123eeddbc72e3844095c53cd9d182684
+      internalID: -349141520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_death_animation_8
+      rect:
+        serializedVersion: 2
+        x: 3724
+        y: 311
+        width: 1270
+        height: 440
+      alignment: 9
+      pivot: {x: 0.6709907, y: 0.17588383}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 269f94c1083173549ad178ff16a45922
+      internalID: -1952464066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +302,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Summoner_monster_death_animation_8: -1952464066
+      Summoner_monster_death_animation_1: -787209651
+      Summoner_monster_death_animation_6: 555963830
+      Summoner_monster_death_animation_4: -1592310767
+      Summoner_monster_death_animation_3: -863587228
+      Summoner_monster_death_animation_2: -319956509
+      Summoner_monster_death_animation_12: 1752707260
+      Summoner_monster_death_animation_10: 766737022
+      Summoner_monster_death_animation_11: -617190356
+      Summoner_monster_death_animation_0: -774539482
+      Summoner_monster_death_animation_5: -500330741
+      Summoner_monster_death_animation_7: -349141520
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

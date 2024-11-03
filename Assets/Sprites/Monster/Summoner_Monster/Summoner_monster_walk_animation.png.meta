@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,201 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Summoner_monster_walk_animation_0
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1321
+        width: 629
+        height: 667
+      alignment: 9
+      pivot: {x: 0.37334508, y: 0.02666733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e79b3841e22e144a67a3845b421737
+      internalID: -1910446874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_walk_animation_1
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1326
+        width: 618
+        height: 680
+      alignment: 9
+      pivot: {x: 0.37586495, y: 0.027038215}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1aa71ef693ddc248b78290c0de35088
+      internalID: -1801457140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_walk_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 1324
+        width: 612
+        height: 686
+      alignment: 9
+      pivot: {x: 0.3119718, y: 0.031174729}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e10307a4971df547ae823bfc14e41c6
+      internalID: -221047789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_walk_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2220
+        y: 1321
+        width: 689
+        height: 651
+      alignment: 9
+      pivot: {x: 0.36894894, y: 0.028889412}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f822888e4ec5bf49bc8d5bab8fa79dc
+      internalID: 939353918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_walk_animation_4
+      rect:
+        serializedVersion: 2
+        x: 2905
+        y: 1313
+        width: 726
+        height: 657
+      alignment: 9
+      pivot: {x: 0.3862029, y: 0.03293576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c75e4c13c80554c418b745c98e0fc040
+      internalID: 224455973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_walk_animation_5
+      rect:
+        serializedVersion: 2
+        x: 3803
+        y: 1323
+        width: 574
+        height: 672
+      alignment: 9
+      pivot: {x: 0.29952398, y: 0.038970582}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48897a8c48bb944d9fceda6e612e1a8
+      internalID: 887972231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_walk_animation_6
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 257
+        width: 605
+        height: 658
+      alignment: 9
+      pivot: {x: 0.32442772, y: 0.033645723}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a6ccbe698a0b74c98d56d78dc36f41
+      internalID: 1418601560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_walk_animation_7
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 257
+        width: 687
+        height: 647
+      alignment: 9
+      pivot: {x: 0.45275614, y: 0.030277211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e74ab537bfe074badc39849b3341a4
+      internalID: 267363201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +281,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Summoner_monster_walk_animation_0: -1910446874
+      Summoner_monster_walk_animation_1: -1801457140
+      Summoner_monster_walk_animation_4: 224455973
+      Summoner_monster_walk_animation_6: 1418601560
+      Summoner_monster_walk_animation_7: 267363201
+      Summoner_monster_walk_animation_5: 887972231
+      Summoner_monster_walk_animation_2: -221047789
+      Summoner_monster_walk_animation_3: 939353918
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

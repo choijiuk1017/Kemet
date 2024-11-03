@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,159 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Summoner_monster_groggy_animation_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 282
+        width: 627
+        height: 670
+      alignment: 9
+      pivot: {x: 0.35108337, y: 0.02530759}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba6be3a7b5c1454e9e0b99aca27020f
+      internalID: -1469374655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_groggy_animation_1
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 280
+        width: 518
+        height: 803
+      alignment: 9
+      pivot: {x: 0.5450628, y: 0.0276235}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce31ee55d691fd41a40eac75790b5bd
+      internalID: 1245386424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_groggy_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 282
+        width: 549
+        height: 721
+      alignment: 9
+      pivot: {x: 0.6860182, y: 0.03865045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922d3a87d491a274aa6c1cadb5b5fa17
+      internalID: -755463055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_groggy_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 282
+        width: 512
+        height: 650
+      alignment: 9
+      pivot: {x: 0.78494453, y: 0.03763531}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86cc6b53e0527940aec321c51536686
+      internalID: 1000691836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_groggy_animation_4
+      rect:
+        serializedVersion: 2
+        x: 3412
+        y: 284
+        width: 625
+        height: 667
+      alignment: 9
+      pivot: {x: 0.6447242, y: 0.0319218}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b25dc5702f09584a9bd9792de930888
+      internalID: 920153394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_groggy_animation_5
+      rect:
+        serializedVersion: 2
+        x: 4247
+        y: 278
+        width: 508
+        height: 649
+      alignment: 9
+      pivot: {x: 0.79293126, y: 0.027931154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c6ff5cf88238c47bf11b336e5d59ed
+      internalID: -1680224328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +239,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Summoner_monster_groggy_animation_3: 1000691836
+      Summoner_monster_groggy_animation_6: -1049559022
+      Summoner_monster_groggy_animation_2: -755463055
+      Summoner_monster_groggy_animation_1: 1245386424
+      Summoner_monster_groggy_animation_5: -1680224328
+      Summoner_monster_groggy_animation_4: 920153394
+      Summoner_monster_groggy_animation_0: -1469374655
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -31,8 +31,30 @@ namespace Core.Unit.Monster.State.RushMonster
                 return;
 
             }
+            float distance = Vector2.Distance(entity.rushMonster.targetObject.transform.position, entity.transform.position);
 
-            if(!entity.rushMonster.isAlive)
+
+            if (!entity.rushMonster.isGroundAhead || entity.rushMonster.isWallAhead)
+            {
+                entity.anim.SetBool("Walk", false);
+                if (distance > 7f)
+                {
+                    entity.ChangeState(RMMonsterStateType.Patrol);
+                }
+
+                return; //벽이나 낭떠러지가 있을 경우 더 이상의 상태 변환을 방지
+            }
+            
+            if (entity.rushMonster.isGroundAhead || !entity.rushMonster.isWallAhead && distance > 10f)
+            {
+                entity.ChangeState(RMMonsterStateType.Patrol);
+            }
+            else if (entity.rushMonster.isGroundAhead || !entity.rushMonster.isWallAhead && distance <= 10f && !entity.rushMonster.isGroggy)
+            {
+                entity.ChangeState(RMMonsterStateType.StartRushing);
+            }
+
+            if (!entity.rushMonster.isAlive)
             {
                 entity.ChangeState(RMMonsterStateType.Dead);
                 return;
@@ -44,26 +66,10 @@ namespace Core.Unit.Monster.State.RushMonster
                 return;
             }
 
-            float distance = Vector2.Distance(entity.rushMonster.targetObject.transform.position, entity.transform.position);
+           
+            
 
-            if(!entity.rushMonster.isGroundAhead || entity.rushMonster.isWallAhead)
-            {
-                if(distance > 7f)
-                {
-                    entity.ChangeState(RMMonsterStateType.Patrol);
-                }
-
-                return; //벽이나 낭떠러지가 있을 경우 더 이상의 상태 변환을 방지
-            }
-
-            if(distance > 10f)
-            {
-                entity.ChangeState(RMMonsterStateType.Patrol);
-            }
-            else if (distance <= 10f && !entity.rushMonster.isGroggy && !entity.rushMonster.isWallAhead)
-            {
-                entity.ChangeState(RMMonsterStateType.StartRushing);
-            }
+            
 
         }
 

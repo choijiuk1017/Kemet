@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,138 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Summoner_monster_summon_scarab_animation_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 234
+        width: 141
+        height: 97
+      alignment: 9
+      pivot: {x: 0.8236359, y: 0.37454948}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762f8c5d4c5f73b4fb5c905f5f419649
+      internalID: -1191415255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_scarab_animation_1
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 228
+        width: 130
+        height: 97
+      alignment: 9
+      pivot: {x: 0.8042175, y: 0.37454948}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f707b74a3b3432479835fcae8409256
+      internalID: 153032647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_scarab_animation_2
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 226
+        width: 136
+        height: 99
+      alignment: 9
+      pivot: {x: 0.8243498, y: 0.3617193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bda8195c13820543880327812500484
+      internalID: 1451442500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_scarab_animation_3
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 227
+        width: 133
+        height: 96
+      alignment: 9
+      pivot: {x: 0.82594746, y: 0.38116518}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13db78a8e140134abe86359b899ad52
+      internalID: -656425270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_scarab_animation_4
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 203
+        width: 111
+        height: 135
+      alignment: 9
+      pivot: {x: 0.64576846, y: 0.6797804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d07d118f7769344983b64f0912d321c
+      internalID: -1442297907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +218,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Summoner_monster_summon_scarab_animation_2: 1451442500
+      Summoner_monster_summon_scarab_animation_4: -1442297907
+      Summoner_monster_summon_scarab_animation_0: -1191415255
+      Summoner_monster_summon_scarab_animation_1: 153032647
+      Summoner_monster_summon_scarab_animation_3: -656425270
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,222 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Summoner_monster_summon_animation_0
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1335
+        width: 627
+        height: 669
+      alignment: 9
+      pivot: {x: 0.37913325, y: 0.02718464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2a0a23cf71f1948bd676dfd656c58b
+      internalID: 2033926692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_animation_1
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 1333
+        width: 529
+        height: 673
+      alignment: 9
+      pivot: {x: 0.25490427, y: 0.032931414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89ce11bc5d1dde4795d154161011b2b
+      internalID: -352344778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 1332
+        width: 496
+        height: 772
+      alignment: 9
+      pivot: {x: 0.2668553, y: 0.031204935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1908caf136bf69b418d93ccd7e0fb36e
+      internalID: 1556710556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 1330
+        width: 495
+        height: 779
+      alignment: 9
+      pivot: {x: 0.26205808, y: 0.027170595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75ab9228c67ca944ba0cc5fbae3e416
+      internalID: 131000549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_animation_4
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 1325
+        width: 468
+        height: 789
+      alignment: 9
+      pivot: {x: 0.28036213, y: 0.030449195}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04b5e7a633a785449dcb1c605b3b32b
+      internalID: 172722592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_animation_5
+      rect:
+        serializedVersion: 2
+        x: 3810
+        y: 1325
+        width: 469
+        height: 789
+      alignment: 9
+      pivot: {x: 0.2808299, y: 0.027735025}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37eb397ae967dbf49867e77bcb2927f9
+      internalID: -2068836688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_animation_6
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 1331
+        width: 496
+        height: 780
+      alignment: 9
+      pivot: {x: 0.26253977, y: 0.03052243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221512cddffc79b4781a6eafc133dc6a
+      internalID: 1300034032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_animation_7
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 261
+        width: 496
+        height: 768
+      alignment: 9
+      pivot: {x: 0.26749477, y: 0.03665022}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 017e6ba5983fd5d43adc5e31da32c7d3
+      internalID: -1941659709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_summon_animation_8
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 264
+        width: 532
+        height: 673
+      alignment: 9
+      pivot: {x: 0.25226083, y: 0.034890752}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63dd18dc0d194284bb0d027144e54b2c
+      internalID: 1875460749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +302,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Summoner_monster_summon_animation_6: 1300034032
+      Summoner_monster_summon_animation_7: -1941659709
+      Summoner_monster_summon_animation_3: 131000549
+      Summoner_monster_summon_animation_5: -2068836688
+      Summoner_monster_summon_animation_4: 172722592
+      Summoner_monster_summon_animation_2: 1556710556
+      Summoner_monster_summon_animation_1: -352344778
+      Summoner_monster_summon_animation_0: 2033926692
+      Summoner_monster_summon_animation_8: 1875460749
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

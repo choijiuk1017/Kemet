@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,180 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Summoner_monster_idle_animation_0
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1347
+        width: 628
+        height: 667
+      alignment: 9
+      pivot: {x: 0.36874554, y: 0.025612988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70793267ac73554499304efbf04fff24
+      internalID: 1993510651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_idle_animation_1
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1345
+        width: 619
+        height: 645
+      alignment: 9
+      pivot: {x: 0.37844184, y: 0.03336721}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97ada02ee5f8e94c80765c67c3e1aa0
+      internalID: 797312060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_idle_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 1345
+        width: 607
+        height: 609
+      alignment: 9
+      pivot: {x: 0.38875273, y: 0.03112753}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce6c255a1afe7c40aff6e1d918dfa46
+      internalID: -1157778268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_idle_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 1348
+        width: 575
+        height: 604
+      alignment: 9
+      pivot: {x: 0.40604916, y: 0.033634614}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9ba42de50c6e0498d49a76d608d71d
+      internalID: 476571643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_idle_animation_4
+      rect:
+        serializedVersion: 2
+        x: 3466
+        y: 1345
+        width: 606
+        height: 609
+      alignment: 9
+      pivot: {x: 0.38220173, y: 0.03112753}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e386f26aa16e54e8b97d50daf8e627
+      internalID: -2086372020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_idle_animation_5
+      rect:
+        serializedVersion: 2
+        x: 4261
+        y: 1345
+        width: 616
+        height: 645
+      alignment: 9
+      pivot: {x: 0.37784964, y: 0.03336721}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31138688276c4734981a1482a38c5e65
+      internalID: -274525806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summoner_monster_idle_animation_6
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 282
+        width: 628
+        height: 667
+      alignment: 9
+      pivot: {x: 0.3709672, y: 0.028510373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12988dfec6890546b2167bba9ee2bb6
+      internalID: -1100595773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +260,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Summoner_monster_idle_animation_2: -1157778268
+      Summoner_monster_idle_animation_3: 476571643
+      Summoner_monster_idle_animation_4: -2086372020
+      Summoner_monster_idle_animation_1: 797312060
+      Summoner_monster_idle_animation_5: -274525806
+      Summoner_monster_idle_animation_0: 1993510651
+      Summoner_monster_idle_animation_6: -1100595773
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
