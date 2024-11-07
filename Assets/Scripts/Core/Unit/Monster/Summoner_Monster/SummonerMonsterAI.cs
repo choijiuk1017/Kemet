@@ -45,6 +45,8 @@ namespace Core.Unit.Monster
             states[(int)SMMonsterStateType.Summon] = GetComponent<SMSummonState>();
             states[(int)(SMMonsterStateType.Groggy)] = GetComponent<SMGroggyState>();
             states[(int)SMMonsterStateType.Dead] = GetComponent<SMDeadState>();
+
+            fsm.Init(this, states[(int)SMMonsterStateType.Idle]);
             
         }
 
