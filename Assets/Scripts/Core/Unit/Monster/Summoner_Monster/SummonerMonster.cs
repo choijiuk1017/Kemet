@@ -12,6 +12,11 @@ namespace Core.Unit.Monster
 
         public SummonerMonsterAI SummonerMonsterAI => summonerMonsterAI;
 
+        public GameObject summonPrefab;
+
+        public Vector3 summonPosition1;
+        public Vector3 summonPosition2;
+
         protected override void Init()
         {
             base.Init();
