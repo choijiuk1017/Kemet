@@ -12,20 +12,19 @@ namespace Core.Unit.Monster.State.SummonerMonster
     {
         private float summonCooldown = 2f;
         private float timeSinceLastSummon = 0f;
-        private bool isSummoning = false;
 
         public override void Enter(SummonerMonsterAI entity)
         {
             entity.anim.SetBool("Walk", false);
 
-            Vector2 direction = (entity.summonerMonster.targetObject.transform.position - entity.transform.right).normalized;
+            // 정확한 방향을 계산하기 위해 targetObject의 위치와 소환사 위치를 사용
+            Vector2 direction = (entity.summonerMonster.targetObject.transform.position - entity.transform.position).normalized;
 
-            if(direction.x > 0 && entity.transform.localScale.x < 0)
+            if (direction.x > 0 && entity.transform.localScale.x < 0)
             {
                 entity.transform.localScale = new Vector3(Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
-
             }
-            else if(direction.x < 0 && entity.transform.localScale.x > 0)
+            else if (direction.x < 0 && entity.transform.localScale.x > 0)
             {
                 entity.transform.localScale = new Vector3(-Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
             }
@@ -47,7 +46,7 @@ namespace Core.Unit.Monster.State.SummonerMonster
 
             float playerDistance = Vector2.Distance(entity.summonerMonster.targetObject.transform.position , entity.transform.position);
 
-            if(isSummoning)
+            if(entity.summonerMonster.isSummoning)
             {
                 return;
             }
@@ -68,7 +67,7 @@ namespace Core.Unit.Monster.State.SummonerMonster
 
         public override void Exit(SummonerMonsterAI entity)
         {
-            isSummoning = false;
+            entity.summonerMonster.isSummoning = false;
 
         }
 
@@ -77,21 +76,7 @@ namespace Core.Unit.Monster.State.SummonerMonster
 
         }
 
-        public void Summon(SummonerMonsterAI entity)
-        {
-            GameObject monsterPrefab = entity.summonerMonster.summonPrefab;
-
-            Vector3 summonPosition1 = entity.summonerMonster.summonPosition1;
-            Vector3 summonPosition2 = entity.summonerMonster.summonPosition2;
-
-            if (monsterPrefab != null)
-            {
-                GameObject summonedMonster1 = GameObject.Instantiate(monsterPrefab, summonPosition1, Quaternion.identity);
-                GameObject summonedMonster2 = GameObject.Instantiate(monsterPrefab, summonPosition2, Quaternion.identity);
-
-                isSummoning = true;
-            }
-        }
+       
 
     }
 

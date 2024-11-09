@@ -280,8 +280,10 @@ MonoBehaviour:
   atkPos: {fileID: 6450048646008394976}
   atkBoxSize: {x: 0, y: 0}
   summonPrefab: {fileID: 2135507774269148383, guid: cc0d7c5145244324894130aa8c02e7f9, type: 3}
-  summonPosition1: {x: 0, y: 0, z: 0}
-  summonPosition2: {x: 0, y: 0, z: 0}
+  summonPosition:
+  - {fileID: 2453642796292367252}
+  - {fileID: 374972776454517378}
+  isSummoning: 0
 --- !u!114 &6450048645327303765
 MonoBehaviour:
   m_ObjectHideFlags: 0

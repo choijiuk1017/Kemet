@@ -14,9 +14,10 @@ namespace Core.Unit.Monster
 
         public GameObject summonPrefab;
 
-        public Vector3 summonPosition1;
-        public Vector3 summonPosition2;
+        public GameObject[] summonPosition;
 
+
+        public bool isSummoning = false;
         protected override void Init()
         {
             base.Init();
@@ -87,6 +88,24 @@ namespace Core.Unit.Monster
             if (groggyGauge >= maxGroggyGauge)
             {
                 isGroggy = true;
+            }
+        }
+
+        public void Summon()
+        {
+            GameObject monsterPrefab = summonPrefab;
+
+            if (monsterPrefab != null)
+            {
+               foreach(GameObject position in summonPosition)
+               {
+                    GameObject summonedMonster = GameObject.Instantiate(monsterPrefab, position.transform.position, Quaternion.identity);
+
+                    summonedMonster.transform.localScale = new Vector3(Mathf.Abs(summonedMonster.transform.localScale.x) * Mathf.Sign(this.transform.localScale.x), summonedMonster.transform.localScale.y, summonedMonster.transform.localScale.z);
+               }
+
+
+                isSummoning = true;
             }
         }
     }
