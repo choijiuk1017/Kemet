@@ -4,34 +4,75 @@ using UnityEngine;
 using Core.Unit;
 using Core.Unit.Monster;
 
-
-public class SummonedMonster : Monster
+namespace Core.Unit.Monster
 {
-    private SummonedMonsterAI summonedMonsterAI;
-
-    public SummonedMonsterAI SummonedMonsterAI => summonedMonsterAI;
-
-    protected override void Init()
+    public class SummonedMonster : Monster
     {
-        base.Init();
-        maxGroggyGauge = 100f;
+        private SummonedMonsterAI summonedMonsterAI;
 
-        groggyGauge = 0f;
+        public SummonedMonsterAI SummonedMonsterAI => summonedMonsterAI;
 
-        maxHealth = 10f;
+        protected override void Init()
+        {
+            base.Init();
+            maxGroggyGauge = 100f;
 
-        currentHealth = maxHealth;
+            groggyGauge = 0f;
 
-        moveSpeed = 5f;
+            maxHealth = 10f;
 
-        damage = 3f;
+            currentHealth = maxHealth;
 
-        defense = 1f;
-    }
+            moveSpeed = 5f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+            damage = 3f;
+
+            defense = 1f;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (isDamaged)
+            {
+                damageFlashTimer += Time.deltaTime;
+
+                if (damageFlashTimer >= damageFlashDuration)
+                {
+                    spriteRenderer.color = originalColor;
+                    isDamaged = false;
+
+                    damageFlashTimer = 0f;
+                }
+            }
+
+            if (groggyGauge >= maxGroggyGauge)
+            {
+                isGroggy = true;
+
+            }
+        }
+
+        public void Flip()
+        {
+            Vector3 scale = this.transform.localScale;
+
+            scale.x *= -1;
+            this.transform.localScale = scale;
+        }
+
+        public override void TakeDamage(float damageAmount)
+        {
+            float defenseFactor = 50f;
+            float finalDamage = damageAmount * (1 - defense / (defense * defenseFactor));
+
+            finalDamage = Mathf.Max(finalDamage, 0);
+
+            currentHealth -= finalDamage;
+
+            base.TakeDamage(damageAmount);
+        }
     }
 }
+
+
