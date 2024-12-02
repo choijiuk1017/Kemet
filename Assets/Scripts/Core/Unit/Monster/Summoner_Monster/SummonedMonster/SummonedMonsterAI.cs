@@ -28,6 +28,8 @@ namespace Core.Unit.Monster
 
         public Animator anim;
 
+        public bool isHit = false;
+
         private void Start()
         {
             anim = GetComponent<Animator>();
@@ -37,12 +39,34 @@ namespace Core.Unit.Monster
             fsm = new MonsterFSM<SummonedMonsterAI>();
 
             states = new State<SummonedMonsterAI>[(int)SMDMonsterStateType.Last];
-            /*
-            states[(int)SMDMonsterStateType.Chasing] = new State<SMDChasingState>();
-            states[(int)SMDMonsterStateType.Chasing] = new State<SMDStickState>();
-            states[(int)SMDMonsterStateType.Chasing] = new State<SMDDeadState>();
-            */
+            
+            states[(int)SMDMonsterStateType.Chasing] = GetComponent<SMDChasingState>();
+            states[(int)SMDMonsterStateType.Stick] = GetComponent<SMDStickState>();
+            states[(int)SMDMonsterStateType.Dead] = GetComponent<SMDDeadState>();
+            
             fsm.Init(this, states[(int)SMDMonsterStateType.Chasing]);
+        }
+
+        private void Update()
+        {
+            fsm.StateUpdate();            
+        }
+
+        public void ChangeState(SMDMonsterStateType newState)
+        {
+            prevState = curState;
+
+            curState = newState;
+
+            fsm.ChangeState(states[(int)newState]); 
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.gameObject == summonedMonster.targetObject)
+            {
+                isHit = true;
+            }
         }
     }
 
