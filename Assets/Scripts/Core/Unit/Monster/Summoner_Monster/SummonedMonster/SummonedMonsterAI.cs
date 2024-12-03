@@ -28,7 +28,6 @@ namespace Core.Unit.Monster
 
         public Animator anim;
 
-        public bool isHit = false;
 
         private void Start()
         {
@@ -61,13 +60,6 @@ namespace Core.Unit.Monster
             fsm.ChangeState(states[(int)newState]); 
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if(collision.gameObject == summonedMonster.targetObject)
-            {
-                isHit = true;
-            }
-        }
     }
 
 }

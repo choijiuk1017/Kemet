@@ -175,7 +175,7 @@ MonoBehaviour:
   groundDetected: {fileID: 7179613354236143740}
   wallDetected: {fileID: 7155045754723800065}
   atkPos: {fileID: 7277023456740473503}
-  atkBoxSize: {x: 0, y: 0}
+  atkBoxSize: {x: 0.3, y: 0.3}
 --- !u!114 &-5620308415770418281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,7 +192,6 @@ MonoBehaviour:
   curState: 0
   summonedMonster: {fileID: 0}
   anim: {fileID: 0}
-  isHit: 0
 --- !u!114 &7384550747822602631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ded40fd04a8124ebf4a86de1caa443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHit: 0
 --- !u!114 &-4095773061504628450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61841bffc54f1d478957294e294496c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0}
 --- !u!70 &1832547938697319044
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -239,7 +240,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.18844464, y: 0.030463098}
@@ -290,7 +291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7911290932504524585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.167, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
