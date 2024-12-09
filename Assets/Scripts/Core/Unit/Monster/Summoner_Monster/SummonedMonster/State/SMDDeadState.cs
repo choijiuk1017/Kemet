@@ -18,7 +18,7 @@ namespace Core.Unit.Monster.State.SummonedMonster
 
         public override void Execute(SummonedMonsterAI entity)
         {
-
+            Destroy(this.gameObject);
 
 
         }

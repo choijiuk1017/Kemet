@@ -29,7 +29,7 @@ namespace Core.Unit.Player
         // 슬라이딩 관련 변수
         public float slideForce = 500f; // 슬라이딩 시 추가할 힘
         public float slideDuration = 0.5f; // 슬라이딩 지속 시간
-        private bool isSliding = false; // 슬라이딩 중인지 여부
+        public bool isSliding = false; // 슬라이딩 중인지 여부
         private float slideTime = 0f; // 슬라이딩 시간 측정
         public float slopeCheckDistance = 0.5f; // 경사 체크 거리
         public float maxSlopeAngle = 45f; // 캐릭터가 슬라이딩할 수 있는 최대 경사각

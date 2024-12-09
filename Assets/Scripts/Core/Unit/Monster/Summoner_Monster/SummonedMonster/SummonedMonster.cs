@@ -72,6 +72,15 @@ namespace Core.Unit.Monster
 
             base.TakeDamage(damageAmount);
         }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            // ground 또는 stair 태그와 충돌하면 isAlive를 false로 설정
+            if (collision.CompareTag("Ground") || collision.CompareTag("Stair"))
+            {
+                isAlive = false;
+            }
+        }
     }
 }
 
