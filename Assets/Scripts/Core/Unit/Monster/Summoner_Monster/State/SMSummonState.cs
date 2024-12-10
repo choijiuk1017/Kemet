@@ -44,21 +44,31 @@ namespace Core.Unit.Monster.State.SummonerMonster
                 return;
             }
 
-            float playerDistance = Vector2.Distance(entity.summonerMonster.targetObject.transform.position , entity.transform.position);
-
-            if(entity.summonerMonster.isSummoning)
-            {
-                return;
-            }
+            float playerDistance = Vector2.Distance(entity.summonerMonster.targetObject.transform.position, entity.transform.position);
 
             timeSinceLastSummon += Time.deltaTime;
 
-            if(playerDistance <= 15f && timeSinceLastSummon >= summonCooldown)
+            // 소환 중이 아닐 때만 소환 가능
+            if (!entity.summonerMonster.isSummoning && timeSinceLastSummon >= summonCooldown && playerDistance <= 15f)
             {
-                entity.anim.SetTrigger("Summon"); //summon()은 애니메이션 이벤트로 처리
+                // 소환 직전에 플레이어를 바라보도록 방향 갱신
+                Vector2 direction = (entity.summonerMonster.targetObject.transform.position - entity.transform.position).normalized;
+
+                if (direction.x > 0 && entity.transform.localScale.x < 0)
+                {
+                    entity.transform.localScale = new Vector3(Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
+                }
+                else if (direction.x < 0 && entity.transform.localScale.x > 0)
+                {
+                    entity.transform.localScale = new Vector3(-Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
+                }
+
+
+                entity.anim.SetTrigger("Summon"); // Summon 애니메이션 실행
+                entity.summonerMonster.isSummoning = true; // 소환 중 상태 설정
                 timeSinceLastSummon = 0;
             }
-            else if(playerDistance > 15f)
+            else if (playerDistance > 15f)
             {
                 entity.ChangeState(SMMonsterStateType.Idle);
             }

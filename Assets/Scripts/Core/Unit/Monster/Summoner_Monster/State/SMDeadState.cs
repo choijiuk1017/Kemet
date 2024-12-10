@@ -13,11 +13,21 @@ namespace Core.Unit.Monster.State.SummonerMonster
     {
         public override void Enter(SummonerMonsterAI entity)
         {
-
+           
+            if(entity.summonerMonster.isGroggy)
+            {
+                entity.anim.SetTrigger("Dead");
+            }
+            else
+            {
+                entity.anim.SetTrigger("Groggy");
+                entity.anim.SetTrigger("Dead");
+            }
         }
 
         public override void Execute(SummonerMonsterAI entity)
         {
+            Destroy(this.gameObject, 2f);
         }
 
         public override void Exit(SummonerMonsterAI entity)

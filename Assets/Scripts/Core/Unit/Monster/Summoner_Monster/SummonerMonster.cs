@@ -108,6 +108,11 @@ namespace Core.Unit.Monster
                 isSummoning = true;
             }
         }
+
+        public void OnSummonComplete()
+        {
+            isSummoning = false; // 소환 상태 해제
+        }
     }
 }
 
