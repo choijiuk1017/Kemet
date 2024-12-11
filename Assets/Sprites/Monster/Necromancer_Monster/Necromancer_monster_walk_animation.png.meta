@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,222 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Necromancer_monster_walk_animation_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1272
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.58051723, y: 0.07562713}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416d319e79d12d04f90fa58ab79f94cd
+      internalID: 559792435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_walk_animation_1
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1272
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5615721, y: 0.07562713}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ed01a47f335b94db239d2d34ac8e45
+      internalID: -1026496395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_walk_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1272
+        width: 573
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5601751, y: 0.07894257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7f1254ca3edf0549b93308796b7d5e9
+      internalID: 1519632079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_walk_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 1272
+        width: 630
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5968312, y: 0.08557343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f80f039786ffb44a8e553601bb23b26
+      internalID: -1907384588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_walk_animation_4
+      rect:
+        serializedVersion: 2
+        x: 2965
+        y: 1272
+        width: 613
+        height: 800
+      alignment: 9
+      pivot: {x: 0.57788205, y: 0.07894257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cffd9771017a6f44b8b4b00c0906ec6
+      internalID: 1326317345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_walk_animation_5
+      rect:
+        serializedVersion: 2
+        x: 3668
+        y: 1272
+        width: 621
+        height: 800
+      alignment: 9
+      pivot: {x: 0.57687914, y: 0.07894257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb78b0863f8a11478ef37da5fc9fca9
+      internalID: 1670821597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_walk_animation_6
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 198
+        width: 610
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5782655, y: 0.08888878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0391426632aeae24fbca94768635b805
+      internalID: -1056807424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_walk_animation_7
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 217
+        width: 613
+        height: 800
+      alignment: 9
+      pivot: {x: 0.59518975, y: 0.06899628}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffad7f3d94e6eef41a5a0fd989132a75
+      internalID: 1854840879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_walk_animation_8
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 219
+        width: 634
+        height: 800
+      alignment: 9
+      pivot: {x: 0.6045869, y: 0.06236538}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4eb27419864bb046b26ace805e4b840
+      internalID: -878990357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +302,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Necromancer_monster_walk_animation_0: 559792435
+      Necromancer_monster_walk_animation_8: -878990357
+      Necromancer_monster_walk_animation_4: 1326317345
+      Necromancer_monster_walk_animation_7: 1854840879
+      Necromancer_monster_walk_animation_3: -1907384588
+      Necromancer_monster_walk_animation_1: -1026496395
+      Necromancer_monster_walk_animation_5: 1670821597
+      Necromancer_monster_walk_animation_2: 1519632079
+      Necromancer_monster_walk_animation_6: -1056807424
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

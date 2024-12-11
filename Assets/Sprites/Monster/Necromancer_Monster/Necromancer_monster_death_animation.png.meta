@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,390 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1849
+        width: 677
+        height: 619
+      alignment: 9
+      pivot: {x: 0.6753902, y: 0.13190477}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6ef603b45e50a4fb611083c5c2d567
+      internalID: 1246347833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_1
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 1798
+        width: 891
+        height: 658
+      alignment: 9
+      pivot: {x: 0.640174, y: 0.15992287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d56cac4042ab564e9f9ce21600574d4
+      internalID: -1293901890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1904
+        y: 1763
+        width: 865
+        height: 633
+      alignment: 9
+      pivot: {x: 0.6383713, y: 0.20815013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4df55f898d59540be723c8d87c1c1c
+      internalID: 1789874403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2824
+        y: 1709
+        width: 901
+        height: 646
+      alignment: 9
+      pivot: {x: 0.5837481, y: 0.27041295}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de8aefe926b7094fb2b2ea44b9dd659
+      internalID: -2130665434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_4
+      rect:
+        serializedVersion: 2
+        x: 3832
+        y: 1651
+        width: 1046
+        height: 684
+      alignment: 9
+      pivot: {x: 0.5621886, y: 0.3326209}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154ce380b4fffd947be4c41693a99272
+      internalID: -185712660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 892
+        width: 1081
+        height: 701
+      alignment: 9
+      pivot: {x: 0.49128005, y: 0.32070675}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618cc71053dbec546964fb3aa413ff06
+      internalID: -1571138001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_6
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 860
+        width: 1026
+        height: 738
+      alignment: 9
+      pivot: {x: 0.50918764, y: 0.34672633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9132f897dbf4ee448cf67dbd290e3fd
+      internalID: -851944430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_7
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 849
+        width: 928
+        height: 755
+      alignment: 9
+      pivot: {x: 0.47968477, y: 0.16706082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ff598ece38756428986455e320d9ff
+      internalID: 1779442522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_8
+      rect:
+        serializedVersion: 2
+        x: 3619
+        y: 785
+        width: 901
+        height: 789
+      alignment: 9
+      pivot: {x: 0.5662599, y: 0.1097245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2d99d549ad31c44b0b26b6007f6971
+      internalID: 1241912572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 104
+        width: 918
+        height: 736
+      alignment: 9
+      pivot: {x: 0.4589266, y: 0.0986971}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c76b38d6d62d4409c29d94e965e3c8
+      internalID: -1869221724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_10
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 78
+        width: 589
+        height: 671
+      alignment: 9
+      pivot: {x: 0.43064955, y: 0.1675259}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e336eb30fa0227643a26881543086889
+      internalID: -2018118422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_11
+      rect:
+        serializedVersion: 2
+        x: 1876
+        y: 75
+        width: 507
+        height: 556
+      alignment: 9
+      pivot: {x: 0.5123953, y: 0.22873819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2358325df3fa6ae42b00e86c4146c984
+      internalID: -990879309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_12
+      rect:
+        serializedVersion: 2
+        x: 2676
+        y: 92
+        width: 431
+        height: 539
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2143532}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a5f1baed30ef1458022bf5ecb5012d
+      internalID: -244515955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_13
+      rect:
+        serializedVersion: 2
+        x: 3286
+        y: 110
+        width: 342
+        height: 431
+      alignment: 9
+      pivot: {x: 0.43568894, y: 0.22296883}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac3fa6fdbc255f419d39df1413a50ff
+      internalID: -2005410764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_14
+      rect:
+        serializedVersion: 2
+        x: 3790
+        y: 122
+        width: 225
+        height: 351
+      alignment: 9
+      pivot: {x: 0.4441406, y: 0.22249106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4052d58d0ab454da69b4ab2c6e3ac1
+      internalID: -1331123172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_15
+      rect:
+        serializedVersion: 2
+        x: 4127
+        y: 101
+        width: 222
+        height: 284
+      alignment: 9
+      pivot: {x: 0.58492357, y: 0.33404335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c09e22799b8a634399317b5cf9cc60f
+      internalID: 1942182702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_death_animation_16
+      rect:
+        serializedVersion: 2
+        x: 4474
+        y: 110
+        width: 289
+        height: 255
+      alignment: 9
+      pivot: {x: 0.48912773, y: 0.2658816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17dee695b74742468fa136524042f24
+      internalID: 480350879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +470,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Necromancer_monster_death_animation_5: -1571138001
+      Necromancer_monster_death_animation_13: -2005410764
+      Necromancer_monster_death_animation_3: -2130665434
+      Necromancer_monster_death_animation_1: -1293901890
+      Necromancer_monster_death_animation_12: -244515955
+      Necromancer_monster_death_animation_8: 1241912572
+      Necromancer_monster_death_animation_11: -990879309
+      Necromancer_monster_death_animation_16: 480350879
+      Necromancer_monster_death_animation_10: -2018118422
+      Necromancer_monster_death_animation_4: -185712660
+      Necromancer_monster_death_animation_2: 1789874403
+      Necromancer_monster_death_animation_6: -851944430
+      Necromancer_monster_death_animation_9: -1869221724
+      Necromancer_monster_death_animation_15: 1942182702
+      Necromancer_monster_death_animation_0: 1246347833
+      Necromancer_monster_death_animation_7: 1779442522
+      Necromancer_monster_death_animation_14: -1331123172
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

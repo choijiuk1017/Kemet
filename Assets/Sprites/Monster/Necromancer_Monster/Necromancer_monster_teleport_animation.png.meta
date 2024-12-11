@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,243 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Necromancer_monster_teleport_animation_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 828
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5567437, y: 0.08555618}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1282dc2acbf7a9a49afc9a2b1940ba41
+      internalID: 800593525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_teleport_animation_1
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 840
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.556, y: 0.0855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d04afed8e182e49abf5a47165a09e4
+      internalID: 826335101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_teleport_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 831
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.556, y: 0.0855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51eec7c2b3a7a2b40a15ac2a4c413e48
+      internalID: 769661406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_teleport_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2501
+        y: 826
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.556, y: 0.0855}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d1d8915c0c1554a993cff8fa668722
+      internalID: 481488180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_teleport_animation_4
+      rect:
+        serializedVersion: 2
+        x: 3333
+        y: 823
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.556, y: 0.0856}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c6fb79d03a81541a4d579bb893cdd3
+      internalID: -209641771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_teleport_animation_5
+      rect:
+        serializedVersion: 2
+        x: 4090
+        y: 828
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.61864626, y: 0.084739}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7273ff1418c7fa419f7d3cd3eeb3075
+      internalID: -2012521290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_teleport_animation_6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.54126817, y: 0.037796415}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926118939182fcd43840f4092708cbfb
+      internalID: -104698655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_teleport_animation_7
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 3
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.54126805, y: 0.030574739}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138f999b912a420438a66c19ead77f14
+      internalID: 697166341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_teleport_animation_8
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 0
+        width: 560
+        height: 800
+      alignment: 9
+      pivot: {x: 0.5257926, y: 0.030574705}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2319ea4af18a7474aa2bd62fd342b265
+      internalID: 860888258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_teleport_animation_9
+      rect:
+        serializedVersion: 2
+        x: 2328
+        y: 233
+        width: 315
+        height: 419
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8946c809c409404487d9402a60e6041
+      internalID: 1156208360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +323,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Necromancer_monster_teleport_animation_5: -2012521290
+      Necromancer_monster_teleport_animation_7: 697166341
+      Necromancer_monster_teleport_animation_8: 860888258
+      Necromancer_monster_teleport_animation_3: 481488180
+      Necromancer_monster_teleport_animation_2: 769661406
+      Necromancer_monster_teleport_animation_4: -209641771
+      Necromancer_monster_teleport_animation_0: 800593525
+      Necromancer_monster_teleport_animation_6: -104698655
+      Necromancer_monster_teleport_animation_9: 1156208360
+      Necromancer_monster_teleport_animation_1: 826335101
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

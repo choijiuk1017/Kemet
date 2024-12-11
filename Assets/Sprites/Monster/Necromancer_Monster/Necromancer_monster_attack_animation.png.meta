@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -76,9 +76,201 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Necromancer_monster_attack_animation_0
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 1269
+        width: 369
+        height: 740
+      alignment: 9
+      pivot: {x: 0.8051786, y: 0.046970017}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7bd7167997844a418159241243c7faf
+      internalID: -1863717617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_attack_animation_1
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 1275
+        width: 417
+        height: 741
+      alignment: 9
+      pivot: {x: 0.7029458, y: 0.039451938}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b82a83eb357773b4895fad7d551ffcd8
+      internalID: 2076959857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_attack_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1272
+        width: 478
+        height: 738
+      alignment: 9
+      pivot: {x: 0.60827225, y: 0.04567464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c127730f8fd0b16408431c414ae51005
+      internalID: -854563440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_attack_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 1269
+        width: 569
+        height: 741
+      alignment: 9
+      pivot: {x: 0.5056384, y: 0.04591425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8c5124fceb86b4aaef9ae933cb91ed
+      internalID: -1975301217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_attack_animation_4
+      rect:
+        serializedVersion: 2
+        x: 2820
+        y: 1265
+        width: 588
+        height: 740
+      alignment: 9
+      pivot: {x: 0.49808964, y: 0.043772105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ec87ba41065cf4f8f0be42b4640b2e
+      internalID: -230773142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_attack_animation_5
+      rect:
+        serializedVersion: 2
+        x: 3426
+        y: 1267
+        width: 591
+        height: 740
+      alignment: 9
+      pivot: {x: 0.49476895, y: 0.04800811}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad5b320c8fb908c448316e19fe5e065a
+      internalID: -482836799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_attack_animation_6
+      rect:
+        serializedVersion: 2
+        x: 4081
+        y: 1260
+        width: 591
+        height: 740
+      alignment: 9
+      pivot: {x: 0.49935555, y: 0.05609758}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ee6cb7029d28c49be310e38b177fb7
+      internalID: 1660945831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_attack_animation_7
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 196
+        width: 589
+        height: 740
+      alignment: 9
+      pivot: {x: 0.49861422, y: 0.044774998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f3866e7a72c7a4cb9e087786de3f8e
+      internalID: -1430143467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +281,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Necromancer_monster_attack_animation_7: -1430143467
+      Necromancer_monster_attack_animation_3: -1975301217
+      Necromancer_monster_attack_animation_6: 1660945831
+      Necromancer_monster_attack_animation_1: 2076959857
+      Necromancer_monster_attack_animation_9: 1817646440
+      Necromancer_monster_attack_animation_5: -482836799
+      Necromancer_monster_attack_animation_2: -854563440
+      Necromancer_monster_attack_animation_4: -230773142
+      Necromancer_monster_attack_animation_0: -1863717617
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

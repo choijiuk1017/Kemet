@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -76,9 +76,138 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Necromancer_monster_heal_effect_animation_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 666
+        width: 1100
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5186295, y: 0.37408507}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d736f7697991041a6e212494aa093b
+      internalID: 656168363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_heal_effect_animation_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 267
+        width: 1100
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5192841, y: 0.40452424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a126186eaa8a9d248b1ab6cdcbb287ab
+      internalID: -291089636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_heal_effect_animation_2
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 266
+        width: 1100
+        height: 200
+      alignment: 9
+      pivot: {x: 0.51881015, y: 0.37840652}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d155a04776e47994ca8ea76f8e790b70
+      internalID: 33459274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_heal_effect_animation_3
+      rect:
+        serializedVersion: 2
+        x: 2464
+        y: 267
+        width: 1100
+        height: 200
+      alignment: 9
+      pivot: {x: 0.51886827, y: 0.40593323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a69c97f1cced647be6b9c996c22e22
+      internalID: 905573860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Necromancer_monster_heal_effect_animation_4
+      rect:
+        serializedVersion: 2
+        x: 3684
+        y: 266
+        width: 1100
+        height: 200
+      alignment: 9
+      pivot: {x: 0.52830213, y: 0.47688782}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbe4c9b608f8874faec66d24046a429
+      internalID: 2001288976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +218,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Necromancer_monster_heal_effect_animation_2: 33459274
+      Necromancer_monster_heal_effect_animation_4: 2001288976
+      Necromancer_monster_heal_effect_animation_3: 905573860
+      Necromancer_monster_heal_effect_animation_1: -291089636
+      Necromancer_monster_heal_effect_animation_0: 656168363
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
