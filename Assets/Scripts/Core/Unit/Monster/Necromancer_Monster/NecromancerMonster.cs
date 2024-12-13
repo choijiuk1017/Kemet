@@ -19,11 +19,11 @@ namespace Core.Unit.Monster
 
             groggyGauge = 0f;
 
-            maxHealth = 10f;
+            maxHealth = 100f;
 
             currentHealth = maxHealth;
 
-            moveSpeed = 5f;
+            moveSpeed = 3f;
 
             damage = 5f;
 
