@@ -56,15 +56,16 @@ namespace Core.Effect
             
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.gameObject.CompareTag("Player"))
+            if (collision.gameObject.CompareTag("Player"))
             {
                 isHit = true;
                 collision.gameObject.GetComponent<Core.Unit.Player.Seth>().TakeDamage(damage);
                 Destroy(gameObject);
             }
-            else if(collision.gameObject.CompareTag("Parry"))
+
+            if (collision.gameObject.CompareTag("Parry"))
             {
                 Destroy(gameObject);
             }

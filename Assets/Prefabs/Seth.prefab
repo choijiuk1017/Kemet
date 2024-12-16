@@ -130,17 +130,24 @@ MonoBehaviour:
   isAlive: 1
   position: {x: 0, y: 0, z: 0}
   attackRange: 0
+  damageFlashDuration: 0.2
   maxComboCount: 3
   coolTime: 0.5
   comboTimeWindow: 1
-  jumpForce: 10
-  parryTime: 0
-  isJump: 0
-  isGround: 0
-  isParry: 0
   atkPos: {fileID: 4450003577204373376}
   atkBoxSize: {x: 2, y: 4}
+  jumpForce: 10
+  isJump: 0
+  slideForce: 500
+  slideDuration: 0.5
+  isSliding: 0
+  slopeCheckDistance: 0.5
+  maxSlopeAngle: 45
+  parryTime: 0
+  isParry: 0
   parryBox: {fileID: 4450003577714855382}
+  isGround: 0
+  isStair: 0
   state: 0
 --- !u!50 &4450003576736383760
 Rigidbody2D:
@@ -255,7 +262,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05745554, y: 0.5359614}
+  m_Offset: {x: -0.46208858, y: 0.5359614}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -266,5 +273,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5833807, y: 1.8469515}
+  m_Size: {x: 2.3926468, y: 1.8469515}
   m_EdgeRadius: 0

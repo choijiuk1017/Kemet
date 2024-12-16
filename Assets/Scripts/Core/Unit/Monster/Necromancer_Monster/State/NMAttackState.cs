@@ -72,7 +72,7 @@ namespace Core.Unit.Monster.State.NecromancerMonster
                 {
                     entity.ChangeState(NMMonsterStateType.Heal);
                 }
-                else if (randomValue < 50) // 30% 확률로 Teleport 상태로 전환
+                else if (randomValue < 40) // 20% 확률로 Teleport 상태로 전환
                 {
                     entity.ChangeState(NMMonsterStateType.Teleport);
                 }
