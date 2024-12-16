@@ -15,8 +15,12 @@ namespace Core.Unit.Monster.State.NecromancerMonster
         private float timeSinceLastAttack = 0f;
         private bool isAttacking = false;
 
+        public GameObject magicBallPrefab;
+
+        private Vector2 spawnPos;
         public override void Enter(NecromancerMonsterAI entity)
         {
+            spawnPos = entity.necromancerMonster.atkPos.transform.position;
             Vector2 direction = (entity.necromancerMonster.targetObject.transform.position - entity.transform.position).normalized;
 
             if(direction.x > 0  && entity.transform.localScale.x < 0)
@@ -98,6 +102,16 @@ namespace Core.Unit.Monster.State.NecromancerMonster
         {
             isAttacking = true;
             Debug.Log("공격 시작");
+        }
+
+        private void SpawnMagic()
+        {
+            if(magicBallPrefab != null)
+            {
+                GameObject magicBall = GameObject.Instantiate(magicBallPrefab, spawnPos, Quaternion.identity);  
+
+            }
+
         }
 
         public void EndAttack()

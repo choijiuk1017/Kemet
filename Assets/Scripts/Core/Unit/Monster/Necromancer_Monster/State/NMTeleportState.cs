@@ -47,17 +47,13 @@ namespace Core.Unit.Monster.State.NecromancerMonster
                 //랜덤으로 상태 변환
                 int randomValue = UnityEngine.Random.Range(0, 100);
 
-                if (randomValue < 20) // 20% 확률로 Heal 상태로 전환
-                {
-                    entity.ChangeState(NMMonsterStateType.Heal);
-                }
-                else if (randomValue < 50) // 30% 확률로 Teleport 상태로 전환
-                {
-                    entity.ChangeState(NMMonsterStateType.Teleport);
-                }
-                else // 나머지 50% 확률로 Attack 상태로 전환
+                if (randomValue < 80) // 80% 확률로 Attack 상태로 전환
                 {
                     entity.ChangeState(NMMonsterStateType.Attack);
+                }
+                else // 나머지 확률로 Heal 상태로 전환
+                {
+                    entity.ChangeState(NMMonsterStateType.Heal);
                 }
             }
 
@@ -67,7 +63,7 @@ namespace Core.Unit.Monster.State.NecromancerMonster
         public override void Exit(NecromancerMonsterAI entity)
         {
 
-            entity.anim.SetTrigger("TeleportEnd");
+           // entity.anim.SetTrigger("TeleportEnd");
         }
 
         public override void OnTransition(NecromancerMonsterAI entity)

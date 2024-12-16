@@ -305,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c2c497c11ac1d141b58bd03a5ff571b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  magicBallPrefab: {fileID: 3830828628399668099, guid: 220a0d7ed133cfb44b13152fd39fd681, type: 3}
 --- !u!114 &7852785809249462369
 MonoBehaviour:
   m_ObjectHideFlags: 0

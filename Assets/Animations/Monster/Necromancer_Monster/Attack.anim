@@ -35,6 +35,20 @@ AnimationClip:
       value: {fileID: 1660945831, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
     - time: 0.5833333
       value: {fileID: -1430143467, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - time: 0.75
+      value: {fileID: 1660945831, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - time: 0.8333333
+      value: {fileID: -482836799, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - time: 0.9166667
+      value: {fileID: -230773142, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - time: 1
+      value: {fileID: -1975301217, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - time: 1.0833334
+      value: {fileID: -854563440, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - time: 1.1666666
+      value: {fileID: 2076959857, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - time: 1.25
+      value: {fileID: -1863717617, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -62,12 +76,19 @@ AnimationClip:
     - {fileID: -482836799, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
     - {fileID: 1660945831, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
     - {fileID: -1430143467, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - {fileID: 1660945831, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - {fileID: -482836799, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - {fileID: -230773142, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - {fileID: -1975301217, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - {fileID: -854563440, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - {fileID: 2076959857, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
+    - {fileID: -1863717617, guid: 2a5b410269fae534dbed18a262d76d0c, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6666666
+    m_StopTime: 1.3333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -95,6 +116,13 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.5833333
+    functionName: SpawnMagic
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 2c2c497c11ac1d141b58bd03a5ff571b, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.25
     functionName: EndAttack
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 2c2c497c11ac1d141b58bd03a5ff571b, type: 3}
