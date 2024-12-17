@@ -64,6 +64,8 @@ namespace Core.Unit.Monster
 
             fsm.ChangeState(states[(int)newState]);
         }
+
+
     }
 
 

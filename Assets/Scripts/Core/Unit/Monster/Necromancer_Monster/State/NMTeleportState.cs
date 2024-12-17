@@ -17,10 +17,12 @@ namespace Core.Unit.Monster.State.NecromancerMonster
 
         private bool isTeleportComplete = false;
 
+        private bool isTeleporting = false;
         public override void Enter(NecromancerMonsterAI entity)
         {
             currenRetry = 0;
             isTeleportComplete = false;
+            isTeleporting = false;
 
             GenerateRandomTargetPosition(entity);
 
@@ -34,6 +36,9 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             {
                 entity.transform.localScale = new Vector3(-Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
             }
+
+            entity.anim.SetTrigger("Teleport");
+            isTeleporting = true;
         }
 
         public override void Execute(NecromancerMonsterAI entity)
@@ -41,6 +46,7 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             
             if (isTeleportComplete)
             {
+                entity.anim.SetTrigger("TeleportEnd");
                 if (entity.necromancerMonster.isGroggy)
                 {
                     entity.ChangeState(NMMonsterStateType.Groggy);
@@ -60,36 +66,16 @@ namespace Core.Unit.Monster.State.NecromancerMonster
                     //랜덤으로 상태 변환
                     int randomValue = UnityEngine.Random.Range(0, 100);
 
-                    if (randomValue < 80) // 80% 확률로 Attack 상태로 전환
-                    {
-                        entity.ChangeState(NMMonsterStateType.Attack);
-                    }
-                    else // 나머지 확률로 Heal 상태로 전환
-                    {
-                        entity.ChangeState(NMMonsterStateType.Heal);
-                    }
+                    entity.ChangeState(randomValue < 80 ? NMMonsterStateType.Attack : NMMonsterStateType.Heal);
                 }
 
                 return;
-            }
-
-            if(currenRetry < MaxTeleportRetries)
-            {
-               Teleport(entity);
-            }
-            else
-            {
-                entity.transform.position = entity.necromancerMonster.targetObject.transform.position + new Vector3(2, 0);
-            }
-
-           
-
-
+            }         
         }
 
         public override void Exit(NecromancerMonsterAI entity)
         {
-            entity.anim.SetTrigger("TeleportEnd");
+
         }
 
         public override void OnTransition(NecromancerMonsterAI entity)
@@ -106,6 +92,15 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             targetPosition = new Vector2(entity.transform.position.x + (randomDistance * direction), entity.transform.position.y);
         }
 
+        private void OnTeleport(NecromancerMonsterAI entity)
+        {
+            if(isTeleporting)
+            {
+                Teleport(entity);
+                isTeleporting = false;
+            }
+        }
+
         private void Teleport(NecromancerMonsterAI entity)
         {
             Vector2 ray = new Vector2(targetPosition.x, entity.transform.position.y + 2f);
@@ -114,7 +109,6 @@ namespace Core.Unit.Monster.State.NecromancerMonster
 
             if (groundHit.collider != null)
             {
-                entity.anim.SetTrigger("Teleport");
                 targetPosition.y = groundHit.point.y;
                 entity.transform.position = targetPosition;
 
@@ -123,12 +117,19 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             else
             {
                 currenRetry++;
-
-                GenerateRandomTargetPosition(entity);
-
-
+                if (currenRetry < MaxTeleportRetries)
+                {
+                    GenerateRandomTargetPosition(entity);
+                }
+                else
+                {
+                    entity.transform.position = entity.necromancerMonster.targetObject.transform.position + new Vector3(2, 0);
+                    isTeleportComplete = true;
+                }
             }
         }
+
+        
     }
 
 
