@@ -18,11 +18,16 @@ namespace Core.Unit.Monster.State.NecromancerMonster
         private bool isTeleportComplete = false;
 
         private bool isTeleporting = false;
+
+        private NecromancerMonsterAI currentEntity;
+
         public override void Enter(NecromancerMonsterAI entity)
         {
             currenRetry = 0;
             isTeleportComplete = false;
             isTeleporting = false;
+
+            currentEntity = entity;
 
             GenerateRandomTargetPosition(entity);
 
@@ -47,6 +52,7 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             if (isTeleportComplete)
             {
                 entity.anim.SetTrigger("TeleportEnd");
+
                 if (entity.necromancerMonster.isGroggy)
                 {
                     entity.ChangeState(NMMonsterStateType.Groggy);
@@ -92,11 +98,12 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             targetPosition = new Vector2(entity.transform.position.x + (randomDistance * direction), entity.transform.position.y);
         }
 
-        private void OnTeleport(NecromancerMonsterAI entity)
+        //애니메이션 이벤트로 처리
+        private void OnTeleport()
         {
-            if(isTeleporting)
+            if(isTeleporting && currentEntity != null)
             {
-                Teleport(entity);
+                Teleport(currentEntity);
                 isTeleporting = false;
             }
         }

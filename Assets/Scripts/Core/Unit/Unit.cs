@@ -94,7 +94,7 @@ namespace Core.Unit
         //치유
         public virtual void Heal(float healAmount)
         {
-            currentHealth = Mathf.Clamp(currentHealth + healAmount, 0, maxHealth);
+            
         }
 
         //버프

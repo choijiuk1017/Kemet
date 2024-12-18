@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 171a0422e4fcd4b48a904d8377338385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healMagicPrefab: {fileID: 1428381989603242746, guid: 50ca78d4f4b2dd84e8f1fcc0cdadbede, type: 3}
 --- !u!114 &7852785809249462368
 MonoBehaviour:
   m_ObjectHideFlags: 0

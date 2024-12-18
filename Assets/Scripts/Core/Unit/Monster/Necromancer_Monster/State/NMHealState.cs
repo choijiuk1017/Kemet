@@ -11,6 +11,8 @@ namespace Core.Unit.Monster.State.NecromancerMonster
 {
     public class NMHealState : State<NecromancerMonsterAI>
     {
+        public GameObject healMagicPrefab;
+
         public override void Enter(NecromancerMonsterAI entity)
         {
             Vector2 direction = (entity.necromancerMonster.targetObject.transform.position - entity.transform.position).normalized;
@@ -25,6 +27,8 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             }
 
             entity.anim.SetTrigger("Heal");
+
+            SpawnHealMagic(entity);
         }
 
         public override void Execute(NecromancerMonsterAI entity)
@@ -66,6 +70,15 @@ namespace Core.Unit.Monster.State.NecromancerMonster
         public override void OnTransition(NecromancerMonsterAI entity)
         {
 
+        }
+
+        private void SpawnHealMagic(NecromancerMonsterAI entity)
+        {
+            if(healMagicPrefab != null)
+            {
+                Vector2 spawnPosition = new Vector2(entity.transform.position.x, entity.transform.position.y);
+                GameObject healMagic = GameObject.Instantiate(healMagicPrefab, spawnPosition, Quaternion.identity);
+            }
         }
     }
 }

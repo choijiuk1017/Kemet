@@ -62,6 +62,19 @@ namespace Core.Unit.Monster
             }
 
         }
+
+        public override void Heal(float healAmount)
+        {
+            if(currentHealth == maxHealth)
+            {
+                return;
+            }
+            else
+            {
+                currentHealth += healAmount;
+            }                
+        }
+
         public virtual void DetectGround()
         {
             RaycastHit2D groundHit = Physics2D.Raycast(groundDetected.position, Vector2.down, 1f);

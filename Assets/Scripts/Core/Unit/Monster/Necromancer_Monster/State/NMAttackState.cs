@@ -18,6 +18,7 @@ namespace Core.Unit.Monster.State.NecromancerMonster
         public GameObject magicBallPrefab;
 
         private Vector2 spawnPos;
+
         public override void Enter(NecromancerMonsterAI entity)
         {
             spawnPos = entity.necromancerMonster.atkPos.transform.position;

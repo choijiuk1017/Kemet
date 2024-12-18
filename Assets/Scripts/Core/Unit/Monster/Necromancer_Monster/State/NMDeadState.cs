@@ -12,14 +12,20 @@ namespace Core.Unit.Monster.State.NecromancerMonster
     {
         public override void Enter(NecromancerMonsterAI entity)
         {
-
+            if(entity.necromancerMonster.isGroggy)
+            {
+                entity.anim.SetTrigger("Dead");
+            }
+            else
+            {
+                entity.anim.SetTrigger("Groggy");
+                entity.anim.SetTrigger("Dead");
+            }
         }
 
         public override void Execute(NecromancerMonsterAI entity)
         {
-
-
-
+            Destroy(this.gameObject, 2f);
         }
 
         public override void Exit(NecromancerMonsterAI entity)
