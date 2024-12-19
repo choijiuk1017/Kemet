@@ -13,6 +13,11 @@ namespace Core.Unit.Monster.State.NecromancerMonster
     {
         public GameObject healMagicPrefab;
 
+        private bool isHeal = false;
+
+        private float stateDuration = 2f;
+        private float stateElapsedTime = 0f;
+
         public override void Enter(NecromancerMonsterAI entity)
         {
             Vector2 direction = (entity.necromancerMonster.targetObject.transform.position - entity.transform.position).normalized;
@@ -25,6 +30,7 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             {
                 entity.transform.localScale = new Vector3(-Mathf.Abs(entity.transform.localScale.x), entity.transform.localScale.y, entity.transform.localScale.z);
             }
+            stateElapsedTime = 0f;
 
             entity.anim.SetTrigger("Heal");
 
@@ -33,6 +39,8 @@ namespace Core.Unit.Monster.State.NecromancerMonster
 
         public override void Execute(NecromancerMonsterAI entity)
         {
+            stateElapsedTime += Time.deltaTime;
+
             if (entity.necromancerMonster.isGroggy)
             {
                 entity.ChangeState(NMMonsterStateType.Groggy);
@@ -45,10 +53,9 @@ namespace Core.Unit.Monster.State.NecromancerMonster
                 return;
             }
 
-            float playerDistance = Vector2.Distance(entity.necromancerMonster.targetObject.transform.position, entity.transform.position);
-
-            if (playerDistance <= 15f)
+            if(stateElapsedTime >= stateDuration)
             {
+                Debug.Log("상태 변환");
                 //랜덤으로 상태 변환
                 int randomValue = UnityEngine.Random.Range(0, 100);
 
@@ -56,15 +63,18 @@ namespace Core.Unit.Monster.State.NecromancerMonster
                 {
                     entity.ChangeState(NMMonsterStateType.Attack);
                 }
-                else // 30% 확률로 Teleport 상태로 전환
+                else // 나머지 확률로 Teleport 상태로 전환
                 {
                     entity.ChangeState(NMMonsterStateType.Teleport);
                 }
             }
+
         }
 
         public override void Exit(NecromancerMonsterAI entity)
         {
+           stateElapsedTime = 0f;
+
         }
 
         public override void OnTransition(NecromancerMonsterAI entity)
@@ -79,6 +89,16 @@ namespace Core.Unit.Monster.State.NecromancerMonster
                 Vector2 spawnPosition = new Vector2(entity.transform.position.x, entity.transform.position.y);
                 GameObject healMagic = GameObject.Instantiate(healMagicPrefab, spawnPosition, Quaternion.identity);
             }
+        }
+
+        private void HealStart()
+        {
+            isHeal = true;
+        }
+
+        private void HealEnd()
+        {
+            isHeal = false;
         }
     }
 }

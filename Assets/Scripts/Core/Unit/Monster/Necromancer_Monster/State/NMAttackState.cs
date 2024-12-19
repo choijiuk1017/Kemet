@@ -14,10 +14,12 @@ namespace Core.Unit.Monster.State.NecromancerMonster
         private float attackCooldown = 2f;
         private float timeSinceLastAttack = 0f;
         private bool isAttacking = false;
+        private float stateDuration = 3f;
+        private float stateElapsedTime = 0f;
 
         public GameObject magicBallPrefab;
-
         private Vector2 spawnPos;
+
 
         public override void Enter(NecromancerMonsterAI entity)
         {
@@ -35,11 +37,32 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             
             timeSinceLastAttack = 0f;
             isAttacking = false;
+
+
+           
+
+            stateElapsedTime = 0f;
         }
 
         public override void Execute(NecromancerMonsterAI entity)
         {
-            if(entity.necromancerMonster.isGroggy)
+            stateElapsedTime += Time.deltaTime;
+
+            float playerDistance = Vector2.Distance(entity.necromancerMonster.targetObject.transform.position, entity.transform.position);
+
+            timeSinceLastAttack += Time.deltaTime;
+
+            if (playerDistance <= 15f && timeSinceLastAttack >= attackCooldown)
+            {
+                entity.anim.SetTrigger("Attack");
+                timeSinceLastAttack = 0f;
+            }
+            else if (playerDistance > 15f)
+            {
+                entity.ChangeState(NMMonsterStateType.Idle);
+            }
+
+            if (entity.necromancerMonster.isGroggy)
             {
                 entity.ChangeState(NMMonsterStateType.Groggy);
                 return;
@@ -51,21 +74,13 @@ namespace Core.Unit.Monster.State.NecromancerMonster
                 return;
             }
 
-            float playerDistance = Vector2.Distance(entity.necromancerMonster.targetObject.transform.position, entity.transform.position);
-
-            if(isAttacking)
+            if (isAttacking)
             {
                 return;
             }
 
-
-            timeSinceLastAttack += Time.deltaTime;
-
-            if(playerDistance <= 15f && timeSinceLastAttack >= attackCooldown)
-            {
-                entity.anim.SetTrigger("Attack");
-                timeSinceLastAttack = 0f;
-
+            if(stateElapsedTime >= stateDuration)
+            {      
                 //랜덤으로 상태 변환
                 int randomValue = UnityEngine.Random.Range(0, 100);
 
@@ -73,7 +88,7 @@ namespace Core.Unit.Monster.State.NecromancerMonster
                 {
                     entity.ChangeState(NMMonsterStateType.Heal);
                 }
-                else if (randomValue < 40) // 20% 확률로 Teleport 상태로 전환
+                else if (randomValue < 50) // 30% 확률로 Teleport 상태로 전환
                 {
                     entity.ChangeState(NMMonsterStateType.Teleport);
                 }
@@ -81,10 +96,7 @@ namespace Core.Unit.Monster.State.NecromancerMonster
                 {
                     entity.ChangeState(NMMonsterStateType.Attack);
                 }
-            }
-            else if(playerDistance > 15f)
-            {
-                entity.ChangeState(NMMonsterStateType.Idle);
+                return;
             }
 
         }
@@ -92,6 +104,7 @@ namespace Core.Unit.Monster.State.NecromancerMonster
         public override void Exit(NecromancerMonsterAI entity)
         {
             isAttacking = false;
+            stateElapsedTime = 0f;
         }
 
         public override void OnTransition(NecromancerMonsterAI entity)
