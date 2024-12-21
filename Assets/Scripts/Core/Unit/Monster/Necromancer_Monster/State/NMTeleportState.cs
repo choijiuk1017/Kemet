@@ -68,11 +68,8 @@ namespace Core.Unit.Monster.State.NecromancerMonster
                     entity.ChangeState(NMMonsterStateType.Dead);
                     return;
                 }
-             
-                if (stateElapsedTime >= stateDuration)
-                {
-                    entity.ChangeState(NMMonsterStateType.Attack);
-                }
+
+                entity.ChangeState(NMMonsterStateType.Attack);
 
                 return;
             }         
