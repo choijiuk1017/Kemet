@@ -91,6 +91,7 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             }
         }
 
+        //애니메이션 이벤트 처리
         private void HealStart()
         {
             isHeal = true;

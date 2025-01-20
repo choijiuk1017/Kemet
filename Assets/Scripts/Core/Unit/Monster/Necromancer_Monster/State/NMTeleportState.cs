@@ -21,8 +21,6 @@ namespace Core.Unit.Monster.State.NecromancerMonster
 
         private NecromancerMonsterAI currentEntity;
 
-        private float stateDuration = 2f;
-        private float stateElapsedTime = 0f;
 
         public override void Enter(NecromancerMonsterAI entity)
         {
@@ -31,7 +29,6 @@ namespace Core.Unit.Monster.State.NecromancerMonster
             isTeleporting = false;
 
             currentEntity = entity;
-            stateElapsedTime = 0f;
 
             GenerateRandomTargetPosition(entity);
 
@@ -52,7 +49,6 @@ namespace Core.Unit.Monster.State.NecromancerMonster
 
         public override void Execute(NecromancerMonsterAI entity)
         {
-            stateElapsedTime += Time.deltaTime;
             if (isTeleportComplete)
             {
                 entity.anim.SetTrigger("TeleportEnd");
@@ -77,7 +73,6 @@ namespace Core.Unit.Monster.State.NecromancerMonster
 
         public override void Exit(NecromancerMonsterAI entity)
         {
-            stateElapsedTime = 0f;
         }
 
         public override void OnTransition(NecromancerMonsterAI entity)
