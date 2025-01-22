@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Core.Unit;
-using Core.Unit.Monster;
+using Core.Unit.Boss;
 
-namespace Core.Unit.Monster
+namespace Core.Unit.Boss
 {
-    public class Tawaret : Monster
+    public class Tawaret : Boss
     {
         private TawaretAI tawaretAI;
 
@@ -19,7 +19,7 @@ namespace Core.Unit.Monster
 
             groggyGauge = 0f;
 
-            maxHealth = 100f;
+            maxHealth = 500f;
 
             currentHealth = maxHealth;
 

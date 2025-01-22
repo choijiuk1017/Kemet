@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Core.Unit.Monster.FSM;
-using Core.Unit.Monster;
-using Core.Unit.Monster.State.Tawaret;
+using Core.Unit.Boss.FSM;
+using Core.Unit.Boss;
+using Core.Unit.Boss.State.Tawaret;
 
-namespace Core.Unit.Monster.State.Tawaret
+namespace Core.Unit.Boss.State.Tawaret
 {
-    public class TDeadState : State<TawaretAI>
+    public class TPattern3State : State<TawaretAI>
     {
         public override void Enter(TawaretAI entity)
         {
@@ -28,5 +28,9 @@ namespace Core.Unit.Monster.State.Tawaret
         {
 
         }
+
     }
 }
+
+
+

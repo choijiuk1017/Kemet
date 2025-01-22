@@ -309,8 +309,10 @@ namespace Core.Unit.Player
                 {
                     //몬스터의 TakeDamage 호출, 데미지는 1
                     collider.GetComponent<Core.Unit.Monster.Monster>().TakeDamage(damage); 
-
-
+                }
+                else if(collider.tag == "Boss")
+                {
+                    collider.GetComponentInParent<Core.Unit.Boss.Boss>().TakeDamage(damage);
                 }
             }
         }

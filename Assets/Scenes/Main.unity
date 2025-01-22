@@ -318,10 +318,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4450003576736383761, guid: bbb060161a84e744a881ea91012f02b3, type: 3}
-      propertyPath: slideForce
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4450003576736383762, guid: bbb060161a84e744a881ea91012f02b3, type: 3}
       propertyPath: m_Name
       value: Seth
@@ -369,14 +365,6 @@ PrefabInstance:
     - target: {fileID: 4450003576736383764, guid: bbb060161a84e744a881ea91012f02b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4450003576736383767, guid: bbb060161a84e744a881ea91012f02b3, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4450003576736383767, guid: bbb060161a84e744a881ea91012f02b3, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 820141907
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbb060161a84e744a881ea91012f02b3, type: 3}

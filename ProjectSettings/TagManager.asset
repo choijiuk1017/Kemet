@@ -8,6 +8,7 @@ TagManager:
   - Monster
   - Parry
   - Stair
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Monster
   - Floor
-  - 
+  - Boss
   - 
   - 
   - 
