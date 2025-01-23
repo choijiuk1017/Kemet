@@ -12,16 +12,29 @@ namespace Core.Unit.Boss.State.Tawaret
     {
         public Animator anim;
         public Animator bodyAnim;
-        public Animator lArmAnim;
+        public Animator rArmAnim;
 
         private bool isAttacking = false;
         private float stateDuration = 3f;
         private float stateElapsedTime = 0f;
 
+        public GameObject magicPrefab;
+        public Transform spawnPosition;
+        public float rotationSpeed = 50f;
+        public float fireRate = 0.2f;
+        public int magicCount = 8;
+        public float magicSpeed = 5f;
+
+        private float spellTimer;
+        private int currentPattern;
+
+
 
         public override void Enter(TawaretAI entity)
         {
             anim.SetTrigger("Pattern1");
+
+            currentPattern = UnityEngine.Random.Range(0,3);
         }
 
         public override void Execute(TawaretAI entity)
@@ -31,11 +44,6 @@ namespace Core.Unit.Boss.State.Tawaret
             if (!entity.tawaret.isAlive)
             {
                 entity.ChangeState(TawaretStateType.Dead);
-                return;
-            }
-
-            if (isAttacking)
-            {
                 return;
             }
 
@@ -70,7 +78,53 @@ namespace Core.Unit.Boss.State.Tawaret
 
         }
 
-        
+
+        //애니메이션 이벤트
+        private void StartAttack()
+        {
+            isAttacking = true;
+            bodyAnim.enabled = false;
+            rArmAnim.enabled = false;
+            Debug.Log("공격 시작");
+        }
+
+        private void EndAttack()
+        {
+            isAttacking = false;
+            bodyAnim.enabled = true;
+            rArmAnim.enabled = true;
+            Debug.Log("공격 끝");
+        }
+
+        private void FireMagic()
+        {
+            float angleStep = 360f / magicCount;
+            float startAngle = currentPattern == 1 ? 45f : 0f;
+
+            for(int i = 0; i < magicCount; i++)
+            {
+                float angle = startAngle + i * angleStep;
+
+                if(currentPattern == 2)
+                {
+                    angle += Time.time * rotationSpeed;
+                }
+
+                Vector3 direction = Quaternion.Euler(0, 0, angle) * Vector3.up;
+                Vector3 spawnPos = (Vector3)spawnPosition.position;
+
+                GameObject magic = GameObject.Instantiate(magicPrefab, spawnPos, Quaternion.identity);
+                Rigidbody2D rb = magic.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.velocity = direction * magicSpeed;
+                }
+            }
+        }
+
+
+
+
     }
 }
 
