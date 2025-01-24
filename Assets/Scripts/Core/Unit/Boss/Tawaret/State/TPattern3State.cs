@@ -17,10 +17,15 @@ namespace Core.Unit.Boss.State.Tawaret
         private bool isAttacking = false;
         private float stateDuration = 3f;
         private float stateElapsedTime = 0f;
+        private TawaretAI currentEntity;
+
+        [SerializeField] private Transform[] spawnPoints;
+        [SerializeField] private GameObject meteorPrefab;
 
         public override void Enter(TawaretAI entity)
         {
             anim.SetTrigger("Pattern3");
+            currentEntity = entity;
         }
 
         public override void Execute(TawaretAI entity)
@@ -86,6 +91,27 @@ namespace Core.Unit.Boss.State.Tawaret
             Debug.Log("공격 끝");
         }
 
+        private void SpawnMeteor()
+        {
+            int spawnCount = (currentEntity.tawaret.currentHealth <= currentEntity.tawaret.maxHealth * 0.5f) ? 2 : 1;
+            List<int> usedIndices = new List<int>();
+
+            for (int i = 0; i < spawnCount; i++)
+            {
+                int randomIndex;
+
+                // 중복되지 않는 스폰 포인트 선택
+                do
+                {
+                    randomIndex = UnityEngine.Random.Range(0, spawnPoints.Length);
+                } while (usedIndices.Contains(randomIndex));
+
+                usedIndices.Add(randomIndex);
+
+                Transform spawnPoint = spawnPoints[randomIndex];
+                GameObject meteor = GameObject.Instantiate(meteorPrefab, spawnPoint.position, Quaternion.identity);
+            }
+        }
     }
 }
 

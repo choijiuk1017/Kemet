@@ -11,10 +11,10 @@ namespace Core.Unit.Boss
         private TawaretAI tawaretAI;
 
         public TawaretAI TawaretAI => tawaretAI;
-
         protected override void Init()
         {
             base.Init();
+
             maxGroggyGauge = 100f;
 
             groggyGauge = 0f;

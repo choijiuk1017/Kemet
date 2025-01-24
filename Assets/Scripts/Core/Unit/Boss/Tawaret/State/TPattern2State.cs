@@ -94,7 +94,6 @@ namespace Core.Unit.Boss.State.Tawaret
             {
                 if (collider.tag == "Parry")
                 {
-                    GetComponent<SpriteRenderer>().color = Color.yellow;
                     Debug.Log("플레이어 패링 성공");
                     parrySuccess = true;
                 }
