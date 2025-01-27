@@ -17,7 +17,7 @@ namespace Core.Unit.Boss.State.Tawaret
 
         public override void Execute(TawaretAI entity)
         {
-
+            Destroy(this.gameObject);
         }
 
         public override void Exit(TawaretAI entity)

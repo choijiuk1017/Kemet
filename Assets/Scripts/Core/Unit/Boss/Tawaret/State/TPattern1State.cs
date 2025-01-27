@@ -19,22 +19,21 @@ namespace Core.Unit.Boss.State.Tawaret
         private float stateElapsedTime = 0f;
 
         public GameObject magicPrefab;
-        public Transform spawnPosition;
-        public float rotationSpeed = 50f;
-        public float fireRate = 0.2f;
-        public int magicCount = 8;
-        public float magicSpeed = 5f;
+        public Transform spawnPosition;  
+        private int magicCount = 10;
+        private float magicSpeed = 5f;
 
         private float spellTimer;
-        private int currentPattern;
 
 
 
         public override void Enter(TawaretAI entity)
         {
+            if(entity.tawaret.currentHealth < entity.tawaret.maxHealth/2)
+            {
+                magicCount = 20;
+            }
             anim.SetTrigger("Pattern1");
-
-            currentPattern = UnityEngine.Random.Range(0,3);
         }
 
         public override void Execute(TawaretAI entity)
@@ -98,26 +97,29 @@ namespace Core.Unit.Boss.State.Tawaret
 
         private void FireMagic()
         {
-            float angleStep = 360f / magicCount;
-            float startAngle = currentPattern == 1 ? 45f : 0f;
+            // 탄막의 각도 설정
+            float angleStep = 360f / magicCount; // 탄막 사이의 간격 각도
+            float startAngle = 0f; // 패턴 1에서는 시작 각도 조정
 
-            for(int i = 0; i < magicCount; i++)
+            for (int i = 0; i < magicCount; i++)
             {
+                // 기본 각도 계산
                 float angle = startAngle + i * angleStep;
 
-                if(currentPattern == 2)
-                {
-                    angle += Time.time * rotationSpeed;
-                }
-
+                // 방향 계산
                 Vector3 direction = Quaternion.Euler(0, 0, angle) * Vector3.up;
-                Vector3 spawnPos = (Vector3)spawnPosition.position;
 
-                GameObject magic = GameObject.Instantiate(magicPrefab, spawnPos, Quaternion.identity);
-                Rigidbody2D rb = magic.GetComponent<Rigidbody2D>();
-                if (rb != null)
+                // 탄막 생성
+                GameObject magic = GameObject.Instantiate(magicPrefab, spawnPosition.position, Quaternion.identity);
+
+                // Null 확인 및 속도 적용
+                if (magic != null)
                 {
-                    rb.velocity = direction * magicSpeed;
+                    Rigidbody2D rb = magic.GetComponent<Rigidbody2D>();
+                    if (rb != null)
+                    {
+                        rb.velocity = direction * magicSpeed;
+                    }
                 }
             }
         }

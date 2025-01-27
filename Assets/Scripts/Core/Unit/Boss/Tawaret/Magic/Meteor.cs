@@ -32,8 +32,8 @@ public class Meteor : MonoBehaviour
         // LineRenderer 컴포넌트를 동적으로 추가
         warningLine = gameObject.AddComponent<LineRenderer>();
         warningLine.positionCount = 2; // 두 점으로 선을 그림
-        warningLine.startWidth = 0.1f; // 선의 시작 두께
-        warningLine.endWidth = 0.1f; // 선의 끝 두께
+        warningLine.startWidth = 1f; // 선의 시작 두께
+        warningLine.endWidth = 1f; // 선의 끝 두께
         warningLine.startColor = warningLineColor; // 시작 색상
         warningLine.endColor = warningLineColor; // 끝 색상
         warningLine.material = new Material(Shader.Find("Sprites/Default")); // 기본 셰이더 사용
