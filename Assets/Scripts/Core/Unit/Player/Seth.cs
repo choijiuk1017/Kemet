@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using Core.Unit;
 
@@ -50,6 +51,8 @@ namespace Core.Unit.Player
         public bool isStair = false;
 
 
+        private static Seth instance;
+
         //플레이어의 상태를 나타낼 구조체
         public enum State
         {
@@ -59,6 +62,43 @@ namespace Core.Unit.Player
         };
         public State state;
 
+        void Awake()
+        {
+            // 플레이어 중복 방지
+            if (instance == null)
+            {
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
+        }
+
+
+        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            StartCoroutine(SetSpawnPosition());
+        }
+
+        IEnumerator SetSpawnPosition()
+        {
+            yield return new WaitForSeconds(0.2f); // 씬이 완전히 로드될 때까지 대기
+
+            GameObject spawnPoint = GameObject.FindGameObjectWithTag("PlayerSpawn");
+
+            if (spawnPoint != null)
+            {
+                transform.position = spawnPoint.transform.position;
+                Debug.Log("? 플레이어가 'PlayerSpawn' 위치로 이동: " + spawnPoint.transform.position);
+            }
+            else
+            {
+                Debug.LogError("? 'PlayerSpawn' 태그를 가진 오브젝트가 씬에서 발견되지 않았습니다.");
+            }
+        }
 
         protected override void Init()
         {
@@ -75,6 +115,9 @@ namespace Core.Unit.Player
             defense = 10f;
 
             position = this.transform.position;
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
 
             rigid = this.GetComponent<Rigidbody2D>();
            
@@ -290,7 +333,7 @@ namespace Core.Unit.Player
         void Jump()
         {
             rigid.velocity = new Vector2(rigid.velocity.x, jumpForce);
-
+            anim.ResetTrigger("isLand");
             anim.SetTrigger("isJump");
 
             isJump = true;
@@ -343,6 +386,7 @@ namespace Core.Unit.Player
                 isJump = false;
                 isStair = false;
                 isGround = true;
+               
             }
             else if(col.gameObject.CompareTag("Stair"))
             {
@@ -355,6 +399,7 @@ namespace Core.Unit.Player
                 isStair = true;
 
                 isGround = true;
+
             }
         }
 

@@ -9,6 +9,7 @@ TagManager:
   - Parry
   - Stair
   - Boss
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX
