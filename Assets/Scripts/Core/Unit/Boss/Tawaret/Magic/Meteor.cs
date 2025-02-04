@@ -7,7 +7,7 @@ public class Meteor : MonoBehaviour
     [Header("Meteor Settings")]
     public float warningDuration = 1.5f; // 경고선 표시 시간
     public float lifetimeAfterFall = 3f; // 운석이 사라지기까지의 시간
-    public int damage = 10; // 운석 데미지
+    public int damage = 30; // 운석 데미지
     public LayerMask playerLayer; // 플레이어 레이어
 
     [Header("Warning Line Settings")]

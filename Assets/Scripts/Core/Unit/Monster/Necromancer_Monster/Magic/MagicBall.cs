@@ -18,7 +18,7 @@ namespace Core.Effect
 
         private Rigidbody2D rigid;
 
-        private int damage;
+        private int damage = 10;
 
         // Start is called before the first frame update
         void Start()

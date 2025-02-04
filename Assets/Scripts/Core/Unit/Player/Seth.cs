@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 using Core.Unit;
 
 namespace Core.Unit.Player
@@ -49,9 +50,13 @@ namespace Core.Unit.Player
         //기타 변수
         public bool isGround = false; //현재 바닥 위에 있는지 확인 여부
         public bool isStair = false;
+        public bool isDead = false;
 
+
+        public Slider playerHPUI;
 
         private static Seth instance;
+
 
         //플레이어의 상태를 나타낼 구조체
         public enum State
@@ -69,6 +74,7 @@ namespace Core.Unit.Player
             {
                 instance = this;
                 DontDestroyOnLoad(gameObject);
+
             }
             else
             {
@@ -85,7 +91,18 @@ namespace Core.Unit.Player
 
         IEnumerator SetSpawnPosition()
         {
-            yield return new WaitForSeconds(0.2f); // 씬이 완전히 로드될 때까지 대기
+            yield return new WaitForSeconds(0.01f); // 씬이 완전히 로드될 때까지 대기
+
+            anim.SetBool("isDead", false);
+            isDead = false;
+
+            currentHealth = maxHealth;
+
+            if (playerHPUI != null)
+            {
+                playerHPUI.maxValue = maxHealth;
+                playerHPUI.value = currentHealth;
+            }
 
             GameObject spawnPoint = GameObject.FindGameObjectWithTag("PlayerSpawn");
 
@@ -108,6 +125,12 @@ namespace Core.Unit.Player
 
             currentHealth = maxHealth;
 
+            if(playerHPUI != null)
+            {
+                playerHPUI.maxValue = maxHealth;
+                playerHPUI.value = currentHealth;
+            }
+
             moveSpeed = 5f;
 
             damage = 10f;
@@ -128,6 +151,8 @@ namespace Core.Unit.Player
         private void Update()
         {
 
+            
+
             if (isDamaged)
             {
                 damageFlashTimer += Time.deltaTime;
@@ -140,7 +165,9 @@ namespace Core.Unit.Player
                 }
             }
 
-            if(isStunned)
+            if (isDead) return;
+
+            if (isStunned)
             {
                 stunTimer += Time.deltaTime;
                 if(stunTimer >= stunDuration)
@@ -151,25 +178,27 @@ namespace Core.Unit.Player
                 return;
             }
 
+            
+            
 
             //유저가 키에서 손을 떼면 이동을 멈춤
-            if (Input.GetButtonUp("Horizontal"))
+            if (Input.GetButtonUp("Horizontal") && !isDead)
             {
                 rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.5f, rigid.velocity.y);
             }
 
             //방향에 따라 좌우 반전
             //회전을 시키는 방식으로 해야 자식 오브젝트에 있는 히트 박스도 함께 회전함
-            if (Input.GetKeyDown(KeyCode.RightArrow) && !isSliding && !Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow) && !isSliding && !Input.GetKeyDown(KeyCode.LeftArrow) && !isDead)
             {
                 transform.eulerAngles = new Vector3(0, 180, 0);
             }
-            if (Input.GetKeyDown(KeyCode.LeftArrow) && !isSliding && !Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && !isSliding && !Input.GetKeyDown(KeyCode.RightArrow) && !isDead)
             {
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift) && isGround && !isSliding && !isStair)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && isGround && !isSliding && !isStair && !isDead)
             {
                 StartSlide();
             }
@@ -185,7 +214,7 @@ namespace Core.Unit.Player
             }
 
 
-            if (curTime <= 0)
+            if (curTime <= 0 && !isDead)
             {
                 //Z키를 누르고 이동하지 않는 상태에서만 공격 가능
                 if (Input.GetKey(KeyCode.Z) && state != State.Move && !isJump && !isSliding)
@@ -228,7 +257,7 @@ namespace Core.Unit.Player
             }
 
             //점프
-            if (Input.GetButtonDown("Jump") && isGround && !Input.GetKeyDown(KeyCode.Z) && !isSliding)
+            if (Input.GetButtonDown("Jump") && isGround && !Input.GetKeyDown(KeyCode.Z) && !isSliding && !isDead)
             {
                 Jump();
             }
@@ -236,16 +265,17 @@ namespace Core.Unit.Player
             
 
             //패링
-            if (Input.GetKeyDown(KeyCode.C) && !isSliding)
+            if (Input.GetKeyDown(KeyCode.C) && !isSliding && !isDead)
             {
                 anim.SetTrigger("isParrying");
             }
+
         }
 
         private void FixedUpdate()
         {
 
-            if (!isStunned)
+            if (!isStunned && !isDead)
             {
                 // 일반 이동 처리 (슬라이딩 중이 아닐 때만)
                 if (!isSliding)
@@ -362,9 +392,19 @@ namespace Core.Unit.Player
 
         public override void TakeDamage(float damageAmount)
         {
+
+            if (isDead) return;
             base.TakeDamage(damageAmount);
+
+            UpdateHealthUI();
+
             isStunned = true;
             anim.SetTrigger("TakeDamage");
+
+            if (currentHealth <= 0)
+            {
+                Die();
+            }
         }
 
         void OnDrawGizmos()
@@ -401,6 +441,21 @@ namespace Core.Unit.Player
                 isGround = true;
 
             }
+        }
+
+        private void UpdateHealthUI()
+        {
+            if (playerHPUI != null)
+            {
+                playerHPUI.value = currentHealth;
+            }
+        }
+
+        protected override void Die()
+        {
+            isDead = true;
+            anim.SetBool("isDead", true); // 죽는 애니메이션 실행
+            rigid.velocity = Vector2.zero; // 이동 중지
         }
 
         //패링

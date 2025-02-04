@@ -103,7 +103,7 @@ namespace Core.Unit.Boss.State.Tawaret
             {
                 if (collider.tag == "Player" && !parrySuccess) // 패링 성공 시 데미지 무시
                 {
-                    collider.GetComponent<Core.Unit.Player.Seth>().TakeDamage(20);
+                    collider.GetComponent<Core.Unit.Player.Seth>().TakeDamage(30);
                     Debug.Log("몬스터 공격 중");
                 }
             }
