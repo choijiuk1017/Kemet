@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Core.Unit.Boss.FSM;
 using Core.Unit.Boss;
 using Core.Unit.Boss.State.Tawaret;
+
 
 namespace Core.Unit.Boss.State.Tawaret
 {
@@ -18,10 +20,12 @@ namespace Core.Unit.Boss.State.Tawaret
         public override void Execute(TawaretAI entity)
         {
             Destroy(this.gameObject);
+            SceneManager.LoadScene("End");
         }
 
         public override void Exit(TawaretAI entity)
         {
+            
         }
 
         public override void OnTransition(TawaretAI entity)
